@@ -83,7 +83,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
       {/* Two-column layout: Article body + Sidebar */}
       <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-8 lg:gap-12">
+        <div className={`grid grid-cols-1 ${article.artist.name === 'LOWEND Editorial' ? '' : 'lg:grid-cols-[1fr_320px]'} gap-8 lg:gap-12`}>
           {/* Article body */}
           <article>
             {/* Back Link */}
@@ -98,12 +98,10 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             </Link>
 
             {/* Article Content */}
-            <div className="prose-custom">
+            <div className="prose-custom article-body">
               <ReactMarkdown
                 components={{
-                  h1: ({ children }) => (
-                    <h1 className="font-display font-bold text-3xl uppercase leading-tight mb-6 mt-8">{children}</h1>
-                  ),
+                  h1: () => null, // Skip h1 - title is already shown in hero overlay
                   h2: ({ children }) => (
                     <h2 className="font-display font-bold text-xl uppercase leading-tight mb-4 mt-8 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-[2px] after:bg-accent-red">
                       {children}
@@ -136,7 +134,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             </div>
           </article>
 
-          {/* Sidebar */}
+          {/* Sidebar - hidden for editorial articles */}
+          {article.artist.name !== 'LOWEND Editorial' && (
           <aside className="space-y-8 lg:sticky lg:top-24 lg:self-start">
             {/* Artist Card */}
             <div className="border border-[#222] p-5">
@@ -240,6 +239,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               </Link>
             </div>
           </aside>
+          )}
         </div>
       </section>
     </main>

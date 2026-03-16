@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="mb-10">
           <p 
             className="font-display font-bold uppercase leading-none text-text-primary"
-            style={{ fontSize: 'clamp(48px, 10vw, 140px)', lineHeight: '0.85', letterSpacing: '0.05em' }}
+            style={{ fontSize: 'clamp(32px, 8vw, 80px)', lineHeight: '0.85', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}
           >
             LOWEND NYC
           </p>
