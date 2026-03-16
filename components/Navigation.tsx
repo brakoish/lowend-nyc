@@ -32,16 +32,14 @@ export default function Navigation() {
         <div className="pt-2 lg:pt-3 pb-0 overflow-hidden">
           <Link
             href="/"
-            className="block font-display uppercase hover:text-accent-red transition-colors duration-75 leading-none w-full"
+            className="block font-display uppercase hover:text-accent-red transition-colors duration-75 leading-none w-full whitespace-nowrap"
             style={{
-              fontSize: 'clamp(60px, 16vw, 220px)',
+              fontSize: 'clamp(40px, 10vw, 140px)',
               lineHeight: '0.9',
               letterSpacing: '0.02em',
               fontWeight: 900,
               display: 'block',
               width: '100%',
-              textAlign: 'justify',
-              textAlignLast: 'justify',
             }}
           >
             LOWEND NYC

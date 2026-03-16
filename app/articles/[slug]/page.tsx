@@ -83,9 +83,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
       {/* Two-column layout: Article body + Sidebar */}
       <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-          {/* Article body — 8/12 cols */}
-          <article className="lg:col-span-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-8 lg:gap-12">
+          {/* Article body */}
+          <article>
             {/* Back Link */}
             <Link
               href="/"
@@ -136,8 +136,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             </div>
           </article>
 
-          {/* Sidebar — 4/12 cols */}
-          <aside className="lg:col-span-4 space-y-8">
+          {/* Sidebar */}
+          <aside className="space-y-8 lg:sticky lg:top-24 lg:self-start">
             {/* Artist Card */}
             <div className="border border-[#222] p-5">
               <h3 className="font-display font-bold uppercase text-sm mb-4 tracking-wider">

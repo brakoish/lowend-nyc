@@ -88,5 +88,5 @@ export function getAllArtists() {
     }
   });
 
-  return Array.from(artistsMap.values());
+  return Array.from(artistsMap.values()).filter(a => a.name !== 'LOWEND Editorial');
 }
