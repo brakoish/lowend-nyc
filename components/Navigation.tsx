@@ -30,7 +30,7 @@ export default function Navigation() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* MASSIVE wordmark — edge to edge, ultra heavy */}
         <div className="pt-2 lg:pt-3 pb-0 overflow-hidden">
-          <Link href="/" className="block font-display uppercase hover:text-accent-red transition-colors duration-75 leading-none" style={{ fontSize: 'clamp(60px, 16vw, 220px)', lineHeight: '0.88', letterSpacing: '-0.03em', fontWeight: 900, fontStretch: '110%' }}>
+          <Link href="/" className="block font-display uppercase hover:text-accent-red transition-colors duration-75 leading-none" style={{ fontSize: 'clamp(60px, 16vw, 220px)', lineHeight: '0.88', letterSpacing: '-0.02em' }}>
             LOWEND NYC
           </Link>
         </div>

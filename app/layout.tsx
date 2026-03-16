@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import { Oswald, Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-
-const oswald = Oswald({
-  subsets: ["latin"],
-  variable: "--font-oswald",
-  display: "swap",
-});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,10 +17,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LOWEND NYC - Underground Electronic Music",
+  title: "LOWEND NYC | Underground Electronic Music",
   description: "NYC's underground electronic music publication covering techno, house, garage, and bass music.",
   openGraph: {
-    title: "LOWEND NYC - Underground Electronic Music",
+    title: "LOWEND NYC | Underground Electronic Music",
     description: "NYC's underground electronic music publication covering techno, house, garage, and bass music.",
     type: "website",
   },
@@ -40,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${oswald.variable} ${inter.variable} ${jetbrainsMono.variable} font-body bg-page-bg text-text-primary antialiased`}
+        className={`${inter.variable} ${jetbrainsMono.variable} font-body bg-page-bg text-text-primary antialiased`}
       >
         <Navigation />
         {children}
