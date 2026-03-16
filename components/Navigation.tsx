@@ -49,7 +49,7 @@ export default function Navigation() {
         </div>
 
         {/* Nav bar — items spread across FULL width like the mockup */}
-        <div className="flex justify-between items-center py-2 border-t border-text-primary/10">
+        <div className="flex justify-between items-center py-2 border-t-2 border-white/20">
           {/* Desktop Navigation — space-between full width */}
           <div className="hidden md:flex items-center justify-between w-full">
             <div className="flex items-center justify-between flex-1">
@@ -60,7 +60,7 @@ export default function Navigation() {
                   className={`font-display uppercase font-bold transition-colors duration-75 ${
                     pathname === link.href ? 'text-accent-red' : 'hover:text-accent-red'
                   }`}
-                  style={{ fontSize: 'clamp(18px, 2.5vw, 36px)', letterSpacing: '-0.01em' }}
+                  style={{ fontSize: 'clamp(16px, 2.5vw, 32px)', fontWeight: 700 }}
                 >
                   {link.label}
                 </Link>

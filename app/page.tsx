@@ -5,73 +5,68 @@ import { getAllArticles } from '@/lib/articles';
 export default function HomePage() {
   const articles = getAllArticles();
   const featuredArticle = articles.find((a) => a.featured) || articles[0];
-  const sideArticles = articles.filter((a) => a.slug !== featuredArticle.slug).slice(0, 2);
+  const gridArticles = articles.filter((a) => a.slug !== featuredArticle.slug);
 
   return (
     <main>
-      {/* Brutalist 6/3/3 Grid — matching Stitch mockup */}
-      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pt-3 pb-0">
-        <div className="grid grid-cols-1 lg:grid-cols-[6fr_3fr_3fr] gap-3 lg:gap-4 items-start">
+      {/* HERO SECTION — Full width image with overlaid headline */}
+      <section className="relative w-full">
+        <Link href={`/articles/${featuredArticle.slug}`} className="group block relative">
+          {/* Full width image */}
+          <div className="relative h-[500px] lg:h-[600px] w-full overflow-hidden">
+            <Image
+              src={featuredArticle.image}
+              alt={featuredArticle.title}
+              fill
+              className="object-cover article-image group-hover:scale-105 transition-transform duration-500"
+              unoptimized
+              priority
+            />
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/70 to-transparent" />
+            
+            {/* FEATURE tag */}
+            <div className="absolute top-4 left-4">
+              <span className="red-tag">FEATURE</span>
+            </div>
 
-          {/* LEFT COLUMN (6/12) — Feature article */}
-          <div className="lg:row-span-2">
-            <Link href={`/articles/${featuredArticle.slug}`} className="group block">
-              {/* Massive headline ABOVE image */}
-              <h1 className="font-display uppercase leading-none group-hover:text-accent-red transition-colors duration-75 mb-3" style={{ fontWeight: 900, fontSize: 'clamp(32px, 6vw, 80px)', lineHeight: '0.88', letterSpacing: '-0.04em' }}>
+            {/* Content overlaid at bottom */}
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:px-6 lg:px-12 pb-6">
+              {/* Red artist name */}
+              <p className="font-display text-accent-red uppercase font-bold mb-2" style={{ fontSize: 'clamp(14px, 2vw, 24px)' }}>
+                {featuredArticle.artist.name}
+              </p>
+              {/* Massive headline */}
+              <h1 
+                className="font-display uppercase leading-[0.9] text-white mb-4"
+                style={{ fontSize: 'clamp(36px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.02em' }}
+              >
                 {featuredArticle.title}
               </h1>
-
-              {/* Image + overlay text */}
-              <div className="relative overflow-hidden mb-3">
-                <div className="relative h-[250px] sm:h-[320px]">
-                  <Image
-                    src={featuredArticle.image}
-                    alt={featuredArticle.title}
-                    fill
-                    className="object-cover article-image group-hover:scale-105 transition-transform duration-500"
-                    unoptimized
-                  />
-                </div>
+              {/* Metadata row */}
+              <div className="meta-text flex items-center gap-4">
+                <span>POSTED {new Date(featuredArticle.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase()}</span>
+                <span>·</span>
+                <span>4 MIN READ</span>
+                <span>·</span>
+                <span>{featuredArticle.venue}</span>
               </div>
-
-              {/* Red sub-headline + excerpt */}
-              <div className="flex gap-4 items-start">
-                <div className="flex-1">
-                  <p className="font-display text-accent-red uppercase font-bold leading-none mb-2" style={{ fontSize: 'clamp(18px, 3vw, 36px)', lineHeight: '0.92', letterSpacing: '-0.02em' }}>
-                    {featuredArticle.artist.name}: {featuredArticle.excerpt.split(',')[0]}
-                  </p>
-                  <p className="text-text-secondary text-sm leading-relaxed max-w-[50ch]">
-                    {featuredArticle.excerpt}
-                  </p>
-                  <div className="meta-text mt-3 flex items-center gap-4">
-                    <span>POSTED {new Date(featuredArticle.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase()}</span>
-                    <span>4 MIN READ</span>
-                    <span>FEATURE</span>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            {/* Crowd strip at bottom of left column */}
-            <div className="relative h-[60px] lg:h-[70px] overflow-hidden mt-3">
-              <Image
-                src="/images/crowd-nyc.png"
-                alt="NYC crowd"
-                fill
-                className="object-cover article-image opacity-70"
-                unoptimized
-              />
             </div>
           </div>
+        </Link>
+      </section>
 
-          {/* MIDDLE COLUMN (3/12) — Two stacked article cards */}
-          {sideArticles.map((article) => (
+      {/* GRID BELOW HERO — Dense 3-column layout */}
+      <section className="max-w-[1440px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {gridArticles.map((article, index) => (
             <Link
               key={article.slug}
               href={`/articles/${article.slug}`}
-              className="group block"
+              className={`group block overflow-hidden ${index === 2 ? 'bg-[#FF2B2B]' : 'border border-[#222] hover:border-[#FF2B2B]'} transition-colors`}
             >
-              <div className="relative h-[160px] lg:h-[180px] overflow-hidden mb-2">
+              {/* Image */}
+              <div className="relative h-[200px] overflow-hidden">
                 <Image
                   src={article.image}
                   alt={article.title}
@@ -80,92 +75,68 @@ export default function HomePage() {
                   unoptimized
                 />
               </div>
-              <h2 className="font-display uppercase font-bold leading-none group-hover:text-accent-red transition-colors duration-75 mb-2 line-clamp-4" style={{ fontSize: 'clamp(16px, 2vw, 26px)', lineHeight: '0.92', letterSpacing: '-0.02em' }}>
-                {article.title}
-              </h2>
-              <p className="text-text-secondary text-xs leading-relaxed line-clamp-2 mb-2">
-                {article.excerpt.substring(0, 80)}...
-              </p>
-              <div className="meta-text">
-                BY LOWEND · {article.genre[0].toUpperCase()}
+              {/* Content */}
+              <div className={`p-3 ${index === 2 ? 'text-black' : ''}`}>
+                <p className={`font-display uppercase font-bold text-xs mb-1 ${index === 2 ? 'text-black/70' : 'text-accent-red'}`}>
+                  {article.artist.name}
+                </p>
+                <h3 
+                  className="font-display font-bold uppercase leading-tight mb-2 line-clamp-2"
+                  style={{ fontSize: 'clamp(14px, 1.5vw, 22px)' }}
+                >
+                  {article.title}
+                </h3>
+                <div className={`meta-text ${index === 2 ? 'text-black/60' : ''}`}>
+                  {article.venue} · {article.genre[0].toUpperCase()}
+                </div>
               </div>
             </Link>
           ))}
-
-          {/* RIGHT COLUMN (3/12) — Red accent card + extras */}
-          <div className="space-y-4">
-            {/* Red accent card */}
-            <div className="bg-accent-red p-4 relative overflow-hidden">
-              <div className="relative z-10">
-                <p className="font-display font-bold text-black uppercase leading-none mb-2" style={{ fontSize: 'clamp(14px, 1.5vw, 20px)', lineHeight: '0.95', letterSpacing: '-0.01em' }}>
-                  CRUSHING DRUMS:
-                </p>
-                {/* Small image inset */}
-                <div className="relative h-[100px] overflow-hidden mb-2">
-                  <Image
-                    src="/images/crowd-nyc.png"
-                    alt="Event"
-                    fill
-                    className="object-cover"
-                    unoptimized
-                  />
-                </div>
-                <p className="font-display font-bold text-black uppercase leading-none" style={{ fontSize: 'clamp(14px, 1.5vw, 18px)', lineHeight: '0.95' }}>
-                  BREAKAWAY NYC PREVIEW
-                </p>
-              </div>
-            </div>
-
-            {/* Additional card */}
+          
+          {/* Red accent card for Breakaway/Pacha promo */}
+          <div className="bg-[#FF2B2B] p-4 flex flex-col justify-between min-h-[280px]">
             <div>
-              <h3 className="font-display uppercase font-bold leading-none mb-2" style={{ fontSize: 'clamp(16px, 2vw, 26px)', lineHeight: '0.92', letterSpacing: '-0.02em' }}>
-                LOCAL SPOTLIGHT: 99 SCOTT
+              <p className="font-display font-bold text-black uppercase text-xs mb-2">EVENT PREVIEW</p>
+              <h3 className="font-display font-bold text-black uppercase leading-tight" style={{ fontSize: 'clamp(18px, 2vw, 28px)' }}>
+                BREAKAWAY NYC
               </h3>
-              <p className="text-text-secondary text-xs leading-relaxed mb-2">
-                The Bushwick warehouse that keeps delivering for Gray Area and Elsewhere Presents.
-              </p>
-              <div className="meta-text">
-                BY LOWEND · ARTICLE
-              </div>
-              {/* Small photo */}
-              <div className="relative h-[100px] overflow-hidden mt-2">
-                <Image
-                  src="/images/oppidan-99scott.png"
-                  alt="99 Scott"
-                  fill
-                  className="object-cover article-image"
-                  unoptimized
-                />
-              </div>
+              <p className="text-black/80 text-sm mt-2">The biggest bass music event of the summer returns to New York.</p>
+            </div>
+            <div className="meta-text text-black/60">
+              AUG 15-17 · RANDALL&apos;S ISLAND
             </div>
           </div>
         </div>
       </section>
 
-      {/* JOIN THE NOISE — inline like the mockup */}
-      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-6 mt-4 border-t border-border">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-          <h2 className="font-display font-bold text-text-primary uppercase leading-none whitespace-nowrap" style={{ fontSize: 'clamp(32px, 5vw, 56px)', lineHeight: '0.9', letterSpacing: '-0.03em', fontWeight: 900 }}>
-            JOIN THE NOISE
-          </h2>
-          <form className="flex gap-3 flex-1 lg:max-w-lg">
-            <input
-              type="email"
-              placeholder="JOIN THE NOISE"
-              className="flex-1 px-4 py-3 bg-transparent border border-border text-text-primary font-mono text-sm uppercase placeholder:text-text-secondary/50 focus:outline-none focus:border-text-primary transition-colors"
-            />
-            <button
-              type="submit"
-              className="px-6 py-3 border border-text-primary text-text-primary font-display font-bold uppercase tracking-wider hover:bg-text-primary hover:text-page-bg transition-colors duration-75"
-            >
-              SIGN UP
-            </button>
-          </form>
-          {/* Social icons */}
-          <div className="flex items-center gap-4">
-            <span className="font-display font-bold uppercase text-xl">IG</span>
-            <span className="font-display font-bold uppercase text-xl">SC</span>
-            <span className="font-display font-bold uppercase text-xl">FB</span>
+      {/* JOIN THE NOISE — Full-bleed red block */}
+      <section className="relative w-full bg-[#FF2B2B] py-12 lg:py-16 mt-8 noise-section">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+            <div className="flex-1">
+              <h2 
+                className="font-display font-bold text-black uppercase leading-none"
+                style={{ fontSize: 'clamp(48px, 10vw, 120px)' }}
+              >
+                JOIN THE NOISE
+              </h2>
+              <p className="text-black/60 mt-3 font-mono text-sm max-w-md">
+                Get the latest on NYC&apos;s underground bass scene. New mixes, artist features, and event previews delivered weekly.
+              </p>
+            </div>
+            <form className="flex gap-3 flex-1 lg:max-w-lg">
+              <input
+                type="email"
+                placeholder="ENTER YOUR EMAIL"
+                className="flex-1 px-4 py-3 bg-black/20 border-2 border-black/40 text-black placeholder:text-black/50 font-mono text-sm uppercase focus:outline-none focus:border-black transition-colors"
+              />
+              <button
+                type="submit"
+                className="px-6 py-3 bg-black text-[#FF2B2B] font-display font-bold uppercase tracking-wider hover:bg-black/80 transition-colors duration-75"
+              >
+                SUBSCRIBE
+              </button>
+            </form>
           </div>
         </div>
       </section>
@@ -173,16 +144,16 @@ export default function HomePage() {
       {/* ALL COVERAGE */}
       <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-10">
         <div className="flex items-center gap-4 mb-8">
-          <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap" style={{ fontSize: 'clamp(24px, 3vw, 40px)', fontWeight: 900 }}>ALL COVERAGE</h2>
+          <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap" style={{ fontSize: 'clamp(24px, 3vw, 40px)', fontWeight: 700 }}>ALL COVERAGE</h2>
           <div className="flex-1 h-[1px] bg-border" />
           <span className="meta-text whitespace-nowrap">{articles.length} ARTICLES</span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {articles.map((article) => (
             <Link
               key={article.slug}
               href={`/articles/${article.slug}`}
-              className="group brutal-card block overflow-hidden"
+              className="group block overflow-hidden border border-[#222] hover:border-[#FF2B2B] transition-colors"
             >
               <div className="relative h-[200px] overflow-hidden">
                 <Image
@@ -196,11 +167,11 @@ export default function HomePage() {
                   <span className="red-tag">{article.genre[0]}</span>
                 </div>
               </div>
-              <div className="p-5">
+              <div className="p-3">
                 <p className="font-display text-accent-red uppercase text-xs font-bold tracking-wider mb-1">
                   {article.artist.name}
                 </p>
-                <h3 className="font-display font-bold uppercase leading-none mb-3 group-hover:text-accent-red transition-colors duration-75 line-clamp-2" style={{ fontSize: 'clamp(16px, 2vw, 24px)', lineHeight: '0.95' }}>
+                <h3 className="font-display font-bold uppercase leading-tight mb-2 group-hover:text-accent-red transition-colors duration-75 line-clamp-2" style={{ fontSize: 'clamp(14px, 1.5vw, 22px)' }}>
                   {article.title}
                 </h3>
                 <div className="meta-text">
