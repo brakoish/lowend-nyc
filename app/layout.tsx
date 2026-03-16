@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Anton, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+
+const anton = Anton({
+  weight: '400',
+  subsets: ["latin"],
+  variable: "--font-anton",
+  display: "swap",
+});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} font-body bg-page-bg text-text-primary antialiased`}
+        className={`${anton.variable} ${inter.variable} ${jetbrainsMono.variable} font-body bg-page-bg text-text-primary antialiased`}
       >
         <Navigation />
         {children}

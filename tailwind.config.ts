@@ -17,7 +17,7 @@ const config: Config = {
         'accent-red': '#FF2B2B',
       },
       fontFamily: {
-        'display': ['Impact', 'Haettenschweiler', 'Arial Narrow Bold', 'sans-serif'],
+        'display': ['var(--font-anton)', 'Impact', 'Haettenschweiler', 'sans-serif'],
         'body': ['var(--font-inter)', 'sans-serif'],
         'mono': ['var(--font-jetbrains)', 'monospace'],
       },
