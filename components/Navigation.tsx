@@ -28,40 +28,41 @@ export default function Navigation() {
   return (
     <nav className="bg-page-bg sticky top-0 z-50">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
-        {/* Massive wordmark */}
-        <div className="pt-4 lg:pt-6 pb-0 overflow-hidden">
-          <Link href="/" className="block font-display font-bold uppercase hover:text-accent-red transition-colors duration-75 leading-none" style={{ fontSize: 'clamp(56px, 14vw, 180px)', lineHeight: '0.82', letterSpacing: '-0.04em' }}>
+        {/* MASSIVE wordmark — edge to edge, ultra heavy */}
+        <div className="pt-2 lg:pt-3 pb-0 overflow-hidden">
+          <Link href="/" className="block font-display uppercase hover:text-accent-red transition-colors duration-75 leading-none" style={{ fontSize: 'clamp(60px, 16vw, 220px)', lineHeight: '0.88', letterSpacing: '-0.03em', fontWeight: 900, fontStretch: '110%' }}>
             LOWEND NYC
           </Link>
         </div>
 
-        {/* Nav bar with harsh border */}
-        <div className="flex justify-between items-center py-3 mt-2 border-t-2 border-b border-text-primary/10">
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 lg:gap-12">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`font-display uppercase text-sm lg:text-base tracking-[0.2em] font-bold transition-colors duration-75 ${
-                  pathname === link.href ? 'text-accent-red' : 'hover:text-accent-red'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+        {/* Nav bar — items spread across FULL width like the mockup */}
+        <div className="flex justify-between items-center py-2 border-t border-text-primary/10">
+          {/* Desktop Navigation — space-between full width */}
+          <div className="hidden md:flex items-center justify-between w-full">
+            <div className="flex items-center justify-between flex-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`font-display uppercase font-bold transition-colors duration-75 ${
+                    pathname === link.href ? 'text-accent-red' : 'hover:text-accent-red'
+                  }`}
+                  style={{ fontSize: 'clamp(18px, 2.5vw, 36px)', letterSpacing: '-0.01em' }}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+            <button className="ml-6 text-text-secondary hover:text-accent-red transition-colors">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
           </div>
-
-          {/* Search icon (desktop) */}
-          <button className="hidden md:block text-text-secondary hover:text-accent-red transition-colors">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </button>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-text-primary z-[60] relative"
+            className="md:hidden text-text-primary z-[60] relative ml-auto"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
           >
