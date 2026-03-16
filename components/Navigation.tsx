@@ -28,9 +28,22 @@ export default function Navigation() {
   return (
     <nav className="bg-page-bg sticky top-0 z-50">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
-        {/* MASSIVE wordmark — edge to edge, ultra heavy */}
+        {/* MASSIVE wordmark — edge to edge, ultra heavy, full width stretch */}
         <div className="pt-2 lg:pt-3 pb-0 overflow-hidden">
-          <Link href="/" className="block font-display uppercase hover:text-accent-red transition-colors duration-75 leading-none w-full" style={{ fontSize: 'clamp(60px, 16vw, 220px)', lineHeight: '0.9', letterSpacing: '0.05em', fontWeight: 700, display: 'block', width: '100%', textAlign: 'justify', textAlignLast: 'justify' }}>
+          <Link
+            href="/"
+            className="block font-display uppercase hover:text-accent-red transition-colors duration-75 leading-none w-full"
+            style={{
+              fontSize: 'clamp(60px, 16vw, 220px)',
+              lineHeight: '0.9',
+              letterSpacing: '0.02em',
+              fontWeight: 900,
+              display: 'block',
+              width: '100%',
+              textAlign: 'justify',
+              textAlignLast: 'justify',
+            }}
+          >
             LOWEND NYC
           </Link>
         </div>

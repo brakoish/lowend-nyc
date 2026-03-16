@@ -17,7 +17,7 @@ const config: Config = {
         'accent-red': '#FF2B2B',
       },
       fontFamily: {
-        'display': ['var(--font-oswald)', 'sans-serif'],
+        'display': ['var(--font-jost)', 'sans-serif'],
         'body': ['var(--font-inter)', 'sans-serif'],
         'mono': ['var(--font-jetbrains)', 'monospace'],
       },
