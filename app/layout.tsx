@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Anton, Inter, JetBrains_Mono } from "next/font/google";
+import { Oswald, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-const anton = Anton({
-  weight: '400',
+const oswald = Oswald({
   subsets: ["latin"],
-  variable: "--font-anton",
+  variable: "--font-oswald",
   display: "swap",
 });
 
@@ -41,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${anton.variable} ${inter.variable} ${jetbrainsMono.variable} font-body bg-page-bg text-text-primary antialiased`}
+        className={`${oswald.variable} ${inter.variable} ${jetbrainsMono.variable} font-body bg-page-bg text-text-primary antialiased`}
       >
         <Navigation />
         {children}
