@@ -102,12 +102,32 @@ ${draftContent}
 - [ ] Confirm genre classifications
 - [ ] Check links and URLs
 
+### Humanizer Check (MANDATORY)
+Run the draft through the humanizer analysis:
+\`\`\`bash
+cd ~/.openclaw/workspace-lowend-nyc/skills/humanizer
+node src/cli.js analyze -f [draft file]
+\`\`\`
+
+If score is above 40/100, rewrite flagged sections. Target: under 30/100.
+
+Key patterns to eliminate:
+- Tier 1 AI vocabulary: "delve", "tapestry", "vibrant", "crucial", "robust", "seamless", "comprehensive"
+- Filler: "In order to", "Due to the fact that", "It is worth noting"  
+- Significance inflation: "marking a pivotal moment", "reshaping the landscape"
+- Generic conclusions: "The future looks bright", "Exciting times"
+- Sycophantic tone, chatbot artifacts
+- Excessive boldface, em dashes, and rule-of-three patterns
+- Formulaic structure ("Despite challenges... continues to thrive")
+
 ### Style
 - [ ] Voice is first-person, opinionated, authoritative
-- [ ] No AI-sounding language (run through humanizer patterns)
+- [ ] Humanizer score under 30/100
 - [ ] Specific details, not generic descriptions
 - [ ] Strong opening hook
 - [ ] Clear verdict/opinion at the end
+- [ ] Sentence length varies (short punchy + longer flowing)
+- [ ] Has actual personality — not sterile or press-release tone
 
 ### SEO
 - [ ] Title under 60 characters
