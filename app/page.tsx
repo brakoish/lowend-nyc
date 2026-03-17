@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAllArticles, calculateReadingTime } from '@/lib/articles';
+import NewsletterForm from '@/components/NewsletterForm';
 
 export default function HomePage() {
   const articles = getAllArticles();
@@ -234,19 +235,9 @@ export default function HomePage() {
                 Get the latest on NYC&apos;s underground bass scene. New mixes, artist features, and event previews delivered weekly.
               </p>
             </div>
-            <form className="flex flex-col sm:flex-row gap-3 flex-1 lg:max-w-lg">
-              <input
-                type="email"
-                placeholder="ENTER YOUR EMAIL"
-                className="flex-1 px-4 py-3 bg-black/20 border-2 border-black/40 text-black placeholder:text-black/50 font-mono text-sm uppercase focus:outline-none focus:border-black transition-colors"
-              />
-              <button
-                type="submit"
-                className="px-6 py-3 bg-black text-[#FF2B2B] font-display font-bold uppercase tracking-wider hover:bg-black/80 transition-colors duration-75 whitespace-nowrap"
-              >
-                SUBSCRIBE
-              </button>
-            </form>
+            <div className="flex-1 lg:max-w-lg">
+              <NewsletterForm />
+            </div>
           </div>
         </div>
       </section>
