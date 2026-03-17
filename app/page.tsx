@@ -56,6 +56,116 @@ export default function HomePage() {
         </Link>
       </section>
 
+      {/* COMING UP — Next week's NYC events */}
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-8">
+        <div className="flex items-center gap-4 mb-6">
+          <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={{ fontSize: 'clamp(20px, 3vw, 32px)', fontWeight: 700 }}>COMING UP</h2>
+          <div className="flex-1 h-[1px] bg-accent-red/30" />
+          <span className="meta-text whitespace-nowrap">MAR 17-23</span>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+          {/* March 18 */}
+          <Link href="/articles/eli-escobar-boy-cordero-le-bain" className="group block overflow-hidden border border-[#222] hover:border-[#FF2B2B] transition-all duration-500 ease-out">
+            <div className="relative h-[140px] overflow-hidden">
+              <Image
+                src="/images/eli-escobar-lebain.png"
+                alt="Eli Escobar & Boy Cordero at Le Bain"
+                fill
+                className="object-cover transition-all duration-700 ease-out group-hover:scale-[1.08]"
+                unoptimized
+              />
+              <div className="absolute top-0 left-0">
+                <span className="red-tag">MAR 18</span>
+              </div>
+            </div>
+            <div className="p-3">
+              <p className="font-display text-accent-red uppercase text-xs font-bold tracking-wider mb-1 group-hover:text-[#FF5555] transition-colors duration-300">
+                ELI ESCOBAR
+              </p>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300 line-clamp-2" style={{ fontSize: 'clamp(13px, 1.2vw, 18px)' }}>
+                House Heat at Le Bain
+              </h3>
+              <div className="meta-text">Le Bain · House/Disco</div>
+            </div>
+          </Link>
+
+          {/* March 20 - Indira */}
+          <Link href="/articles/indira-paganotto-knockdown-center" className="group block overflow-hidden border border-[#222] hover:border-[#FF2B2B] transition-all duration-500 ease-out">
+            <div className="relative h-[140px] overflow-hidden">
+              <Image
+                src="/images/indira-paganotto.png"
+                alt="Indira Paganotto at Knockdown Center"
+                fill
+                className="object-cover transition-all duration-700 ease-out group-hover:scale-[1.08]"
+                unoptimized
+              />
+              <div className="absolute top-0 left-0">
+                <span className="red-tag">MAR 20</span>
+              </div>
+            </div>
+            <div className="p-3">
+              <p className="font-display text-accent-red uppercase text-xs font-bold tracking-wider mb-1 group-hover:text-[#FF5555] transition-colors duration-300">
+                INDIRA PAGANOTTO
+              </p>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300 line-clamp-2" style={{ fontSize: 'clamp(13px, 1.2vw, 18px)' }}>
+                Acid Mayhem in Queens
+              </h3>
+              <div className="meta-text">Knockdown Center · Acid Techno</div>
+            </div>
+          </Link>
+
+          {/* March 20 - Prospa */}
+          <Link href="/articles/teksupport-prophecy-prospa-josh-baker" className="group block overflow-hidden border border-[#222] hover:border-[#FF2B2B] transition-all duration-500 ease-out">
+            <div className="relative h-[140px] overflow-hidden">
+              <Image
+                src="/images/prospa-brooklyn.png"
+                alt="Prospa at Brooklyn Storehouse"
+                fill
+                className="object-cover transition-all duration-700 ease-out group-hover:scale-[1.08]"
+                unoptimized
+              />
+              <div className="absolute top-0 left-0">
+                <span className="red-tag">MAR 20</span>
+              </div>
+            </div>
+            <div className="p-3">
+              <p className="font-display text-accent-red uppercase text-xs font-bold tracking-wider mb-1 group-hover:text-[#FF5555] transition-colors duration-300">
+                PROSPA
+              </p>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300 line-clamp-2" style={{ fontSize: 'clamp(13px, 1.2vw, 18px)' }}>
+                Teksupport x Prophecy
+              </h3>
+              <div className="meta-text">Brooklyn Storehouse · Progressive</div>
+            </div>
+          </Link>
+
+          {/* March 21 - Carl Cox */}
+          <Link href="/articles/carl-cox-nicole-moudaber-ilario-alicante-brooklyn-storehouse" className="group block overflow-hidden border border-[#222] hover:border-[#FF2B2B] transition-all duration-500 ease-out">
+            <div className="relative h-[140px] overflow-hidden">
+              <Image
+                src="/images/carl-cox-brooklyn.png"
+                alt="Carl Cox at Brooklyn Storehouse"
+                fill
+                className="object-cover transition-all duration-700 ease-out group-hover:scale-[1.08]"
+                unoptimized
+              />
+              <div className="absolute top-0 left-0">
+                <span className="red-tag">MAR 21</span>
+              </div>
+            </div>
+            <div className="p-3">
+              <p className="font-display text-accent-red uppercase text-xs font-bold tracking-wider mb-1 group-hover:text-[#FF5555] transition-colors duration-300">
+                CARL COX
+              </p>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300 line-clamp-2" style={{ fontSize: 'clamp(13px, 1.2vw, 18px)' }}>
+                Techno Royalty Returns
+              </h3>
+              <div className="meta-text">Brooklyn Storehouse · Techno</div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* GRID BELOW HERO — Dense 3-column layout */}
       <section className="max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
