@@ -1,0 +1,150 @@
+[
+  {
+    "id": "sample-brooklyn-mirage-2026-03-22",
+    "title": "Charlotte de Witte at Brooklyn Mirage",
+    "date": "2026-03-22",
+    "time": "10:00 PM",
+    "venue": "Brooklyn Mirage",
+    "venue_city": "Brooklyn",
+    "artists": [
+      "Charlotte de Witte",
+      "Enrico Sangiuliano"
+    ],
+    "headliner": "Charlotte de Witte",
+    "genre": [
+      "electronic"
+    ],
+    "description": "",
+    "ticket_url": "",
+    "price": "$45-75",
+    "age": "21+",
+    "days_until": 4,
+    "status": "soon",
+    "scraped_at": "2026-03-17T06:16:49.923486",
+    "assigned_to": "",
+    "coverage_type": "",
+    "draft_due": "",
+    "publish_date": "",
+    "priority": "high",
+    "notes": ""
+  },
+  {
+    "id": "sample-knockdown-center-2026-03-29",
+    "title": "Four Tet at Knockdown Center",
+    "date": "2026-03-29",
+    "time": "10:00 PM",
+    "venue": "Knockdown Center",
+    "venue_city": "Queens",
+    "artists": [
+      "Four Tet",
+      "Floating Points"
+    ],
+    "headliner": "Four Tet",
+    "genre": [
+      "electronic"
+    ],
+    "description": "",
+    "ticket_url": "",
+    "price": "$40-60",
+    "age": "21+",
+    "days_until": 11,
+    "status": "upcoming",
+    "scraped_at": "2026-03-17T06:16:49.923486",
+    "assigned_to": "",
+    "coverage_type": "",
+    "draft_due": "",
+    "publish_date": "",
+    "priority": "high",
+    "notes": ""
+  },
+  {
+    "id": "sample-basement-2026-03-20",
+    "title": "Bass House Night at Basement",
+    "date": "2026-03-20",
+    "time": "10:00 PM",
+    "venue": "Basement",
+    "venue_city": "Brooklyn",
+    "artists": [
+      "AC Slater",
+      "Shift K3Y"
+    ],
+    "headliner": "AC Slater",
+    "genre": [
+      "house",
+      "bass"
+    ],
+    "description": "",
+    "ticket_url": "",
+    "price": "$25-40",
+    "age": "21+",
+    "days_until": 2,
+    "status": "soon",
+    "scraped_at": "2026-03-17T06:16:49.923486",
+    "assigned_to": "",
+    "coverage_type": "",
+    "draft_due": "",
+    "publish_date": "",
+    "priority": "high",
+    "notes": ""
+  },
+  {
+    "id": "sample-nowadays-2026-03-25",
+    "title": "Drum & Bass Sessions at Nowadays",
+    "date": "2026-03-25",
+    "time": "10:00 PM",
+    "venue": "Nowadays",
+    "venue_city": "Queens",
+    "artists": [
+      "Andy C",
+      "Friction",
+      "Sub Focus"
+    ],
+    "headliner": "Andy C",
+    "genre": [
+      "bass",
+      "dnb"
+    ],
+    "description": "",
+    "ticket_url": "",
+    "price": "$30-50",
+    "age": "21+",
+    "days_until": 7,
+    "status": "upcoming",
+    "scraped_at": "2026-03-17T06:16:49.923486",
+    "assigned_to": "",
+    "coverage_type": "",
+    "draft_due": "",
+    "publish_date": "",
+    "priority": "high",
+    "notes": ""
+  },
+  {
+    "id": "sample-elsewhere-2026-04-01",
+    "title": "Deep House Showcase at Elsewhere",
+    "date": "2026-04-01",
+    "time": "10:00 PM",
+    "venue": "Elsewhere",
+    "venue_city": "Brooklyn",
+    "artists": [
+      "Moodymann",
+      "Marcellus Pittman"
+    ],
+    "headliner": "Moodymann",
+    "genre": [
+      "house"
+    ],
+    "description": "",
+    "ticket_url": "",
+    "price": "$35-55",
+    "age": "21+",
+    "days_until": 14,
+    "status": "upcoming",
+    "scraped_at": "2026-03-17T06:16:49.923486",
+    "assigned_to": "",
+    "coverage_type": "",
+    "draft_due": "",
+    "publish_date": "",
+    "priority": "normal",
+    "notes": ""
+  }
+]
