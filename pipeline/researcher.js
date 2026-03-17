@@ -1,14 +1,46 @@
 /**
  * researcher.js — Research agent for LOWEND NYC pipeline
  * 
- * Gathers facts about artists, venues, and events before the writer gets involved.
+ * Gathers facts about artists, venues, and events.
  * Output: structured research brief with verified data and sources.
+ * 
+ * MODEL RECOMMENDATIONS:
+ *   Researcher: gemini-3-flash (fast, cheap, good at web search + extraction)
+ *   Writer: kimi or sonnet (creative, strong voice, long-form)
+ *   Editor: haiku (fast, cheap, good at proofreading + fact-checking)
  */
 
 const fs = require('fs');
 const path = require('path');
 
 const BRIEFS_DIR = path.join(__dirname, 'briefs');
+
+/**
+ * Model recommendations per pipeline step
+ * Optimized for cost, speed, and quality per task
+ */
+const MODEL_CONFIG = {
+  researcher: {
+    model: 'gemini-3-flash',
+    alias: 'google/gemini-3-flash-preview',
+    reason: 'Fast, cheap, excellent at web search synthesis and data extraction. Low token cost for high-volume fact gathering.',
+  },
+  writer: {
+    model: 'kimi',
+    alias: 'moonshot/kimi-k2.5',
+    reason: 'Strong creative writing, good voice/personality, handles long-form well. Cost-effective for draft generation.',
+  },
+  editor: {
+    model: 'haiku',
+    alias: 'anthropic/claude-3-5-haiku-20241022',
+    reason: 'Fast, cheap, precise. Excellent for fact-checking, grammar, and style consistency. Low token usage for review tasks.',
+  },
+  // Alternative configs for different quality/cost tradeoffs
+  alternatives: {
+    writerPremium: { model: 'sonnet', alias: 'anthropic/claude-sonnet-4-20250514', reason: 'Higher quality writing, better nuance' },
+    researcherDeep: { model: 'sonnet', alias: 'anthropic/claude-sonnet-4-20250514', reason: 'Better reasoning for complex research' },
+  },
+};
 
 /**
  * Generate a research task based on topic and template type
@@ -21,7 +53,7 @@ function generateResearchTask(row) {
     'scene-analysis': generateSceneResearchTask,
     'list-format': generateListResearchTask,
     'hot-take': generateHotTakeResearchTask,
-    'editorial': generateEditorialResearchTask,
+    'editorial': generateHotTakeResearchTask,
     'event-recap': generateEventResearchTask,
   };
 
@@ -30,79 +62,82 @@ function generateResearchTask(row) {
 }
 
 function generateArtistResearchTask(row) {
-  // Extract artist name from topic
   const artistName = extractArtistName(row.topic);
 
-  return `
-# Research Task — LOWEND NYC
+  return `# Research Task — LOWEND NYC
+**Model**: ${MODEL_CONFIG.researcher.model} (${MODEL_CONFIG.researcher.reason})
 
-## Subject
-**${row.topic}**
+## Subject: ${row.topic}
 Angle: ${row.angle || 'Artist profile'}
+Artist: ${artistName}
 
-## Artist to Research: ${artistName}
+## INTERVIEWS & QUOTES (Priority)
 
-### Required Data Points
+Search for and extract quotes from:
+- [ ] YouTube interviews (search: "${artistName} interview")
+- [ ] Podcast appearances (search: "${artistName} podcast DJ")
+- [ ] Magazine/blog interviews (Mixmag, DJ Mag, RA, FADER, Pitchfork)
+- [ ] Social media statements (Instagram captions, Twitter threads)
+- [ ] Reddit AMAs or fan Q&As
+- [ ] Boiler Room / HÖR Berlin chat segments
 
-**Identity**
-- [ ] Full/real name (if publicly known)
+For each interview found:
+- Source name and URL
+- Date published
+- 2-3 best quotes (with context)
+- Key topics discussed
+
+## IDENTITY
+- [ ] Full/real name (if public)
 - [ ] Origin city/country
 - [ ] Current base
-- [ ] Active since (year)
-- [ ] Age (if publicly known)
-- [ ] Pronouns (if stated publicly)
+- [ ] Active since
+- [ ] Pronouns (if stated)
 
-**Music**
-- [ ] Primary genre(s) — be specific (not just "techno" — what kind?)
-- [ ] Label affiliations (current and past)
-- [ ] Notable releases (last 2 years minimum, with dates)
-- [ ] Most streamed/popular tracks (with play counts if available)
-- [ ] Production style — what makes their sound distinct?
-- [ ] Any aliases or side projects
+## MUSIC
+- [ ] Primary genre(s) — be specific (sub-genre level)
+- [ ] Label affiliations (current + past)
+- [ ] Notable releases (last 2 years, with dates and labels)
+- [ ] Most streamed tracks (Spotify play counts)
+- [ ] Production style — what makes them distinct?
+- [ ] Aliases or side projects
 
-**Career**
-- [ ] Breakthrough moment — what put them on the map?
-- [ ] Major festival appearances (list with years)
-- [ ] Residencies (current or past)
-- [ ] Notable collaborations
-- [ ] Awards or chart positions
+## CAREER
+- [ ] Breakthrough moment
+- [ ] Festival appearances (with years)
+- [ ] Residencies
+- [ ] Collaborations
 - [ ] Any controversy or notable public moments
 
-**NYC Connections**
+## NYC CONNECTIONS
 - [ ] Previous NYC shows (venues, dates, promoters)
 - [ ] Upcoming NYC dates
-- [ ] Any NYC-specific relationships (labels, collectives, venues)
+- [ ] NYC-specific relationships (labels, collectives)
 
-**Social & Following**
-- [ ] Instagram followers + handle
-- [ ] SoundCloud followers + handle
-- [ ] Spotify monthly listeners
-- [ ] Beatport chart positions
-- [ ] Resident Advisor profile URL
-- [ ] Other relevant platforms
+## SOCIAL & FOLLOWING
+- [ ] Instagram: @handle (follower count)
+- [ ] SoundCloud: handle (follower count)
+- [ ] Spotify: monthly listeners
+- [ ] Beatport: chart positions
+- [ ] RA profile URL
 
-**Quotes**
-- [ ] Find 2-3 notable quotes from interviews, podcasts, or social media
-- [ ] Source each quote with link
+## CONTEXT
+- [ ] Current genre landscape — who are their peers?
+- [ ] Trajectory — rising, established, evolving?
+- [ ] Recent press coverage
 
-**Context**
-- [ ] What's happening in their genre right now?
-- [ ] Who are their peers/contemporaries?
-- [ ] What's their current trajectory — rising, peaking, evolving?
-
-### Sources to Check
+## Sources to Check
 1. Resident Advisor (ra.co/dj/${artistName.toLowerCase().replace(/\s+/g, '')})
 2. Spotify artist page
-3. SoundCloud
-4. Beatport
-5. Instagram
-6. Recent interviews (YouTube, podcasts, press)
-7. Bandcamp (if applicable)
-8. Discogs
+3. YouTube (interviews, sets, Boiler Room)
+4. SoundCloud
+5. Beatport
+6. Instagram
+7. Mixmag, DJ Mag, FADER, Pitchfork interviews
+8. Bandcamp
+9. Discogs
 
-### Output Format
-
-Return a structured research brief in this format:
+## Output Format
 
 \`\`\`markdown
 # Research Brief: ${artistName}
@@ -117,247 +152,205 @@ Return a structured research brief in this format:
 - **Spotify Monthly Listeners**: 
 - **Instagram**: @handle (X followers)
 
+## Interviews Found
+### [Source Name] — [Date]
+URL: [link]
+> "Quote 1" 
+> "Quote 2"
+Topics: [what they discussed]
+
 ## Discography Highlights
-1. "Track Name" (Year) — Label — [context]
-2. "Track Name" (Year) — Label — [context]
-3. "Track Name" (Year) — Label — [context]
+1. "Track" (Year) — Label — [context]
 
 ## Career Timeline
 - YYYY: [milestone]
-- YYYY: [milestone]
-- YYYY: [milestone]
 
 ## NYC History
-- [Date]: [Venue] — [Promoter] — [context]
-
-## Notable Quotes
-> "Quote" — Source, Date
+- [Date]: [Venue] — [Promoter]
 
 ## Current Moment
-[What they're doing right now — touring, releasing, etc.]
+[What they're doing now]
 
 ## Scene Context
-[Where they fit in the broader landscape]
+[Where they fit]
 
 ## Sources
 - [URL 1]
-- [URL 2]
 \`\`\`
 
-### Important
-- Only include VERIFIED facts with sources
-- Mark anything uncertain with [UNVERIFIED]
-- Do NOT fabricate quotes, stats, or dates
-- If data isn't available, say so — don't guess
+**RULES**:
+- Only VERIFIED facts with sources
+- Mark uncertain data with [UNVERIFIED]
+- Do NOT fabricate quotes
+- If no interviews found, note that explicitly
+- Keep output under 2000 words — concise facts, not prose
 `;
 }
 
 function generateEventResearchTask(row) {
-  return `
-# Research Task — LOWEND NYC
+  return `# Research Task — LOWEND NYC
+**Model**: ${MODEL_CONFIG.researcher.model}
 
-## Subject
-**${row.topic}**
-Angle: ${row.angle || 'Event preview/coverage'}
+## Subject: ${row.topic}
+Angle: ${row.angle || 'Event coverage'}
 
-### Required Data Points
-
-**Event Details**
-- [ ] Full event name
-- [ ] Date and time
-- [ ] Venue name and address
+## EVENT DETAILS
+- [ ] Full event name, date, time
+- [ ] Venue name, address, capacity
 - [ ] Promoter/presenter
 - [ ] Ticket price and link
-- [ ] Age restriction
-- [ ] Lineup (full, with set times if available)
+- [ ] Full lineup with set times
 
-**Headliner Research**
-- [ ] Bio summary (origin, genre, notable releases)
-- [ ] Recent touring activity
-- [ ] Previous NYC appearances
-- [ ] Current releases or projects
-- [ ] Social handles and follower counts
+## HEADLINER RESEARCH
+- [ ] Bio (origin, genre, notable releases)
+- [ ] Recent interviews or quotes (search YouTube, podcasts, press)
+- [ ] Previous NYC shows
+- [ ] Current releases/projects
+- [ ] Social handles + follower counts
 
-**Support Acts**
+## SUPPORT ACTS
 - [ ] Brief bio for each
 - [ ] Why they fit this bill
 
-**Venue Context**
-- [ ] Venue capacity
-- [ ] Sound system details
-- [ ] Neighborhood and transit options
-- [ ] Recent notable shows at this venue
+## VENUE + PROMOTER CONTEXT
+- [ ] Sound system, room layout
+- [ ] Promoter's track record
+- [ ] Recent notable shows here
 
-**Promoter Context**
-- [ ] Who's behind this event?
-- [ ] Their track record — other notable events
-- [ ] Their booking philosophy
+## Sources: Event page, RA, artist socials, venue site, YouTube interviews
 
-### Sources to Check
-1. Event page (RA, DICE, Eventbrite, venue website)
-2. Artist socials for tour announcements
-3. Promoter socials
-4. Previous coverage of this venue/promoter
-
-### Output Format
-Return structured research brief with all verified facts and source URLs.
-Mark anything uncertain with [UNVERIFIED].
+**Output**: Structured brief under 1500 words. Verified facts + sources only.
 `;
 }
 
 function generateVenueResearchTask(row) {
-  return `
-# Research Task — LOWEND NYC
+  return `# Research Task — LOWEND NYC
+**Model**: ${MODEL_CONFIG.researcher.model}
 
-## Subject
-**${row.topic}**
+## Subject: ${row.topic}
 Angle: ${row.angle || 'Venue spotlight'}
 
-### Required Data Points
+## VENUE IDENTITY
+- [ ] Full name, address, neighborhood
+- [ ] Year opened, capacity
+- [ ] Owner/operator
+- [ ] Sound system details
 
-**Venue Identity**
-- [ ] Full name and address
-- [ ] Neighborhood and borough
-- [ ] Year opened
-- [ ] Capacity (main room + any additional rooms)
-- [ ] Owner/operator names
-- [ ] Parent company (if any)
+## INTERVIEWS & QUOTES
+- [ ] Owner/promoter interviews (YouTube, press, podcasts)
+- [ ] Artist quotes about this venue
+- [ ] Community/press coverage
 
-**Physical Space**
-- [ ] Sound system (brand, configuration)
-- [ ] Room layout (single room, multi-room, outdoor?)
-- [ ] Notable design/architectural features
-- [ ] Recent renovations or changes
-
-**Programming**
-- [ ] Booking philosophy — what genres, what level of artist?
+## PROGRAMMING
+- [ ] Booking philosophy
 - [ ] Regular nights/residencies
-- [ ] Notable past headliners (last 2 years)
-- [ ] Upcoming calendar highlights
+- [ ] Notable headliners (last 2 years)
 - [ ] Associated promoters
 
-**History**
+## HISTORY
 - [ ] What was the space before?
-- [ ] Key milestones in the venue's history
-- [ ] Any controversies (noise complaints, closures, incidents)
-- [ ] Community response — how is it perceived?
+- [ ] Key milestones
+- [ ] Controversies or challenges
 
-**Practical Info**
-- [ ] Transit options
-- [ ] Cover charge range
-- [ ] Crowd description
-- [ ] Drink prices (approximate)
-- [ ] Door policy
+## PRACTICAL
+- [ ] Transit, cover charge range, crowd vibe
 
-### Sources to Check
-1. Venue website
-2. RA venue page
-3. Google Maps reviews
-4. Local press coverage
-5. Social media
+## Sources: Venue website, RA, Google reviews, local press, YouTube, social media
 
-### Output Format
-Return structured research brief with verified facts and sources.
+**Output**: Structured brief under 1500 words.
 `;
 }
 
 function generateSceneResearchTask(row) {
-  return `
-# Research Task — LOWEND NYC
+  return `# Research Task — LOWEND NYC
+**Model**: ${MODEL_CONFIG.researcher.model}
 
-## Subject
-**${row.topic}**
+## Subject: ${row.topic}
 Angle: ${row.angle || 'Scene analysis'}
 
-### Required Data Points
-- [ ] Key statistics (venue openings/closings, event frequency, ticket prices)
-- [ ] Notable quotes from promoters, DJs, venue owners
+## DATA POINTS
+- [ ] Key statistics (venue activity, ticket prices, event frequency)
+- [ ] Quotes from promoters, DJs, venue owners (search interviews)
 - [ ] Specific examples supporting the thesis
-- [ ] Counter-examples or opposing viewpoints
-- [ ] Historical context — how did we get here?
-- [ ] Comparable situations in other cities
+- [ ] Counter-examples
+- [ ] Historical context
 
-### Sources to Check
-1. RA editorial
-2. Local press (Time Out NY, Brooklyn Paper, etc.)
-3. Social media discussions
-4. Industry publications (DJ Mag, Mixmag, etc.)
+## INTERVIEWS
+- [ ] Search for relevant interviews on this topic
+- [ ] Industry figures who've commented publicly
+- [ ] Social media discussions
 
-### Output Format
-Return structured research brief with data points, quotes, and sources.
+## Sources: RA editorial, local press, industry publications, social media, YouTube
+
+**Output**: Structured brief under 1500 words. Data + quotes + sources.
 `;
 }
 
 function generateListResearchTask(row) {
-  return `
-# Research Task — LOWEND NYC
+  return `# Research Task — LOWEND NYC
+**Model**: ${MODEL_CONFIG.researcher.model}
 
-## Subject
-**${row.topic}**
+## Subject: ${row.topic}
 Angle: ${row.angle || 'List/roundup'}
 
-### Required Data Points
-- [ ] Research each item thoroughly — release date, label, context
-- [ ] Verify all names, spellings, dates
-- [ ] Find streaming/purchase links
-- [ ] Get play counts or chart positions where relevant
-- [ ] Identify what connects the items thematically
+## PER ITEM
+- [ ] Full details (release date, label, artist, streaming links)
+- [ ] Play counts or chart positions
+- [ ] Context — why this matters
 
-### Output Format
-Return structured research brief with verified data for each list item.
+## CONNECTIONS
+- [ ] What ties these items together?
+- [ ] Any interviews or quotes about these items?
+
+**Output**: Structured brief, verified data per item. Under 1500 words.
 `;
 }
 
 function generateHotTakeResearchTask(row) {
-  return `
-# Research Task — LOWEND NYC
+  return `# Research Task — LOWEND NYC
+**Model**: ${MODEL_CONFIG.researcher.model}
 
-## Subject
-**${row.topic}**
-Angle: ${row.angle || 'Opinion/debate piece'}
+## Subject: ${row.topic}
+Angle: ${row.angle || 'Opinion/debate'}
 
-### Required Data Points
-- [ ] Facts supporting the main argument
-- [ ] Facts supporting the counter-argument
-- [ ] Quotes from relevant figures on both sides
-- [ ] Specific examples and data points
-- [ ] Historical precedent or comparable situations
-- [ ] Financial data if relevant (ticket prices, revenue, ownership)
+## EVIDENCE FOR THE ARGUMENT
+- [ ] Facts, data points, examples
+- [ ] Quotes from people who agree
 
-### Sources to Check
-1. Public records, press releases
-2. Industry publications
-3. Social media statements from involved parties
-4. Local press coverage
-5. Community discussions (Reddit, forums)
+## EVIDENCE AGAINST
+- [ ] Counter-arguments with evidence
+- [ ] Quotes from people who disagree
 
-### Output Format
-Return structured research brief with evidence for BOTH sides of the argument.
-Mark opinion vs fact clearly.
+## INTERVIEWS & PUBLIC STATEMENTS
+- [ ] Search for relevant interviews, press releases
+- [ ] Social media statements from involved parties
+- [ ] Financial data if relevant
+
+## CONTEXT
+- [ ] Historical precedent
+- [ ] Comparable situations in other cities/scenes
+
+## Sources: Press, social media, public records, industry publications
+
+**Output**: Structured brief with evidence for BOTH sides. Under 1500 words.
 `;
 }
 
-function generateEditorialResearchTask(row) {
-  return generateHotTakeResearchTask(row);
-}
-
 function generateGenericResearchTask(row) {
-  return `
-# Research Task — LOWEND NYC
+  return `# Research Task — LOWEND NYC
+**Model**: ${MODEL_CONFIG.researcher.model}
 
-## Subject
-**${row.topic}**
-Angle: ${row.angle || 'General coverage'}
+## Subject: ${row.topic}
+Angle: ${row.angle || 'General'}
 
-### Required Data Points
-- [ ] All relevant facts, names, dates, locations
-- [ ] Social media handles and follower counts
-- [ ] Notable quotes from interviews or public statements
-- [ ] Context within the NYC electronic music scene
+## REQUIRED
+- [ ] All relevant facts, names, dates
+- [ ] Interviews or quotes (YouTube, podcasts, press)
+- [ ] Social handles + follower counts
+- [ ] NYC scene context
 - [ ] Source URLs for all claims
 
-### Output Format
-Return structured research brief with verified facts and sources.
+**Output**: Structured brief under 1500 words.
 `;
 }
 
@@ -365,14 +358,14 @@ Return structured research brief with verified facts and sources.
  * Extract artist name from topic string
  */
 function extractArtistName(topic) {
-  // Common patterns: "Artist Name: subtitle", "Artist Name Is...", "Artist Name at Venue"
   const patterns = [
-    /^([^:]+?):/,           // "Artist: ..."
-    /^(.+?)\s+Is\s/i,      // "Artist Is ..."
-    /^(.+?)\s+at\s/i,      // "Artist at ..."
-    /^(.+?)\s+Brought/i,   // "Artist Brought ..."
-    /^(.+?)\s+Turns/i,     // "Artist Turns ..."
-    /^(.+?)['']s\s/,       // "Artist's ..."
+    /^([^:]+?):/,
+    /^(.+?)\s+Is\s/i,
+    /^(.+?)\s+at\s/i,
+    /^(.+?)\s+Brought/i,
+    /^(.+?)\s+Turns/i,
+    /^(.+?)['']s\s/,
+    /^(.+?)\s+and\s+the\s/i,
   ];
 
   for (const pattern of patterns) {
@@ -380,13 +373,9 @@ function extractArtistName(topic) {
     if (match) return match[1].trim();
   }
 
-  // Fallback: first 3 words
   return topic.split(' ').slice(0, 3).join(' ');
 }
 
-/**
- * Save research brief to file
- */
 function saveResearchBrief(slug, content) {
   if (!fs.existsSync(BRIEFS_DIR)) {
     fs.mkdirSync(BRIEFS_DIR, { recursive: true });
@@ -397,9 +386,6 @@ function saveResearchBrief(slug, content) {
   return filePath;
 }
 
-/**
- * Read research brief
- */
 function readResearchBrief(slug) {
   const filePath = path.join(BRIEFS_DIR, `${slug}-research.md`);
   if (fs.existsSync(filePath)) {
@@ -413,4 +399,5 @@ module.exports = {
   saveResearchBrief,
   readResearchBrief,
   extractArtistName,
+  MODEL_CONFIG,
 };
