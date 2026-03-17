@@ -24,6 +24,7 @@ const { SheetsClient, STATUS } = require('./sheets');
 const { GitHubClient } = require('./github');
 const { Notifier } = require('./notify');
 const { generateBrief, generateEditBrief, saveDraft, readDraft } = require('./agents');
+const { generateResearchTask, saveResearchBrief, readResearchBrief } = require('./researcher');
 const fs = require('fs');
 const path = require('path');
 
@@ -96,6 +97,8 @@ async function check() {
   const stats = {
     ideas: 0,
     approved: 0,
+    researching: 0,
+    researchDone: 0,
     writing: 0,
     editing: 0,
     pendingApproval: 0,
@@ -107,6 +110,8 @@ async function check() {
     switch (row.status) {
       case STATUS.IDEA: stats.ideas++; break;
       case STATUS.APPROVED: stats.approved++; break;
+      case STATUS.RESEARCHING: stats.researching++; break;
+      case STATUS.RESEARCH_DONE: stats.researchDone++; break;
       case STATUS.WRITING: stats.writing++; break;
       case STATUS.EDITING: stats.editing++; break;
       case STATUS.PENDING_APPROVAL: stats.pendingApproval++; break;
@@ -149,37 +154,63 @@ async function processTopics() {
     return;
   }
 
-  console.log('\n⚙️  Processing approved topics...');
+  console.log('\n⚙️  Processing pipeline...');
 
-  // Get approved topics (ready for writing)
+  // Ensure briefs directory exists
+  const briefsDir = path.join(__dirname, 'briefs');
+  if (!fs.existsSync(briefsDir)) {
+    fs.mkdirSync(briefsDir, { recursive: true });
+  }
+
+  // ─── Step 1: APPROVED → RESEARCHING ───
   const approved = await sheets.getRowsByStatus(STATUS.APPROVED);
 
   for (const row of approved) {
-    console.log(`\n  Processing: "${row.topic}"`);
+    console.log(`\n  🔬 Researching: "${row.topic}"`);
 
-    // Generate writing brief
+    // Generate research task
+    const researchTask = generateResearchTask(row);
+    const taskPath = saveResearchBrief(row.slug, researchTask);
+    console.log(`    Research task saved: ${taskPath}`);
+
+    // Update status
+    await sheets.updateStatus(row.rowNumber, STATUS.RESEARCHING);
+
+    // Notify
+    await notify.topicApproved(row.topic, 'researcher');
+
+    console.log(`    Status → RESEARCHING`);
+    console.log(`    ⚡ Research task ready — researcher agent will gather facts`);
+  }
+
+  // ─── Step 2: RESEARCH_DONE → WRITING ───
+  const researched = await sheets.getRowsByStatus(STATUS.RESEARCH_DONE);
+
+  for (const row of researched) {
+    console.log(`\n  ✍️  Writing: "${row.topic}"`);
+
+    // Read the completed research brief
+    const researchBrief = readResearchBrief(row.slug);
+
+    // Generate writing brief (includes template + research)
     const brief = generateBrief(row);
-    const briefPath = path.join(__dirname, '..', 'pipeline', 'briefs', `${row.slug}-brief.md`);
     
-    // Ensure briefs directory exists
-    const briefsDir = path.join(__dirname, 'briefs');
-    if (!fs.existsSync(briefsDir)) {
-      fs.mkdirSync(briefsDir, { recursive: true });
+    // Combine writing brief with research findings
+    let fullBrief = brief;
+    if (researchBrief) {
+      fullBrief += `\n\n---\n\n# RESEARCH FINDINGS\n\nThe following research has been gathered and verified. Use these facts in your article.\n\n${researchBrief}`;
     }
-    
-    fs.writeFileSync(briefPath, brief, 'utf-8');
-    console.log(`    Brief saved: ${briefPath}`);
+
+    const briefPath = path.join(briefsDir, `${row.slug}-writing-brief.md`);
+    fs.writeFileSync(briefPath, fullBrief, 'utf-8');
+    console.log(`    Writing brief saved: ${briefPath}`);
 
     // Update status
     await sheets.updateStatus(row.rowNumber, STATUS.WRITING);
     await sheets.setWriter(row.rowNumber, 'lowend-nyc-writer');
 
-    // Notify
-    await notify.topicApproved(row.topic, 'lowend-nyc-writer');
-
     console.log(`    Status → WRITING`);
-    console.log(`    ⚡ Brief ready for writer agent`);
-    console.log(`    To write the draft, run: node orchestrator.js write ${row.slug}`);
+    console.log(`    ⚡ Writer brief ready with research — writer agent will draft article`);
   }
 
   // Get drafts ready for editing
