@@ -18,7 +18,7 @@ export default function HomePage() {
               src={featuredArticle.image}
               alt={featuredArticle.title}
               fill
-              className="object-cover article-image group-hover:scale-105 transition-transform duration-500"
+              className="object-cover article-image transition-transform duration-700 ease-out group-hover:scale-[1.03]"
               unoptimized
               priority
             />
@@ -33,12 +33,12 @@ export default function HomePage() {
             {/* Content overlaid at bottom */}
             <div className="absolute bottom-0 left-0 right-0 p-4 sm:px-6 lg:px-12 pb-6">
               {/* Red artist name */}
-              <p className="font-display text-accent-red uppercase font-bold mb-2" style={{ fontSize: 'clamp(14px, 2vw, 24px)' }}>
+              <p className="font-display text-accent-red uppercase font-bold mb-2 transition-colors duration-300 group-hover:text-[#FF5555]" style={{ fontSize: 'clamp(14px, 2vw, 24px)' }}>
                 {featuredArticle.artist.name === 'LOWEND Editorial' ? 'EDITORIAL' : featuredArticle.artist.name}
               </p>
               {/* Massive headline */}
               <h1 
-                className="font-display uppercase leading-[0.95] text-white mb-4"
+                className="font-display uppercase leading-[0.95] text-white mb-4 transition-colors duration-300 group-hover:text-[#FF2B2B]"
                 style={{ fontSize: 'clamp(28px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.02em' }}
               >
                 {featuredArticle.title}
@@ -63,7 +63,7 @@ export default function HomePage() {
             <Link
               key={article.slug}
               href={`/articles/${article.slug}`}
-              className={`group block overflow-hidden ${index === 2 ? 'bg-[#FF2B2B]' : 'border border-[#222] hover:border-[#FF2B2B]'} transition-colors`}
+              className={`group block overflow-hidden ${index === 2 ? 'bg-[#FF2B2B]' : 'border border-[#222] hover:border-[#FF2B2B]'} transition-all duration-500 ease-out`}
             >
               {/* Image */}
               <div className="relative h-[200px] overflow-hidden">
@@ -71,17 +71,17 @@ export default function HomePage() {
                   src={article.image}
                   alt={article.title}
                   fill
-                  className="object-cover article-image group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover article-image transition-all duration-700 ease-out group-hover:scale-[1.08] group-hover:grayscale-[30%]"
                   unoptimized
                 />
               </div>
               {/* Content */}
               <div className={`p-3 ${index === 2 ? 'text-black' : ''}`}>
-                <p className={`font-display uppercase font-bold text-xs mb-1 ${index === 2 ? 'text-black/70' : 'text-accent-red'}`}>
+                <p className={`font-display uppercase font-bold text-xs mb-1 ${index === 2 ? 'text-black/70 group-hover:text-black' : 'text-accent-red group-hover:text-[#FF5555]'} transition-colors duration-300`}>
                   {article.artist.name === 'LOWEND Editorial' ? 'EDITORIAL' : article.artist.name}
                 </p>
                 <h3 
-                  className="font-display font-bold uppercase leading-tight mb-2 line-clamp-2"
+                  className={`font-display font-bold uppercase leading-tight mb-2 line-clamp-2 ${index === 2 ? 'group-hover:text-black/80' : 'group-hover:text-accent-red'} transition-colors duration-300`}
                   style={{ fontSize: 'clamp(14px, 1.5vw, 22px)' }}
                 >
                   {article.title}
@@ -153,14 +153,14 @@ export default function HomePage() {
             <Link
               key={article.slug}
               href={`/articles/${article.slug}`}
-              className="group block overflow-hidden border border-[#222] hover:border-[#FF2B2B] transition-colors"
+              className="group block overflow-hidden border border-[#222] hover:border-[#FF2B2B] transition-all duration-500 ease-out"
             >
               <div className="relative h-[200px] overflow-hidden">
                 <Image
                   src={article.image}
                   alt={article.title}
                   fill
-                  className="object-cover article-image group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover article-image transition-all duration-700 ease-out group-hover:scale-[1.08] group-hover:grayscale-[30%]"
                   unoptimized
                 />
                 <div className="absolute top-0 left-0 flex">
@@ -168,10 +168,10 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="p-3">
-                <p className="font-display text-accent-red uppercase text-xs font-bold tracking-wider mb-1">
+                <p className="font-display text-accent-red uppercase text-xs font-bold tracking-wider mb-1 group-hover:text-[#FF5555] transition-colors duration-300">
                   {article.artist.name === 'LOWEND Editorial' ? 'EDITORIAL' : article.artist.name}
                 </p>
-                <h3 className="font-display font-bold uppercase leading-tight mb-2 group-hover:text-accent-red transition-colors duration-75 line-clamp-2" style={{ fontSize: 'clamp(14px, 1.5vw, 22px)' }}>
+                <h3 className="font-display font-bold uppercase leading-tight mb-2 group-hover:text-accent-red transition-colors duration-300 line-clamp-2" style={{ fontSize: 'clamp(14px, 1.5vw, 22px)' }}>
                   {article.title}
                 </h3>
                 <div className="meta-text">
