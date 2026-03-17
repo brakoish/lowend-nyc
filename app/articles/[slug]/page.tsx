@@ -59,7 +59,46 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
     notFound();
   }
 
+  // Build JSON-LD structured data for Article schema
+  const ogImage = article.image.startsWith('http')
+    ? article.image
+    : `${SITE_URL}${article.image}`;
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.excerpt,
+    image: ogImage,
+    datePublished: article.date,
+    dateModified: article.date,
+    author: {
+      '@type': 'Organization',
+      name: 'LOWEND NYC',
+      url: SITE_URL,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'LOWEND NYC',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/favicon.ico`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}/articles/${article.slug}`,
+    },
+    articleSection: article.genre.join(', '),
+    keywords: article.genre.join(', '),
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <main>
       {/* Full-width hero image with overlaid headline */}
       <section className="relative w-full">
@@ -265,5 +304,6 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         </div>
       </section>
     </main>
+    </>
   );
 }
