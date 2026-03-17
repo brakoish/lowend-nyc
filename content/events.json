@@ -3,7 +3,7 @@
     "id": "sample-brooklyn-mirage-2026-03-22",
     "title": "Charlotte de Witte at Brooklyn Mirage",
     "date": "2026-03-22",
-    "time": "10:00 PM",
+    "time": "22:00",
     "venue": "Brooklyn Mirage",
     "venue_city": "Brooklyn",
     "artists": [
@@ -12,27 +12,27 @@
     ],
     "headliner": "Charlotte de Witte",
     "genre": [
-      "electronic"
+      "techno"
     ],
-    "description": "",
+    "description": "Presented by Teksupport",
     "ticket_url": "",
-    "price": "$45-75",
+    "price": "TBD",
     "age": "21+",
     "days_until": 4,
     "status": "soon",
-    "scraped_at": "2026-03-17T06:16:49.923486",
+    "scraped_at": "2026-03-17T07:34:17.982099",
     "assigned_to": "",
     "coverage_type": "",
     "draft_due": "",
     "publish_date": "",
     "priority": "high",
-    "notes": ""
+    "notes": "Source: Teksupport"
   },
   {
     "id": "sample-knockdown-center-2026-03-29",
     "title": "Four Tet at Knockdown Center",
     "date": "2026-03-29",
-    "time": "10:00 PM",
+    "time": "22:00",
     "venue": "Knockdown Center",
     "venue_city": "Queens",
     "artists": [
@@ -41,27 +41,58 @@
     ],
     "headliner": "Four Tet",
     "genre": [
-      "electronic"
+      "electronic",
+      "ambient"
     ],
-    "description": "",
+    "description": "Presented by Gray Area",
     "ticket_url": "",
-    "price": "$40-60",
+    "price": "TBD",
     "age": "21+",
     "days_until": 11,
     "status": "upcoming",
-    "scraped_at": "2026-03-17T06:16:49.923486",
+    "scraped_at": "2026-03-17T07:34:17.982099",
     "assigned_to": "",
     "coverage_type": "",
     "draft_due": "",
     "publish_date": "",
     "priority": "high",
-    "notes": ""
+    "notes": "Source: Gray Area"
+  },
+  {
+    "id": "sample-brooklyn-storehouse-2026-03-25",
+    "title": "The Martinez Brothers at Brooklyn Storehouse",
+    "date": "2026-03-25",
+    "time": "22:00",
+    "venue": "Brooklyn Storehouse",
+    "venue_city": "Brooklyn",
+    "artists": [
+      "The Martinez Brothers",
+      "Seth Troxler"
+    ],
+    "headliner": "The Martinez Brothers",
+    "genre": [
+      "house",
+      "techno"
+    ],
+    "description": "Presented by Circoloco",
+    "ticket_url": "",
+    "price": "TBD",
+    "age": "21+",
+    "days_until": 7,
+    "status": "upcoming",
+    "scraped_at": "2026-03-17T07:34:17.982099",
+    "assigned_to": "",
+    "coverage_type": "",
+    "draft_due": "",
+    "publish_date": "",
+    "priority": "high",
+    "notes": "Source: Circoloco"
   },
   {
     "id": "sample-basement-2026-03-20",
     "title": "Bass House Night at Basement",
     "date": "2026-03-20",
-    "time": "10:00 PM",
+    "time": "22:00",
     "venue": "Basement",
     "venue_city": "Brooklyn",
     "artists": [
@@ -70,81 +101,106 @@
     ],
     "headliner": "AC Slater",
     "genre": [
-      "house",
-      "bass"
+      "bass",
+      "house"
     ],
-    "description": "",
+    "description": "Presented by Basement",
     "ticket_url": "",
-    "price": "$25-40",
+    "price": "TBD",
     "age": "21+",
     "days_until": 2,
     "status": "soon",
-    "scraped_at": "2026-03-17T06:16:49.923486",
+    "scraped_at": "2026-03-17T07:34:17.982099",
     "assigned_to": "",
     "coverage_type": "",
     "draft_due": "",
     "publish_date": "",
     "priority": "high",
-    "notes": ""
+    "notes": "Source: Basement"
   },
   {
-    "id": "sample-nowadays-2026-03-25",
+    "id": "sample-nowadays-2026-03-27",
     "title": "Drum & Bass Sessions at Nowadays",
-    "date": "2026-03-25",
-    "time": "10:00 PM",
+    "date": "2026-03-27",
+    "time": "22:00",
     "venue": "Nowadays",
     "venue_city": "Queens",
     "artists": [
       "Andy C",
-      "Friction",
-      "Sub Focus"
+      "Friction"
     ],
     "headliner": "Andy C",
     "genre": [
-      "bass",
       "dnb"
     ],
-    "description": "",
+    "description": "Presented by Nowadays",
     "ticket_url": "",
-    "price": "$30-50",
+    "price": "TBD",
     "age": "21+",
-    "days_until": 7,
+    "days_until": 9,
     "status": "upcoming",
-    "scraped_at": "2026-03-17T06:16:49.923486",
+    "scraped_at": "2026-03-17T07:34:17.982099",
     "assigned_to": "",
     "coverage_type": "",
     "draft_due": "",
     "publish_date": "",
     "priority": "high",
-    "notes": ""
+    "notes": "Source: Nowadays"
   },
   {
     "id": "sample-elsewhere-2026-04-01",
     "title": "Deep House Showcase at Elsewhere",
     "date": "2026-04-01",
-    "time": "10:00 PM",
+    "time": "22:00",
     "venue": "Elsewhere",
     "venue_city": "Brooklyn",
     "artists": [
-      "Moodymann",
-      "Marcellus Pittman"
+      "Moodymann"
     ],
     "headliner": "Moodymann",
     "genre": [
       "house"
     ],
-    "description": "",
+    "description": "Presented by Elsewhere",
     "ticket_url": "",
-    "price": "$35-55",
+    "price": "TBD",
     "age": "21+",
     "days_until": 14,
     "status": "upcoming",
-    "scraped_at": "2026-03-17T06:16:49.923486",
+    "scraped_at": "2026-03-17T07:34:17.982099",
     "assigned_to": "",
     "coverage_type": "",
     "draft_due": "",
     "publish_date": "",
     "priority": "normal",
-    "notes": ""
+    "notes": "Source: Elsewhere"
+  },
+  {
+    "id": "sample-99-scott-2026-04-06",
+    "title": "Nina Kraviz at 99 Scott",
+    "date": "2026-04-06",
+    "time": "22:00",
+    "venue": "99 Scott",
+    "venue_city": "Brooklyn",
+    "artists": [
+      "Nina Kraviz"
+    ],
+    "headliner": "Nina Kraviz",
+    "genre": [
+      "techno"
+    ],
+    "description": "Presented by Teksupport",
+    "ticket_url": "",
+    "price": "TBD",
+    "age": "21+",
+    "days_until": 19,
+    "status": "upcoming",
+    "scraped_at": "2026-03-17T07:34:17.982099",
+    "assigned_to": "",
+    "coverage_type": "",
+    "draft_due": "",
+    "publish_date": "",
+    "priority": "normal",
+    "notes": "Source: Teksupport"
   }
 ]
