@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getAllArticles, getArticleBySlug } from '@/lib/articles';
+import { getAllArticles, getArticleBySlug, getRelatedArticles } from '@/lib/articles';
 import ReactMarkdown from 'react-markdown';
 
 export async function generateStaticParams() {
@@ -58,6 +58,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   if (!article) {
     notFound();
   }
+
+  // Get related articles based on genre or venue
+  const relatedArticles = getRelatedArticles(params.slug, article.genre, article.venue, 3);
 
   // Build JSON-LD structured data for Article schema
   const ogImage = article.image.startsWith('http')
@@ -285,13 +288,39 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             </div>
 
             {/* Related Articles */}
+            {relatedArticles.length > 0 && (
             <div className="border border-[#222] p-5">
               <h3 className="font-display font-bold uppercase text-sm mb-4 tracking-wider">
-                MORE FROM LOWEND NYC
+                RELATED ARTICLES
               </h3>
+              <div className="space-y-4">
+                {relatedArticles.map((related) => (
+                  <Link
+                    key={related.slug}
+                    href={`/articles/${related.slug}`}
+                    className="group block"
+                  >
+                    <div className="relative h-24 w-full overflow-hidden mb-2">
+                      <Image
+                        src={related.image}
+                        alt={related.title}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        unoptimized
+                      />
+                    </div>
+                    <h4 className="font-display uppercase text-sm leading-tight group-hover:text-accent-red transition-colors line-clamp-2">
+                      {related.title}
+                    </h4>
+                    <p className="text-text-secondary text-xs mt-1">
+                      {related.venue}
+                    </p>
+                  </Link>
+                ))}
+              </div>
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 text-accent-red hover:text-[#CC2222] transition-colors font-display uppercase text-sm"
+                className="inline-flex items-center gap-2 text-accent-red hover:text-[#CC2222] transition-colors font-display uppercase text-sm mt-4"
               >
                 View All Articles
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -299,6 +328,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 </svg>
               </Link>
             </div>
+            )}
           </aside>
           )}
         </div>

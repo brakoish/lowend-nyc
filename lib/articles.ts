@@ -98,3 +98,42 @@ export function getAllArtists() {
 
   return Array.from(artistsMap.values()).filter(a => a.name !== 'LOWEND Editorial');
 }
+
+export function getRelatedArticles(currentSlug: string, genre: string[], venue: string, limit: number = 3): Article[] {
+  const allArticles = getAllArticles();
+  
+  // Filter out the current article
+  const otherArticles = allArticles.filter(article => article.slug !== currentSlug);
+  
+  // Score articles based on matching criteria
+  const scoredArticles = otherArticles.map(article => {
+    let score = 0;
+    
+    // Same venue is highest priority
+    if (article.venue === venue) {
+      score += 3;
+    }
+    
+    // Matching genres (1 point per match)
+    const matchingGenres = article.genre.filter(g => genre.includes(g));
+    score += matchingGenres.length;
+    
+    // Boost score for more genre matches
+    if (matchingGenres.length >= 2) {
+      score += 1;
+    }
+    
+    return { article, score };
+  });
+  
+  // Sort by score (descending), then by date (newest first)
+  scoredArticles.sort((a, b) => {
+    if (b.score !== a.score) {
+      return b.score - a.score;
+    }
+    return new Date(b.article.date).getTime() - new Date(a.article.date).getTime();
+  });
+  
+  // Return top articles up to limit
+  return scoredArticles.slice(0, limit).map(item => item.article);
+}
