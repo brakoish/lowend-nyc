@@ -11,12 +11,19 @@ export async function generateStaticParams() {
   }));
 }
 
+const SITE_URL = 'https://lowend-nyc.vercel.app';
+
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const article = getArticleBySlug(params.slug);
 
   if (!article) {
     return {};
   }
+
+  // Ensure og:image is an absolute URL
+  const ogImage = article.image.startsWith('http')
+    ? article.image
+    : `${SITE_URL}${article.image}`;
 
   return {
     title: `${article.title} - LOWEND NYC`,
@@ -25,7 +32,22 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: article.title,
       description: article.excerpt,
       type: 'article',
-      images: [article.image],
+      url: `${SITE_URL}/articles/${article.slug}`,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+      siteName: 'LOWEND NYC',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description: article.excerpt,
+      images: [ogImage],
     },
   };
 }

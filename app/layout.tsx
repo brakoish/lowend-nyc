@@ -23,6 +23,8 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const SITE_URL = 'https://lowend-nyc.vercel.app';
+
 export const metadata: Metadata = {
   title: "LOWEND NYC | Underground Electronic Music",
   description: "NYC's underground electronic music publication covering techno, house, garage, and bass music.",
@@ -30,6 +32,22 @@ export const metadata: Metadata = {
     title: "LOWEND NYC | Underground Electronic Music",
     description: "NYC's underground electronic music publication covering techno, house, garage, and bass music.",
     type: "website",
+    url: SITE_URL,
+    siteName: "LOWEND NYC",
+    images: [
+      {
+        url: `${SITE_URL}/images/og-default.png`,
+        width: 1200,
+        height: 630,
+        alt: "LOWEND NYC - Underground Electronic Music",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LOWEND NYC | Underground Electronic Music",
+    description: "NYC's underground electronic music publication covering techno, house, garage, and bass music.",
+    images: [`${SITE_URL}/images/og-default.png`],
   },
 };
 
