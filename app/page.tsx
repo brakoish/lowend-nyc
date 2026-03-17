@@ -38,17 +38,17 @@ export default function HomePage() {
               </p>
               {/* Massive headline */}
               <h1 
-                className="font-display uppercase leading-[0.9] text-white mb-4"
-                style={{ fontSize: 'clamp(36px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.02em' }}
+                className="font-display uppercase leading-[0.95] text-white mb-4"
+                style={{ fontSize: 'clamp(28px, 7vw, 96px)', fontWeight: 700, letterSpacing: '-0.02em' }}
               >
                 {featuredArticle.title}
               </h1>
               {/* Metadata row */}
-              <div className="meta-text flex items-center gap-4">
+              <div className="meta-text flex flex-wrap items-center gap-x-4 gap-y-1">
                 <span>POSTED {new Date(featuredArticle.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase()}</span>
-                <span>·</span>
+                <span className="hidden sm:inline">·</span>
                 <span>4 MIN READ</span>
-                <span>·</span>
+                <span className="hidden sm:inline">·</span>
                 <span>{featuredArticle.venue}</span>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default function HomePage() {
             <div className="flex-1">
               <h2 
                 className="font-display font-bold text-black uppercase leading-none"
-                style={{ fontSize: 'clamp(48px, 10vw, 120px)' }}
+                style={{ fontSize: 'clamp(36px, 10vw, 120px)' }}
               >
                 JOIN THE NOISE
               </h2>
@@ -124,7 +124,7 @@ export default function HomePage() {
                 Get the latest on NYC&apos;s underground bass scene. New mixes, artist features, and event previews delivered weekly.
               </p>
             </div>
-            <form className="flex gap-3 flex-1 lg:max-w-lg">
+            <form className="flex flex-col sm:flex-row gap-3 flex-1 lg:max-w-lg">
               <input
                 type="email"
                 placeholder="ENTER YOUR EMAIL"
@@ -132,7 +132,7 @@ export default function HomePage() {
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-black text-[#FF2B2B] font-display font-bold uppercase tracking-wider hover:bg-black/80 transition-colors duration-75"
+                className="px-6 py-3 bg-black text-[#FF2B2B] font-display font-bold uppercase tracking-wider hover:bg-black/80 transition-colors duration-75 whitespace-nowrap"
               >
                 SUBSCRIBE
               </button>

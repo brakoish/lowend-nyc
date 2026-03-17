@@ -70,11 +70,11 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             >
               {article.title}
             </h1>
-            <div className="meta-text flex items-center gap-4 mt-3">
+            <div className="meta-text flex flex-wrap items-center gap-x-4 gap-y-1 mt-3">
               <span>{article.venue}</span>
-              <span>·</span>
+              <span className="hidden sm:inline">·</span>
               <span>{article.location}</span>
-              <span>·</span>
+              <span className="hidden sm:inline">·</span>
               <span>{new Date(article.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
       {/* Two-column layout: Article body + Sidebar */}
       <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
-        <div className={`grid grid-cols-1 ${article.artist.name === 'LOWEND Editorial' ? '' : 'lg:grid-cols-[1fr_320px]'} gap-8 lg:gap-12`}>
+        <div className={`grid grid-cols-1 ${article.artist.name === 'LOWEND Editorial' ? '' : 'xl:grid-cols-[1fr_320px]'} gap-8 lg:gap-12`}>
           {/* Article body */}
           <article>
             {/* Back Link */}
@@ -136,7 +136,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
           {/* Sidebar - hidden for editorial articles */}
           {article.artist.name !== 'LOWEND Editorial' && (
-          <aside className="space-y-8 lg:sticky lg:top-24 lg:self-start">
+          <aside className="space-y-8 xl:sticky xl:top-24 xl:self-start">
             {/* Artist Card */}
             <div className="border border-[#222] p-5">
               <h3 className="font-display font-bold uppercase text-sm mb-4 tracking-wider">
