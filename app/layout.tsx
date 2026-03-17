@@ -69,7 +69,9 @@ export default function RootLayout({
         className={`${jost.variable} ${inter.variable} ${jetbrainsMono.variable} font-body bg-page-bg text-text-primary antialiased`}
       >
         <Navigation />
-        {children}
+        <div id="main-content" role="main">
+          {children}
+        </div>
         <Footer />
         <Analytics />
       </body>

@@ -119,17 +119,19 @@ export default function AboutPage() {
             <div className="w-12 h-0.5 bg-accent-red mb-4" />
             <div className="space-y-2">
               {[
-                { label: 'Instagram', href: '#' },
-                { label: 'Twitter / X', href: '#' },
-                { label: 'SoundCloud', href: '#' },
+                { label: 'Instagram', href: 'https://instagram.com/lowend.nyc' },
+                { label: 'Twitter / X', href: 'https://twitter.com/lowend_nyc' },
+                { label: 'SoundCloud', href: 'https://soundcloud.com/lowend-nyc' },
               ].map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
-                  className="flex items-center justify-between py-2 border-b border-border hover:text-accent-red transition-colors group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between py-2 border-b border-border hover:text-accent-red transition-colors group focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded px-1 -ml-1"
                 >
                   <span className="font-display uppercase text-sm tracking-wider">{social.label}</span>
-                  <span className="text-text-secondary group-hover:text-accent-red transition-colors">→</span>
+                  <span className="text-text-secondary group-hover:text-accent-red transition-colors" aria-hidden="true">→</span>
                 </a>
               ))}
             </div>

@@ -116,11 +116,11 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           />
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/60 to-transparent" />
-          
+
           {/* Genre tags */}
           <div className="absolute top-4 left-4 flex gap-2">
             {article.genre.map((genre) => (
-              <span key={genre} className="red-tag">
+              <span key={genre} className="red-tag" aria-label={`Genre: ${genre}`}>
                 {genre}
               </span>
             ))}
@@ -153,9 +153,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             {/* Back Link */}
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-text-secondary hover:text-accent-red transition-colors mb-8 font-mono text-sm uppercase"
+              className="inline-flex items-center gap-2 text-text-secondary hover:text-accent-red transition-colors mb-8 font-mono text-sm uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded px-1 -ml-1"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
               Back to Home
@@ -238,7 +238,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       href={article.artist.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase"
+                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
+                      aria-label={`${article.artist.name} on Instagram`}
                     >
                       IG
                     </a>
@@ -248,7 +249,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       href={article.artist.spotify}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase"
+                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
+                      aria-label={`${article.artist.name} on Spotify`}
                     >
                       Spotify
                     </a>
@@ -258,7 +260,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       href={article.artist.soundcloud}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase"
+                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
+                      aria-label={`${article.artist.name} on SoundCloud`}
                     >
                       SoundCloud
                     </a>
@@ -268,7 +271,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       href={article.artist.residentadvisor}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase"
+                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
+                      aria-label={`${article.artist.name} on Resident Advisor`}
                     >
                       RA
                     </a>
@@ -278,7 +282,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       href={article.artist.beatport}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase"
+                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
+                      aria-label={`${article.artist.name} on Beatport`}
                     >
                       Beatport
                     </a>
