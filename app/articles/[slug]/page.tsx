@@ -303,7 +303,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                   <Link
                     key={related.slug}
                     href={`/articles/${related.slug}`}
-                    className="group block"
+                    className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
                   >
                     <div className="relative h-24 w-full overflow-hidden mb-2">
                       <Image
@@ -325,7 +325,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               </div>
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 text-accent-red hover:text-[#CC2222] transition-colors font-display uppercase text-sm mt-4"
+                className="inline-flex items-center gap-2 text-accent-red hover:text-[#CC2222] transition-colors font-display uppercase text-sm mt-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded px-1 -ml-1"
               >
                 View All Articles
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

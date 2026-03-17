@@ -144,3 +144,35 @@ body::after {
     text-wrap: balance;
   }
 }
+
+/* Keyboard Navigation - Global Focus Styles */
+/* Ensure all interactive elements have visible focus indicators */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: none;
+  ring: 2px;
+  ring-color: #FF2B2B;
+  ring-offset: 2px;
+  ring-offset-color: #0A0A0A;
+}
+
+/* Skip link enhancement */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 9999;
+  background: #FF2B2B;
+  color: #000;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.skip-link:focus {
+  top: 0;
+}
