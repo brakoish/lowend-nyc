@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'About - LOWEND NYC',
+  title: 'About',
   description: 'LOWEND NYC is an independent electronic music publication based in New York City.',
 };
 
