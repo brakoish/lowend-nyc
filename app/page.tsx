@@ -34,7 +34,7 @@ export default function HomePage() {
             <div className="absolute bottom-0 left-0 right-0 p-4 sm:px-6 lg:px-12 pb-6">
               {/* Red artist name */}
               <p className="font-display text-accent-red uppercase font-bold mb-2" style={{ fontSize: 'clamp(14px, 2vw, 24px)' }}>
-                {featuredArticle.artist.name}
+                {featuredArticle.artist.name === 'LOWEND Editorial' ? 'EDITORIAL' : featuredArticle.artist.name}
               </p>
               {/* Massive headline */}
               <h1 
@@ -78,7 +78,7 @@ export default function HomePage() {
               {/* Content */}
               <div className={`p-3 ${index === 2 ? 'text-black' : ''}`}>
                 <p className={`font-display uppercase font-bold text-xs mb-1 ${index === 2 ? 'text-black/70' : 'text-accent-red'}`}>
-                  {article.artist.name}
+                  {article.artist.name === 'LOWEND Editorial' ? 'EDITORIAL' : article.artist.name}
                 </p>
                 <h3 
                   className="font-display font-bold uppercase leading-tight mb-2 line-clamp-2"
@@ -169,7 +169,7 @@ export default function HomePage() {
               </div>
               <div className="p-3">
                 <p className="font-display text-accent-red uppercase text-xs font-bold tracking-wider mb-1">
-                  {article.artist.name}
+                  {article.artist.name === 'LOWEND Editorial' ? 'EDITORIAL' : article.artist.name}
                 </p>
                 <h3 className="font-display font-bold uppercase leading-tight mb-2 group-hover:text-accent-red transition-colors duration-75 line-clamp-2" style={{ fontSize: 'clamp(14px, 1.5vw, 22px)' }}>
                   {article.title}
