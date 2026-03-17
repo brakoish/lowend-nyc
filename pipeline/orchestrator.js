@@ -105,11 +105,13 @@ async function check() {
     pendingApproval: 0,
     scheduled: 0,
     published: 0,
+    draftComplete: 0,
   };
 
   rows.forEach(row => {
     switch (row.status) {
-      case STATUS.IDEA: stats.ideas++; break;
+      case STATUS.IDEA:
+      case STATUS.IDEA_PROPOSED: stats.ideas++; break;
       case STATUS.APPROVED: stats.approved++; break;
       case STATUS.RESEARCHING: stats.researching++; break;
       case STATUS.RESEARCH_DONE: stats.researchDone++; break;
@@ -118,12 +120,15 @@ async function check() {
       case STATUS.PENDING_APPROVAL: stats.pendingApproval++; break;
       case STATUS.SCHEDULED: stats.scheduled++; break;
       case STATUS.PUBLISHED: stats.published++; break;
+      case STATUS.DRAFT_COMPLETE: stats.draftComplete++; break;
     }
   });
 
   console.log(`  Ideas: ${stats.ideas}`);
   console.log(`  Approved: ${stats.approved}`);
+  console.log(`  Researching: ${stats.researching}`);
   console.log(`  Writing: ${stats.writing}`);
+  console.log(`  Draft Complete: ${stats.draftComplete}`);
   console.log(`  Pending Review: ${stats.pendingApproval}`);
   console.log(`  Scheduled: ${stats.scheduled}`);
   console.log(`  Published: ${stats.published}`);
@@ -132,14 +137,14 @@ async function check() {
   if (stats.ideas > 0) {
     const ideas = rows.filter(r => r.status === STATUS.IDEA);
     for (const idea of ideas) {
-      await notify.newTopic(idea.topic, idea.angle, idea.rowNumber);
+      await notify.newTopic(idea.headline || idea.topic, idea.angle, idea.rowNumber);
     }
   }
 
   if (stats.pendingApproval > 0) {
     const pending = rows.filter(r => r.status === STATUS.PENDING_APPROVAL);
     for (const article of pending) {
-      await notify.draftReady(article.topic, article.slug, article.rowNumber);
+      await notify.draftReady(article.headline || article.topic, article.slug, article.rowNumber);
     }
   }
 
@@ -167,7 +172,8 @@ async function processTopics() {
   const approved = await sheets.getRowsByStatus(STATUS.APPROVED);
 
   for (const row of approved) {
-    console.log(`\n  🔬 Researching: "${row.topic}"`);
+    const displayTitle = row.headline || row.topic;
+    console.log(`\n  🔬 Researching: "${displayTitle}"`);
 
     // Generate research task
     const researchTask = generateResearchTask(row);
@@ -178,7 +184,7 @@ async function processTopics() {
     await sheets.updateStatus(row.rowNumber, STATUS.RESEARCHING);
 
     // Notify
-    await notify.topicApproved(row.topic, 'researcher');
+    await notify.topicApproved(displayTitle, 'researcher');
 
     console.log(`    Status → RESEARCHING`);
     console.log(`    ⚡ Research task ready — researcher agent will gather facts`);
@@ -188,7 +194,8 @@ async function processTopics() {
   const researched = await sheets.getRowsByStatus(STATUS.RESEARCH_DONE);
 
   for (const row of researched) {
-    console.log(`\n  ✍️  Writing: "${row.topic}"`);
+    const displayTitle = row.headline || row.topic;
+    console.log(`\n  ✍️  Writing: "${displayTitle}"`);
 
     // Read the completed research brief
     const researchBrief = readResearchBrief(row.slug);
@@ -208,7 +215,6 @@ async function processTopics() {
 
     // Update status
     await sheets.updateStatus(row.rowNumber, STATUS.WRITING);
-    await sheets.setWriter(row.rowNumber, 'lowend-nyc-writer');
 
     console.log(`    Status → WRITING`);
     console.log(`    ⚡ Writer brief ready with research — writer agent will draft article`);
@@ -218,7 +224,8 @@ async function processTopics() {
   const draftsReady = await sheets.getRowsByStatus(STATUS.DRAFT_READY);
 
   for (const row of draftsReady) {
-    console.log(`\n  Editing: "${row.topic}"`);
+    const displayTitle = row.headline || row.topic;
+    console.log(`\n  Editing: "${displayTitle}"`);
 
     const draftContent = readDraft(row.slug);
     if (!draftContent) {
@@ -234,7 +241,6 @@ async function processTopics() {
 
     // Update status
     await sheets.updateStatus(row.rowNumber, STATUS.EDITING);
-    await sheets.setEditor(row.rowNumber, 'lowend-nyc-editor');
 
     console.log(`    Status → EDITING`);
   }
@@ -263,7 +269,8 @@ async function publish() {
   }
 
   for (const row of ready) {
-    console.log(`\n  Publishing: "${row.topic}" (${row.slug})`);
+    const displayTitle = row.headline || row.topic;
+    console.log(`\n  Publishing: "${displayTitle}" (${row.slug})`);
 
     // Read the draft
     const content = readDraft(row.slug);
@@ -281,7 +288,7 @@ async function publish() {
       await sheets.updateStatus(row.rowNumber, STATUS.PUBLISHED);
 
       // Notify
-      await notify.articlePublished(row.topic, row.slug);
+      await notify.articlePublished(displayTitle, row.slug);
 
       console.log(`    ✅ Published!`);
     } catch (error) {
@@ -308,14 +315,15 @@ async function setup() {
 /**
  * ADD: Add a new topic to the pipeline
  */
-async function addTopic(topic, angle, template, genre, priority) {
+async function addTopic(headline, angle, type, priority) {
   if (!sheets) {
     console.log('Sheets not configured. Cannot add topic.');
     return;
   }
 
-  await sheets.addTopic(topic, angle, template, genre, priority);
-  await notify.newTopic(topic, angle, 'new');
+  const slug = await sheets.addTopic(headline, angle, type, 'Electronic', priority);
+  await notify.newTopic(headline, angle, 'new');
+  return slug;
 }
 
 /**
@@ -423,10 +431,11 @@ async function main() {
       break;
     case 'add':
       if (args.length < 2) {
-        console.log('Usage: node orchestrator.js add "Topic" "Angle" [template] [genre] [priority]');
+        console.log('Usage: node orchestrator.js add "Headline" "Angle" [type] [priority]');
+        console.log('  type: artist-profile, event-preview, venue-spotlight, scene-analysis, list-format, hot-take');
         globalThis.process.exit(1);
       }
-      await addTopic(args[0], args[1], args[2] || 'event-preview', args[3] || 'Electronic', args[4] || 'Normal');
+      await addTopic(args[0], args[1], args[2] || 'event-preview', args[3] || 'Normal');
       break;
     case 'test':
       await test();

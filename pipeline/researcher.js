@@ -62,12 +62,13 @@ function generateResearchTask(row) {
 }
 
 function generateArtistResearchTask(row) {
-  const artistName = extractArtistName(row.topic);
+  const displayTitle = row.headline || row.topic;
+  const artistName = extractArtistName(displayTitle);
 
   return `# Research Task — LOWEND NYC
 **Model**: ${MODEL_CONFIG.researcher.model} (${MODEL_CONFIG.researcher.reason})
 
-## Subject: ${row.topic}
+## Subject: ${displayTitle}
 Angle: ${row.angle || 'Artist profile'}
 Artist: ${artistName}
 
@@ -293,10 +294,11 @@ Find legally usable images for the article hero and body. Priority order:
 }
 
 function generateEventResearchTask(row) {
+  const displayTitle = row.headline || row.topic;
   return `# Research Task — LOWEND NYC
 **Model**: ${MODEL_CONFIG.researcher.model}
 
-## Subject: ${row.topic}
+## Subject: ${displayTitle}
 Angle: ${row.angle || 'Event coverage'}
 
 ## EVENT DETAILS
@@ -314,10 +316,11 @@ Angle: ${row.angle || 'Event coverage'}
 - [ ] Social handles + follower counts
 
 ## SUPPORT ACTS
-- [ ] Brief bio for each
+- [ ] Brief bio for each: ${row.artists || 'TBD'}
 - [ ] Why they fit this bill
 
 ## VENUE + PROMOTER CONTEXT
+- [ ] Venue: ${row.venue || 'TBD'}
 - [ ] Sound system, room layout
 - [ ] Promoter's track record
 - [ ] Recent notable shows here
@@ -329,21 +332,25 @@ Angle: ${row.angle || 'Event coverage'}
 - [ ] Support act press photos
 - For each: URL, source, license, credit line, resolution
 
-## Sources: Event page, RA, artist socials, venue site, YouTube interviews
+## Sources
+- Event page: ${row.edmtrainLink || 'Search EDMTrain'}
+- RA, artist socials, venue site, YouTube interviews
 
 **Output**: Structured brief under 1500 words. Verified facts + sources + image links.
 `;
 }
 
 function generateVenueResearchTask(row) {
+  const displayTitle = row.headline || row.topic;
   return `# Research Task — LOWEND NYC
 **Model**: ${MODEL_CONFIG.researcher.model}
 
-## Subject: ${row.topic}
+## Subject: ${displayTitle}
 Angle: ${row.angle || 'Venue spotlight'}
 
 ## VENUE IDENTITY
-- [ ] Full name, address, neighborhood
+- [ ] Full name: ${row.venue || displayTitle}
+- [ ] Address, neighborhood
 - [ ] Year opened, capacity
 - [ ] Owner/operator
 - [ ] Sound system details
@@ -381,10 +388,11 @@ Angle: ${row.angle || 'Venue spotlight'}
 }
 
 function generateSceneResearchTask(row) {
+  const displayTitle = row.headline || row.topic;
   return `# Research Task — LOWEND NYC
 **Model**: ${MODEL_CONFIG.researcher.model}
 
-## Subject: ${row.topic}
+## Subject: ${displayTitle}
 Angle: ${row.angle || 'Scene analysis'}
 
 ## DATA POINTS
@@ -406,10 +414,11 @@ Angle: ${row.angle || 'Scene analysis'}
 }
 
 function generateListResearchTask(row) {
+  const displayTitle = row.headline || row.topic;
   return `# Research Task — LOWEND NYC
 **Model**: ${MODEL_CONFIG.researcher.model}
 
-## Subject: ${row.topic}
+## Subject: ${displayTitle}
 Angle: ${row.angle || 'List/roundup'}
 
 ## PER ITEM
@@ -426,10 +435,11 @@ Angle: ${row.angle || 'List/roundup'}
 }
 
 function generateHotTakeResearchTask(row) {
+  const displayTitle = row.headline || row.topic;
   return `# Research Task — LOWEND NYC
 **Model**: ${MODEL_CONFIG.researcher.model}
 
-## Subject: ${row.topic}
+## Subject: ${displayTitle}
 Angle: ${row.angle || 'Opinion/debate'}
 
 ## EVIDENCE FOR THE ARGUMENT
@@ -456,10 +466,11 @@ Angle: ${row.angle || 'Opinion/debate'}
 }
 
 function generateGenericResearchTask(row) {
+  const displayTitle = row.headline || row.topic;
   return `# Research Task — LOWEND NYC
 **Model**: ${MODEL_CONFIG.researcher.model}
 
-## Subject: ${row.topic}
+## Subject: ${displayTitle}
 Angle: ${row.angle || 'General'}
 
 ## REQUIRED

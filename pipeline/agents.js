@@ -28,7 +28,8 @@ const TEMPLATE_MAP = {
  * Generate a writing brief for the agent
  */
 function generateBrief(row) {
-  const template = TEMPLATE_MAP[row.template] || 'event-template.mdx';
+  const templateKey = row.template || row.type || 'event-preview';
+  const template = TEMPLATE_MAP[templateKey] || 'event-template.mdx';
   let templateContent = '';
 
   try {
@@ -39,14 +40,23 @@ function generateBrief(row) {
     console.warn(`Template not found: ${template}`);
   }
 
+  const displayTitle = row.headline || row.topic;
+  const displayVenue = row.venue || 'TBD';
+  const displayArtists = row.artists || '';
+
   return `
 # Writing Brief — LOWEND NYC
 
 ## Assignment
-Write an article for LOWEND NYC about: **${row.topic}**
+Write an article for LOWEND NYC about: **${displayTitle}**
 
 ## Angle
 ${row.angle || 'Cover this topic with your own editorial perspective.'}
+
+## Event Details
+- **Venue**: ${displayVenue}
+- **Artists**: ${displayArtists}
+- **Event Date**: ${row.eventDate || 'TBD'}
 
 ## Template
 Use this template structure as a guide:
@@ -74,9 +84,9 @@ ${row.genre || 'Electronic music (techno, house, garage, bass)'}
 - Verify venue details (location, capacity, sound system)
 - Listen to recent releases/mixes from featured artists
 - Check for upcoming NYC dates
+- EDMTrain Link: ${row.edmtrainLink || 'Search EDMTrain for event details'}
 
 ## Priority: ${row.priority}
-## Deadline: ${row.draftDue || 'ASAP'}
 `;
 }
 
@@ -84,11 +94,15 @@ ${row.genre || 'Electronic music (techno, house, garage, bass)'}
  * Generate an editing brief for the editor agent
  */
 function generateEditBrief(row, draftContent) {
+  const displayTitle = row.headline || row.topic;
   return `
 # Editing Brief — LOWEND NYC
 
 ## Assignment
 Edit and improve this article for LOWEND NYC.
+
+## Article
+${displayTitle}
 
 ## Draft Content
 ${draftContent}
