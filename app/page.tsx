@@ -8,18 +8,93 @@ export default function HomePage() {
   
   if (articles.length === 0) {
     return (
-      <main className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-24">
-        <div className="text-center">
-          <h1 className="font-display uppercase text-4xl md:text-6xl mb-6">LOWEND NYC</h1>
-          <p className="text-text-secondary text-lg mb-8 max-w-xl mx-auto">
-            NYC&apos;s underground electronic music publication. Coverage coming soon.
-          </p>
-          <div className="w-20 h-1 bg-accent-red mx-auto mb-12" />
-          <div className="max-w-md mx-auto">
-            <p className="font-display uppercase text-sm mb-4">Get notified when we launch</p>
-            <NewsletterForm />
+      <main>
+        <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-24">
+          <div className="text-center">
+            <h1 className="font-display uppercase text-4xl md:text-6xl mb-6">LOWEND NYC</h1>
+            <p className="text-text-secondary text-lg mb-8 max-w-xl mx-auto">
+              NYC&apos;s underground electronic music publication. Coverage coming soon.
+            </p>
+            <div className="w-20 h-1 bg-accent-red mx-auto mb-12" />
+            <div className="max-w-md mx-auto">
+              <p className="font-display uppercase text-sm mb-4">Get notified when we launch</p>
+              <NewsletterForm />
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* COMING UP — Next week's NYC events */}
+        <section className="max-w-[1440px] mx-auto px-3 sm:px-4 lg:px-6 py-4">
+          <div className="flex items-center gap-3 mb-3">
+            <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={{ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }}>COMING UP</h2>
+            <div className="flex-1 h-[1px] bg-accent-red/30" />
+            <span className="meta-text whitespace-nowrap">MAR 17-31</span>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-1">
+            {/* March 17 - Obskür at H0L0 */}
+            <a href="https://edmtrain.com/new-york-city-ny/raw-cuts-obskur-484986" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+              <div className="relative h-[100px] sm:h-[120px] overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0A0A0A] flex items-center justify-center">
+                  <span className="font-display text-accent-red text-4xl font-bold">O</span>
+                </div>
+                <div className="absolute top-0 left-0">
+                  <span className="red-tag text-[10px] px-2 py-0.5">MAR 17</span>
+                </div>
+              </div>
+              <div className="p-2">
+                <p className="font-display text-accent-red uppercase text-[10px] font-bold tracking-wider mb-0.5 group-hover:text-[#FF3333] transition-colors duration-300">
+                  OBSKÜR
+                </p>
+                <h3 className="font-display font-bold uppercase leading-tight mb-0.5 group-hover:text-accent-red transition-colors duration-300 line-clamp-2" style={{ fontSize: 'clamp(11px, 1vw, 14px)' }}>
+                  Raw Cuts at H0L0
+                </h3>
+                <div className="meta-text text-[10px]">H0L0 · House/Techno</div>
+              </div>
+            </a>
+
+            {/* March 18 - 8ULENTINA at Nowadays */}
+            <a href="https://edmtrain.com/new-york-city-ny/8ulentina-arushi-jain-485201" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+              <div className="relative h-[100px] sm:h-[120px] overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0A0A0A] flex items-center justify-center">
+                  <span className="font-display text-accent-red text-4xl font-bold">8</span>
+                </div>
+                <div className="absolute top-0 left-0">
+                  <span className="red-tag text-[10px] px-2 py-0.5">MAR 18</span>
+                </div>
+              </div>
+              <div className="p-2">
+                <p className="font-display text-accent-red uppercase text-[10px] font-bold tracking-wider mb-0.5 group-hover:text-[#FF3333] transition-colors duration-300">
+                  8ULENTINA
+                </p>
+                <h3 className="font-display font-bold uppercase leading-tight mb-0.5 group-hover:text-accent-red transition-colors duration-300 line-clamp-2" style={{ fontSize: 'clamp(11px, 1vw, 14px)' }}>
+                  Arushi Jain at Nowadays
+                </h3>
+                <div className="meta-text text-[10px]">Nowadays · Ambient/Experimental</div>
+              </div>
+            </a>
+
+            {/* March 18 - Steen at SILO */}
+            <a href="https://edmtrain.com/new-york-city-ny/steen-469215" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+              <div className="relative h-[100px] sm:h-[120px] overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0A0A0A] flex items-center justify-center">
+                  <span className="font-display text-accent-red text-4xl font-bold">S</span>
+                </div>
+                <div className="absolute top-0 left-0">
+                  <span className="red-tag text-[10px] px-2 py-0.5">MAR 18</span>
+                </div>
+              </div>
+              <div className="p-2">
+                <p className="font-display text-accent-red uppercase text-[10px] font-bold tracking-wider mb-0.5 group-hover:text-[#FF3333] transition-colors duration-300">
+                  STEEN
+                </p>
+                <h3 className="font-display font-bold uppercase leading-tight mb-0.5 group-hover:text-accent-red transition-colors duration-300 line-clamp-2" style={{ fontSize: 'clamp(11px, 1vw, 14px)' }}>
+                  SILO Brooklyn
+                </h3>
+                <div className="meta-text text-[10px]">SILO · Techno/Electronic</div>
+              </div>
+            </a>
+          </div>
+        </section>
       </main>
     );
   }
@@ -122,108 +197,71 @@ export default function HomePage() {
         <div className="flex items-center gap-3 mb-3">
           <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={{ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }}>COMING UP</h2>
           <div className="flex-1 h-[1px] bg-accent-red/30" />
-          <span className="meta-text whitespace-nowrap">MAR 17-23</span>
+          <span className="meta-text whitespace-nowrap">MAR 17-31</span>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-1">
-          {/* March 18 */}
-          <Link href="/articles/eli-escobar-boy-cordero-le-bain" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-1">
+          {/* March 17 - Obskür at H0L0 */}
+          <a href="https://edmtrain.com/new-york-city-ny/raw-cuts-obskur-484986" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
             <div className="relative h-[100px] sm:h-[120px] overflow-hidden">
-              <Image
-                src="/images/eli-escobar-lebain.png"
-                alt="Eli Escobar & Boy Cordero at Le Bain"
-                fill
-                className="object-cover transition-all duration-700 ease-out group-hover:scale-[1.08]"
-                unoptimized
-              />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0A0A0A] flex items-center justify-center">
+                <span className="font-display text-accent-red text-4xl font-bold">O</span>
+              </div>
+              <div className="absolute top-0 left-0">
+                <span className="red-tag text-[10px] px-2 py-0.5">MAR 17</span>
+              </div>
+            </div>
+            <div className="p-2">
+              <p className="font-display text-accent-red uppercase text-[10px] font-bold tracking-wider mb-0.5 group-hover:text-[#FF3333] transition-colors duration-300">
+                OBSKÜR
+              </p>
+              <h3 className="font-display font-bold uppercase leading-tight mb-0.5 group-hover:text-accent-red transition-colors duration-300 line-clamp-2" style={{ fontSize: 'clamp(11px, 1vw, 14px)' }}>
+                Raw Cuts at H0L0
+              </h3>
+              <div className="meta-text text-[10px]">H0L0 · House/Techno</div>
+            </div>
+          </a>
+
+          {/* March 18 - 8ULENTINA at Nowadays */}
+          <a href="https://edmtrain.com/new-york-city-ny/8ulentina-arushi-jain-485201" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+            <div className="relative h-[100px] sm:h-[120px] overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0A0A0A] flex items-center justify-center">
+                <span className="font-display text-accent-red text-4xl font-bold">8</span>
+              </div>
               <div className="absolute top-0 left-0">
                 <span className="red-tag text-[10px] px-2 py-0.5">MAR 18</span>
               </div>
             </div>
             <div className="p-2">
               <p className="font-display text-accent-red uppercase text-[10px] font-bold tracking-wider mb-0.5 group-hover:text-[#FF3333] transition-colors duration-300">
-                ELI ESCOBAR
+                8ULENTINA
               </p>
               <h3 className="font-display font-bold uppercase leading-tight mb-0.5 group-hover:text-accent-red transition-colors duration-300 line-clamp-2" style={{ fontSize: 'clamp(11px, 1vw, 14px)' }}>
-                House Heat at Le Bain
+                Arushi Jain at Nowadays
               </h3>
-              <div className="meta-text text-[10px]">Le Bain · House/Disco</div>
+              <div className="meta-text text-[10px]">Nowadays · Ambient/Experimental</div>
             </div>
-          </Link>
+          </a>
 
-          {/* March 20 - Indira */}
-          <Link href="/articles/indira-paganotto-knockdown-center" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+          {/* March 18 - Steen at SILO */}
+          <a href="https://edmtrain.com/new-york-city-ny/steen-469215" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
             <div className="relative h-[100px] sm:h-[120px] overflow-hidden">
-              <Image
-                src="/images/indira-paganotto.png"
-                alt="Indira Paganotto at Knockdown Center"
-                fill
-                className="object-cover transition-all duration-700 ease-out group-hover:scale-[1.08]"
-                unoptimized
-              />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0A0A0A] flex items-center justify-center">
+                <span className="font-display text-accent-red text-4xl font-bold">S</span>
+              </div>
               <div className="absolute top-0 left-0">
-                <span className="red-tag text-[10px] px-2 py-0.5">MAR 20</span>
+                <span className="red-tag text-[10px] px-2 py-0.5">MAR 18</span>
               </div>
             </div>
             <div className="p-2">
               <p className="font-display text-accent-red uppercase text-[10px] font-bold tracking-wider mb-0.5 group-hover:text-[#FF3333] transition-colors duration-300">
-                INDIRA PAGANOTTO
+                STEEN
               </p>
               <h3 className="font-display font-bold uppercase leading-tight mb-0.5 group-hover:text-accent-red transition-colors duration-300 line-clamp-2" style={{ fontSize: 'clamp(11px, 1vw, 14px)' }}>
-                Acid Mayhem in Queens
+                SILO Brooklyn
               </h3>
-              <div className="meta-text text-[10px]">Knockdown Center · Acid Techno</div>
+              <div className="meta-text text-[10px]">SILO · Techno/Electronic</div>
             </div>
-          </Link>
-
-          {/* March 20 - Prospa */}
-          <Link href="/articles/teksupport-prophecy-prospa-josh-baker" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
-            <div className="relative h-[100px] sm:h-[120px] overflow-hidden">
-              <Image
-                src="/images/prospa-brooklyn.png"
-                alt="Prospa at Brooklyn Storehouse"
-                fill
-                className="object-cover transition-all duration-700 ease-out group-hover:scale-[1.08]"
-                unoptimized
-              />
-              <div className="absolute top-0 left-0">
-                <span className="red-tag text-[10px] px-2 py-0.5">MAR 20</span>
-              </div>
-            </div>
-            <div className="p-2">
-              <p className="font-display text-accent-red uppercase text-[10px] font-bold tracking-wider mb-0.5 group-hover:text-[#FF3333] transition-colors duration-300">
-                PROSPA
-              </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-0.5 group-hover:text-accent-red transition-colors duration-300 line-clamp-2" style={{ fontSize: 'clamp(11px, 1vw, 14px)' }}>
-                Teksupport x Prophecy
-              </h3>
-              <div className="meta-text text-[10px]">Brooklyn Storehouse · Progressive</div>
-            </div>
-          </Link>
-
-          {/* March 21 - Carl Cox */}
-          <Link href="/articles/carl-cox-nicole-moudaber-ilario-alicante-brooklyn-storehouse" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
-            <div className="relative h-[100px] sm:h-[120px] overflow-hidden">
-              <Image
-                src="/images/carl-cox-brooklyn.png"
-                alt="Carl Cox at Brooklyn Storehouse"
-                fill
-                className="object-cover transition-all duration-700 ease-out group-hover:scale-[1.08]"
-                unoptimized
-              />
-              <div className="absolute top-0 left-0">
-                <span className="red-tag text-[10px] px-2 py-0.5">MAR 21</span>
-              </div>
-            </div>
-            <div className="p-2">
-              <p className="font-display text-accent-red uppercase text-[10px] font-bold tracking-wider mb-0.5 group-hover:text-[#FF3333] transition-colors duration-300">
-                CARL COX
-              </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-0.5 group-hover:text-accent-red transition-colors duration-300 line-clamp-2" style={{ fontSize: 'clamp(11px, 1vw, 14px)' }}>
-                Techno Royalty Returns
-              </h3>
-              <div className="meta-text text-[10px]">Brooklyn Storehouse · Techno</div>
-            </div>
-          </Link>
+          </a>
         </div>
       </section>
 

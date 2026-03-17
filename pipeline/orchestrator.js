@@ -11,6 +11,7 @@
  *   summary  - Send daily summary notification
  *   add      - Add a new topic
  *   test     - Test connections
+ *   bridge   - Import events from scout to pipeline
  */
 
 const dotenvPath = require('path').join(__dirname, '.env');
@@ -430,9 +431,21 @@ async function main() {
     case 'test':
       await test();
       break;
+    case 'bridge':
+      // Import events from scout
+      const { execSync } = require('child_process');
+      try {
+        execSync('node scout-bridge.js --days 14 --min-priority high', {
+          cwd: __dirname,
+          stdio: 'inherit'
+        });
+      } catch (e) {
+        console.log('Bridge failed or no events to import');
+      }
+      break;
     default:
       console.log(`Unknown command: ${command}`);
-      console.log('Available: check, process, publish, run, setup, summary, add, test');
+      console.log('Available: check, process, publish, run, setup, summary, add, test, bridge');
       globalThis.process.exit(1);
   }
 }
