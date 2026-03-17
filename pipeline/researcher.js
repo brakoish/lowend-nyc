@@ -178,12 +178,77 @@ Topics: [what they discussed]
 - [URL 1]
 \`\`\`
 
+## IMAGES (Required)
+
+Find legally usable images for the article hero and body. Priority order:
+
+### 1. Artist Press Photos
+- [ ] Check artist website for press kit / EPK (electronic press kit)
+- [ ] Check artist management site for downloadable press photos
+- [ ] Look for "press" or "media" pages with download links
+- [ ] Note any usage terms (credit requirements, editorial use only)
+
+### 2. Label / PR Photos
+- [ ] Check the artist's label website for press assets
+- [ ] Search "[artist name] press photo" or "[artist name] EPK"
+- [ ] PR agencies often host downloadable images
+
+### 3. Event Flyers & Artwork
+- [ ] Official event flyer from promoter's social media or website
+- [ ] Album/EP cover art (usually fair use for editorial coverage)
+- [ ] Official tour artwork
+
+### 4. Venue Photos
+- [ ] Venue website (often has gallery/press section)
+- [ ] Venue's Google Maps photos (check licensing)
+- [ ] Promoter's official event photos from past shows
+
+### 5. Creative Commons / Free Sources
+- [ ] Wikimedia Commons (search artist/venue name)
+- [ ] Unsplash (for generic venue/crowd atmosphere shots)
+- [ ] Pexels (same)
+
+### 6. Embeddable Content
+- [ ] YouTube video thumbnail (can embed, not download)
+- [ ] SoundCloud player embed
+- [ ] Instagram embed (with proper attribution)
+
+### For Each Image Found, Record:
+- **URL**: Direct link to image
+- **Source**: Where it came from
+- **License**: Press kit / CC BY / editorial use / unknown
+- **Credit**: Required photo credit line
+- **Resolution**: Approximate size (need minimum 1200x630 for OG)
+- **Description**: What's in the image
+
+### Image Output Format:
+\`\`\`
+## Images Found
+### Hero Image (recommended)
+- URL: [link]
+- Source: [press kit / label / venue]
+- License: [editorial use / CC BY / press kit]
+- Credit: "Photo by [photographer] / courtesy of [source]"
+- Resolution: [dimensions if known]
+
+### Additional Images
+1. [description] — [URL] — [license] — [credit]
+2. [description] — [URL] — [license] — [credit]
+\`\`\`
+
+### Image Rules:
+- **NEVER** use images without checking licensing
+- Press kit photos are generally safe for editorial use
+- Always note the required credit line
+- Prefer high-resolution images (minimum 1200px wide)
+- If no legal images found, note that — we'll generate or commission
+
 **RULES**:
 - Only VERIFIED facts with sources
 - Mark uncertain data with [UNVERIFIED]
 - Do NOT fabricate quotes
 - If no interviews found, note that explicitly
-- Keep output under 2000 words — concise facts, not prose
+- Keep output under 2500 words — concise facts, not prose
 `;
 }
 
@@ -217,9 +282,16 @@ Angle: ${row.angle || 'Event coverage'}
 - [ ] Promoter's track record
 - [ ] Recent notable shows here
 
+## IMAGES
+- [ ] Official event flyer (promoter socials / website)
+- [ ] Headliner press photos (artist website / EPK / label)
+- [ ] Venue interior shots (venue website press section)
+- [ ] Support act press photos
+- For each: URL, source, license, credit line, resolution
+
 ## Sources: Event page, RA, artist socials, venue site, YouTube interviews
 
-**Output**: Structured brief under 1500 words. Verified facts + sources only.
+**Output**: Structured brief under 1500 words. Verified facts + sources + image links.
 `;
 }
 
@@ -255,9 +327,16 @@ Angle: ${row.angle || 'Venue spotlight'}
 ## PRACTICAL
 - [ ] Transit, cover charge range, crowd vibe
 
+## IMAGES
+- [ ] Venue interior/exterior photos (venue website press section)
+- [ ] Sound system / room shots
+- [ ] Crowd photos from past events (promoter / photographer credits)
+- [ ] Venue logo or branding assets
+- For each: URL, source, license, credit line, resolution
+
 ## Sources: Venue website, RA, Google reviews, local press, YouTube, social media
 
-**Output**: Structured brief under 1500 words.
+**Output**: Structured brief under 1500 words. Include image links with licensing.
 `;
 }
 
