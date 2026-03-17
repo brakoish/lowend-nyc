@@ -5,6 +5,25 @@ import NewsletterForm from '@/components/NewsletterForm';
 
 export default function HomePage() {
   const articles = getAllArticles();
+  
+  if (articles.length === 0) {
+    return (
+      <main className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-24">
+        <div className="text-center">
+          <h1 className="font-display uppercase text-4xl md:text-6xl mb-6">LOWEND NYC</h1>
+          <p className="text-text-secondary text-lg mb-8 max-w-xl mx-auto">
+            NYC&apos;s underground electronic music publication. Coverage coming soon.
+          </p>
+          <div className="w-20 h-1 bg-accent-red mx-auto mb-12" />
+          <div className="max-w-md mx-auto">
+            <p className="font-display uppercase text-sm mb-4">Get notified when we launch</p>
+            <NewsletterForm />
+          </div>
+        </div>
+      </main>
+    );
+  }
+  
   const featuredArticle = articles.find((a) => a.featured) || articles[0];
   const gridArticles = articles.filter((a) => a.slug !== featuredArticle.slug);
   // Take first 4 articles for sidebar
