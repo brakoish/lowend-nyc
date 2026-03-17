@@ -65,6 +65,7 @@ export async function POST(request: NextRequest) {
 // Get subscriber count (for admin)
 export async function GET(request: NextRequest) {
   // In production, add authentication here
+  void request; // Mark as intentionally used for ESLint
   return NextResponse.json({
     subscriberCount: subscribers.size
   });
