@@ -116,15 +116,15 @@ export default function Navigation() {
                   </Link>
                 ))}
               </div>
-              <button
+              <Link
+                href="/search"
                 className="ml-6 text-text-secondary hover:text-accent-red transition-colors flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded p-1"
-                aria-label="Search (coming soon)"
-                onClick={() => alert('Search feature coming soon!')}
+                aria-label="Search articles"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
-              </button>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
