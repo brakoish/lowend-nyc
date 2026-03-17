@@ -121,6 +121,39 @@ For each interview found:
 - [ ] Beatport: chart positions
 - [ ] RA profile URL
 
+## IMAGES (Legal to Use)
+
+Find images we can legally use. For each image provide: URL, source, license type.
+
+**Priority order:**
+1. **Press kit / EPK photos** — Check artist website for press/media section (usually free for editorial use)
+2. **Creative Commons** — Wikimedia Commons, Flickr CC-licensed photos
+3. **Official promo shots** — From label press releases (editorial use permitted)
+4. **Event flyers / artwork** — From promoter social media (fair use for coverage)
+5. **Album / single artwork** — From Spotify, Bandcamp, label sites (fair use for review)
+6. **Venue photos** — From venue website press section
+7. **RA artist photo** — From their RA profile
+
+**Search locations:**
+- [ ] Artist website → Press/Media/EPK section
+- [ ] Label website → Press section
+- [ ] Wikimedia Commons: "${artistName}"
+- [ ] Flickr Creative Commons: "${artistName} DJ"
+- [ ] Artist Instagram (note: need permission, but can reference)
+- [ ] Event promoter press assets
+
+**For each image found, note:**
+- Direct URL
+- Source/photographer credit
+- License type (CC-BY, CC-BY-SA, press kit, fair use editorial)
+- Resolution (if visible)
+- Description (what's in the image)
+
+**DO NOT use:**
+- Getty Images, Shutterstock, or other paid stock (we don't have licenses)
+- Uncredited random Google Images
+- Fan photos without permission
+
 ## CONTEXT
 - [ ] Current genre landscape — who are their peers?
 - [ ] Trajectory — rising, established, evolving?
@@ -167,6 +200,13 @@ Topics: [what they discussed]
 
 ## NYC History
 - [Date]: [Venue] — [Promoter]
+
+## Images Found
+### [Image 1]
+- URL: [direct link]
+- Source: [photographer/press kit/label]
+- License: [CC-BY / press kit / fair use editorial]
+- Description: [what's in the image]
 
 ## Current Moment
 [What they're doing now]
