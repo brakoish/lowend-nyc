@@ -112,12 +112,13 @@ node src/cli.js analyze -f [draft file]
 If score is above 40/100, rewrite flagged sections. Target: under 30/100.
 
 Key patterns to eliminate:
-- Tier 1 AI vocabulary: "delve", "tapestry", "vibrant", "crucial", "robust", "seamless", "comprehensive"
+- **ZERO EM DASHES (—)**: Replace ALL with periods, commas, or colons. No exceptions.
+- Tier 1 AI vocabulary: "delve", "tapestry", "vibrant", "crucial", "robust", "seamless", "comprehensive", "landscape"
 - Filler: "In order to", "Due to the fact that", "It is worth noting"  
 - Significance inflation: "marking a pivotal moment", "reshaping the landscape"
 - Generic conclusions: "The future looks bright", "Exciting times"
 - Sycophantic tone, chatbot artifacts
-- Excessive boldface, em dashes, and rule-of-three patterns
+- Excessive boldface and rule-of-three patterns
 - Formulaic structure ("Despite challenges... continues to thrive")
 
 ### Style
