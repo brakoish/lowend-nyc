@@ -66,7 +66,7 @@ export default function HomePage() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
           {/* March 18 */}
-          <Link href="/articles/eli-escobar-boy-cordero-le-bain" className="group block overflow-hidden border border-[#222] hover:border-[#FF2B2B] focus-visible:border-[#FF2B2B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+          <Link href="/articles/eli-escobar-boy-cordero-le-bain" className="group block overflow-hidden border border-border hover:border-[#FF2B2B] focus-visible:border-[#FF2B2B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
             <div className="relative h-[140px] overflow-hidden">
               <Image
                 src="/images/eli-escobar-lebain.png"
@@ -91,7 +91,7 @@ export default function HomePage() {
           </Link>
 
           {/* March 20 - Indira */}
-          <Link href="/articles/indira-paganotto-knockdown-center" className="group block overflow-hidden border border-[#222] hover:border-[#FF2B2B] focus-visible:border-[#FF2B2B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+          <Link href="/articles/indira-paganotto-knockdown-center" className="group block overflow-hidden border border-border hover:border-[#FF2B2B] focus-visible:border-[#FF2B2B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
             <div className="relative h-[140px] overflow-hidden">
               <Image
                 src="/images/indira-paganotto.png"
@@ -116,7 +116,7 @@ export default function HomePage() {
           </Link>
 
           {/* March 20 - Prospa */}
-          <Link href="/articles/teksupport-prophecy-prospa-josh-baker" className="group block overflow-hidden border border-[#222] hover:border-[#FF2B2B] focus-visible:border-[#FF2B2B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+          <Link href="/articles/teksupport-prophecy-prospa-josh-baker" className="group block overflow-hidden border border-border hover:border-[#FF2B2B] focus-visible:border-[#FF2B2B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
             <div className="relative h-[140px] overflow-hidden">
               <Image
                 src="/images/prospa-brooklyn.png"
@@ -141,7 +141,7 @@ export default function HomePage() {
           </Link>
 
           {/* March 21 - Carl Cox */}
-          <Link href="/articles/carl-cox-nicole-moudaber-ilario-alicante-brooklyn-storehouse" className="group block overflow-hidden border border-[#222] hover:border-[#FF2B2B] focus-visible:border-[#FF2B2B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+          <Link href="/articles/carl-cox-nicole-moudaber-ilario-alicante-brooklyn-storehouse" className="group block overflow-hidden border border-border hover:border-[#FF2B2B] focus-visible:border-[#FF2B2B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
             <div className="relative h-[140px] overflow-hidden">
               <Image
                 src="/images/carl-cox-brooklyn.png"
@@ -174,7 +174,7 @@ export default function HomePage() {
             <Link
               key={article.slug}
               href={`/articles/${article.slug}`}
-              className={`group block overflow-hidden ${index === 2 ? 'bg-[#FF2B2B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg' : 'border border-[#222] hover:border-[#FF2B2B] focus-visible:border-[#FF2B2B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg'} transition-all duration-500 ease-out`}
+              className={`group block overflow-hidden ${index === 2 ? 'bg-[#FF2B2B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg' : 'border border-border hover:border-[#FF2B2B] focus-visible:border-[#FF2B2B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg'} transition-all duration-500 ease-out`}
             >
               {/* Image */}
               <div className="relative h-[200px] overflow-hidden">
@@ -254,7 +254,7 @@ export default function HomePage() {
             <Link
               key={article.slug}
               href={`/articles/${article.slug}`}
-              className="group block overflow-hidden border border-[#222] hover:border-[#FF2B2B] focus-visible:border-[#FF2B2B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out"
+              className="group block overflow-hidden border border-border hover:border-[#FF2B2B] focus-visible:border-[#FF2B2B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out"
             >
               <div className="relative h-[200px] overflow-hidden">
                 <Image

@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         'page-bg': '#0A0A0A',
         'card-bg': '#0F0F0F',
-        'border': '#222222',
+        'border': '#3A3A3A',
         'text-primary': '#EFEFEF',
         'text-secondary': '#BFBFBF',
         'accent-red': '#FF2B2B',

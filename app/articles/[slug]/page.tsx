@@ -202,7 +202,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           {article.artist.name !== 'LOWEND Editorial' && (
           <aside className="space-y-8 xl:sticky xl:top-24 xl:self-start">
             {/* Artist Card */}
-            <div className="border border-[#222] p-5">
+            <div className="border border-border p-5">
               <h3 className="font-display font-bold uppercase text-sm mb-4 tracking-wider">
                 ABOUT {article.artist.name}
               </h3>
@@ -216,7 +216,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               {/* Genre tags */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {article.genre.map((genre) => (
-                  <span key={genre} className="font-mono text-[10px] uppercase px-2 py-1 bg-[#222] text-text-secondary">
+                  <span key={genre} className="font-mono text-[10px] uppercase px-2 py-1 bg-[#333333] text-text-secondary">
                     {genre}
                   </span>
                 ))}
@@ -238,7 +238,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       href={article.artist.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
+                      className="px-3 py-1 border border-border hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
                       aria-label={`${article.artist.name} on Instagram`}
                     >
                       IG
@@ -249,7 +249,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       href={article.artist.spotify}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
+                      className="px-3 py-1 border border-border hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
                       aria-label={`${article.artist.name} on Spotify`}
                     >
                       Spotify
@@ -260,7 +260,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       href={article.artist.soundcloud}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
+                      className="px-3 py-1 border border-border hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
                       aria-label={`${article.artist.name} on SoundCloud`}
                     >
                       SoundCloud
@@ -271,7 +271,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       href={article.artist.residentadvisor}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
+                      className="px-3 py-1 border border-border hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
                       aria-label={`${article.artist.name} on Resident Advisor`}
                     >
                       RA
@@ -282,7 +282,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       href={article.artist.beatport}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1 border border-[#333] hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
+                      className="px-3 py-1 border border-border hover:border-accent-red hover:text-accent-red transition-colors font-mono text-[10px] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded"
                       aria-label={`${article.artist.name} on Beatport`}
                     >
                       Beatport
@@ -294,7 +294,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
             {/* Related Articles */}
             {relatedArticles.length > 0 && (
-            <div className="border border-[#222] p-5">
+            <div className="border border-border p-5">
               <h3 className="font-display font-bold uppercase text-sm mb-4 tracking-wider">
                 RELATED ARTICLES
               </h3>
