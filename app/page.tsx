@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { getAllArticles } from '@/lib/articles';
+import { getAllArticles, calculateReadingTime } from '@/lib/articles';
 
 export default function HomePage() {
   const articles = getAllArticles();
@@ -47,7 +47,7 @@ export default function HomePage() {
               <div className="meta-text flex flex-wrap items-center gap-x-4 gap-y-1">
                 <span>POSTED {new Date(featuredArticle.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase()}</span>
                 <span className="hidden sm:inline">·</span>
-                <span>4 MIN READ</span>
+                <span>{calculateReadingTime(featuredArticle.content)}</span>
                 <span className="hidden sm:inline">·</span>
                 <span>{featuredArticle.venue}</span>
               </div>

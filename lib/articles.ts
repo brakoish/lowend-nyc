@@ -29,6 +29,14 @@ export interface Article extends ArticleMetadata {
   content: string;
 }
 
+export function calculateReadingTime(content: string): string {
+  // Average reading speed: 200 words per minute
+  const wordsPerMinute = 200;
+  const wordCount = content.trim().split(/\s+/).length;
+  const minutes = Math.ceil(wordCount / wordsPerMinute);
+  return `${minutes} MIN READ`;
+}
+
 export function getAllArticles(): Article[] {
   const fileNames = fs.readdirSync(articlesDirectory);
   const articles = fileNames
