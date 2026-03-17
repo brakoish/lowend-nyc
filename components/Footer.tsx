@@ -20,8 +20,8 @@ export default function Footer() {
           <div>
             <p className="meta-text mb-4">NAVIGATE</p>
             <nav className="space-y-2" aria-label="Footer navigation">
-              {['News', 'Features', 'Mixes', 'Artists', 'About'].map((item) => {
-                const href = item === 'News' ? '/' : `/${item.toLowerCase()}`;
+              {['Featured', 'Events', 'Artists', 'About'].map((item) => {
+                const href = item === 'Featured' ? '/' : `/${item.toLowerCase()}`;
                 return (
                   <Link
                     key={item}

@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'page-bg': '#0A0A0A',
-        'card-bg': '#0F0F0F',
-        'border': '#3A3A3A',
-        'text-primary': '#EFEFEF',
-        'text-secondary': '#BFBFBF',
-        'accent-red': '#FF2B2B',
+        'page-bg': '#000000',
+        'card-bg': '#0A0A0A',
+        'border': '#2A2A2A',
+        'text-primary': '#FFFFFF',
+        'text-secondary': '#999999',
+        'accent-red': '#E30614',
       },
       fontFamily: {
         'display': ['var(--font-jost)', 'sans-serif'],

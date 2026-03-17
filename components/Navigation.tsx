@@ -5,9 +5,8 @@ import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
 const navLinks = [
-  { href: '/', label: 'NEWS' },
-  { href: '/features', label: 'FEATURES' },
-  { href: '/mixes', label: 'MIXES' },
+  { href: '/', label: 'FEATURED' },
+  { href: '/events', label: 'EVENTS' },
   { href: '/artists', label: 'ARTISTS' },
   { href: '/about', label: 'ABOUT' },
 ];
@@ -22,17 +21,14 @@ export default function Navigation() {
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
-      // Focus the close button when menu opens
       setTimeout(() => firstFocusableRef.current?.focus(), 100);
     } else {
       document.body.style.overflow = '';
-      // Return focus to menu button when closed
       mobileMenuButtonRef.current?.focus();
     }
     return () => { document.body.style.overflow = ''; };
   }, [mobileMenuOpen]);
 
-  // Handle escape key to close menu
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && mobileMenuOpen) {
@@ -43,7 +39,6 @@ export default function Navigation() {
     return () => document.removeEventListener('keydown', handleEscape);
   }, [mobileMenuOpen]);
 
-  // Trap focus within mobile menu
   useEffect(() => {
     if (!mobileMenuOpen) return;
     
@@ -78,72 +73,78 @@ export default function Navigation() {
 
   return (
     <nav className="bg-page-bg sticky top-0 z-50">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
-        {/* MASSIVE wordmark — edge to edge, ultra heavy, full width stretch */}
-        <div className="pt-2 lg:pt-3 pb-0 overflow-hidden">
+      {/* Full-bleed masthead — edge to edge, ultra heavy */}
+      <div className="w-full">
+        <div className="max-w-[1440px] mx-auto px-3 sm:px-4 lg:px-6">
           <Link
             href="/"
-            className="block font-display uppercase hover:text-accent-red transition-colors duration-75 leading-none w-full whitespace-nowrap"
+            className="block font-display uppercase hover:text-accent-red transition-colors duration-75 leading-none whitespace-nowrap"
             style={{
-              fontSize: 'clamp(40px, 10vw, 140px)',
-              lineHeight: '0.9',
-              letterSpacing: '0.02em',
+              fontSize: 'clamp(56px, 14vw, 200px)',
+              lineHeight: '0.82',
+              letterSpacing: '-0.03em',
               fontWeight: 900,
-              display: 'block',
-              width: '100%',
+              paddingTop: '0.75rem',
+              paddingBottom: '0.25rem',
             }}
           >
-            LOWEND NYC
+            LOWEND<span className="text-accent-red"> NYC</span>
           </Link>
+          {/* Red underline bar from mockup */}
+          <div className="h-[6px] bg-accent-red w-full mb-1" />
         </div>
+      </div>
 
-        {/* Nav bar — items spread across FULL width like the mockup */}
-        <div className="flex justify-between items-center py-2 border-t-2 border-white/20">
-          {/* Desktop Navigation — space-between full width */}
-          <div className="hidden md:flex items-center justify-between w-full">
-            <div className="flex items-center justify-between flex-1 gap-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`font-display uppercase font-bold transition-colors duration-75 whitespace-nowrap ${
-                    pathname === link.href ? 'text-accent-red' : 'hover:text-accent-red'
-                  }`}
-                  style={{ fontSize: 'clamp(14px, 2vw, 28px)', fontWeight: 700 }}
-                  aria-current={pathname === link.href ? 'page' : undefined}
-                >
-                  {link.label}
-                </Link>
-              ))}
+      {/* Full-width nav bar — evenly spaced like mockup */}
+      <div className="w-full border-b-2 border-white/20">
+        <div className="max-w-[1440px] mx-auto px-3 sm:px-4 lg:px-6">
+          <div className="flex justify-between items-center py-3">
+            {/* Desktop Navigation — space-between full width */}
+            <div className="hidden md:flex items-center justify-between w-full">
+              <div className="flex items-center justify-between flex-1">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`font-display uppercase transition-colors duration-75 whitespace-nowrap tracking-wider ${
+                      pathname === link.href ? 'text-accent-red' : 'hover:text-accent-red'
+                    }`}
+                    style={{ fontSize: 'clamp(12px, 1.5vw, 18px)', fontWeight: 700, letterSpacing: '0.08em' }}
+                    aria-current={pathname === link.href ? 'page' : undefined}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+              <button
+                className="ml-6 text-text-secondary hover:text-accent-red transition-colors flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded p-1"
+                aria-label="Search (coming soon)"
+                onClick={() => alert('Search feature coming soon!')}
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </button>
             </div>
+
+            {/* Mobile menu button */}
             <button
-              className="ml-4 lg:ml-6 text-text-secondary hover:text-accent-red transition-colors flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded p-1"
-              aria-label="Search (coming soon)"
-              onClick={() => alert('Search feature coming soon!')}
+              ref={mobileMenuButtonRef}
+              className="md:hidden text-text-primary z-[60] relative ml-auto focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded p-1"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
             >
-              <svg className="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h16" />
+                )}
               </svg>
             </button>
           </div>
-
-          {/* Mobile menu button */}
-          <button
-            ref={mobileMenuButtonRef}
-            className="md:hidden text-text-primary z-[60] relative ml-auto focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg rounded p-1"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={mobileMenuOpen}
-            aria-controls="mobile-menu"
-          >
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
         </div>
       </div>
 

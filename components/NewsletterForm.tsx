@@ -66,12 +66,12 @@ export default function NewsletterForm() {
             aria-required="true"
             aria-invalid={status === 'error' ? 'true' : 'false'}
             aria-describedby={status === 'error' ? 'newsletter-error' : undefined}
-            className="flex-1 px-4 py-3 bg-white border-2 border-black text-black placeholder:text-black/60 font-mono text-sm uppercase focus:outline-none focus:border-black focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:ring-offset-[#FF2B2B] transition-colors disabled:opacity-50"
+            className="flex-1 px-4 py-3 bg-white border-2 border-black text-black placeholder:text-black/60 font-mono text-sm uppercase focus:outline-none focus:border-black focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:ring-offset-[#E30614] transition-colors disabled:opacity-50"
           />
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="px-6 py-3 bg-black text-[#FF2B2B] font-display font-bold uppercase tracking-wider hover:bg-black/80 transition-colors duration-75 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:ring-offset-[#FF2B2B]"
+            className="px-6 py-3 bg-black text-[#E30614] font-display font-bold uppercase tracking-wider hover:bg-black/80 transition-colors duration-75 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:ring-offset-[#E30614]"
           >
             {status === 'loading' ? 'SUBSCRIBING...' : 'SUBSCRIBE'}
           </button>
