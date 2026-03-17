@@ -1,0 +1,18 @@
+{
+  "name": "lowend-nyc-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LOWEND NYC editorial pipeline orchestrator",
+  "main": "orchestrator.js",
+  "scripts": {
+    "check": "node orchestrator.js check",
+    "process": "node orchestrator.js process",
+    "publish": "node orchestrator.js publish",
+    "run": "node orchestrator.js run",
+    "test": "node orchestrator.js test"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0",
+    "dotenv": "^16.4.7"
+  }
+}
