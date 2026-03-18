@@ -171,7 +171,7 @@ export default function HomePage() {
         <div className="flex items-center gap-3 mb-3">
           <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={{ fontSize: "clamp(16px, 2vw, 24px)", fontWeight: 700 }}>COMING UP</h2>
           <div className="flex-1 h-[1px] bg-accent-red/30" />
-          <span className="meta-text whitespace-nowrap">MAR 18-MAR 18</span>
+          <span className="meta-text whitespace-nowrap">MAR 18 — APR 1</span>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-1">
           {/* MAR 18 - 8ULENTINA AND ARUSHI JAIN at NOWADAYS */}
@@ -204,6 +204,70 @@ export default function HomePage() {
                 SILO BROOKLYN
               </h3>
               <div className="meta-text text-[10px]">SILO BROOKLYN</div>
+            </div>
+          </a>
+          {/* MAR 20 - COVENANT at BROOKLYN MONARCH */}
+          <a href="/articles/covenant-at-brooklyn-monarch" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+            <div className="p-3">
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <span className="red-tag text-[10px] px-2 py-0.5">MAR 20</span>
+                <span className="meta-text text-[10px]">Electronic</span>
+              </div>
+              <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
+                COVENANT
+              </p>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: "clamp(12px, 1.2vw, 16px)" }}>
+                BROOKLYN MONARCH
+              </h3>
+              <div className="meta-text text-[10px]">BROOKLYN MONARCH</div>
+            </div>
+          </a>
+          {/* MAR 21 - CARL COX at BROOKLYN STOREHOUSE */}
+          <a href="/articles/carl-cox-at-brooklyn-storehouse" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+            <div className="p-3">
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <span className="red-tag text-[10px] px-2 py-0.5">MAR 21</span>
+                <span className="meta-text text-[10px]">House</span>
+              </div>
+              <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
+                CARL COX
+              </p>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: "clamp(12px, 1.2vw, 16px)" }}>
+                BROOKLYN STOREHOUSE
+              </h3>
+              <div className="meta-text text-[10px]">BROOKLYN STOREHOUSE</div>
+            </div>
+          </a>
+          {/* MAR 21 - DARREN STYLES at EDEN */}
+          <a href="/articles/darren-styles-at-eden" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+            <div className="p-3">
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <span className="red-tag text-[10px] px-2 py-0.5">MAR 21</span>
+                <span className="meta-text text-[10px]">Electronic</span>
+              </div>
+              <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
+                DARREN STYLES
+              </p>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: "clamp(12px, 1.2vw, 16px)" }}>
+                EDEN
+              </h3>
+              <div className="meta-text text-[10px]">EDEN</div>
+            </div>
+          </a>
+          {/* MAR 21 - DJ SHANNON, KATIE REX, TODD TERRY at PARAGON */}
+          <a href="/articles/dj-shannon-katie-rex-todd-terry-at-paragon" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+            <div className="p-3">
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <span className="red-tag text-[10px] px-2 py-0.5">MAR 21</span>
+                <span className="meta-text text-[10px]">Electronic</span>
+              </div>
+              <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
+                DJ SHANNON, KATIE REX, TODD TERRY
+              </p>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: "clamp(12px, 1.2vw, 16px)" }}>
+                PARAGON
+              </h3>
+              <div className="meta-text text-[10px]">PARAGON</div>
             </div>
           </a>
         </div>
