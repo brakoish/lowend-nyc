@@ -70,9 +70,13 @@ export default function HomePage() {
   }
   
   const featuredArticle = articles.find((a) => a.featured) || articles[0];
-  const gridArticles = articles.filter((a) => a.slug !== featuredArticle.slug);
+  const remainingArticles = articles.filter((a) => a.slug !== featuredArticle.slug);
   // Take first 4 articles for sidebar
-  const sidebarArticles = gridArticles.slice(0, 4);
+  const sidebarArticles = remainingArticles.slice(0, 4);
+  // Take next 6 for the featured grid (limit to avoid crowding)
+  const gridArticles = remainingArticles.slice(4, 10);
+  // Rest go to ALL COVERAGE
+  const allCoverageArticles = remainingArticles.slice(10);
 
   return (
     <main>
@@ -288,7 +292,7 @@ export default function HomePage() {
           <span className="meta-text whitespace-nowrap">{articles.length} ARTICLES</span>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
-          {articles.map((article) => (
+          {allCoverageArticles.map((article) => (
             <Link
               key={article.slug}
               href={`/articles/${article.slug}`}
