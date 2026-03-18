@@ -23,117 +23,48 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* COMING UP — Next 14 days of NYC events */}
-        <section className="max-w-[1440px] mx-auto px-3 sm:px-4 lg:px-6 py-4">
-          <div className="flex items-center gap-3 mb-3">
-            <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={{ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }}>COMING UP</h2>
-            <div className="flex-1 h-[1px] bg-accent-red/30" />
-            <span className="meta-text whitespace-nowrap">MAR 17-31</span>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-1">
-            {/* March 17 - Obskür at H0L0 */}
-            <a href="https://edmtrain.com/new-york-city-ny/raw-cuts-obskur-484986" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
-              <div className="p-3">
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <span className="red-tag text-[10px] px-2 py-0.5">MAR 17</span>
-                  <span className="meta-text text-[10px]">House/Techno</span>
-                </div>
-                <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
-                  OBSKÜR
-                </p>
-                <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                  Raw Cuts at H0L0
-                </h3>
-                <div className="meta-text text-[10px]">H0L0</div>
+              {/* COMING UP — Next 14 days of NYC events */}
+      <section className="max-w-[1440px] mx-auto px-3 sm:px-4 lg:px-6 py-4">
+        <div className="flex items-center gap-3 mb-3">
+          <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }>COMING UP</h2>
+          <div className="flex-1 h-[1px] bg-accent-red/30" />
+          <span className="meta-text whitespace-nowrap">MAR 18-MAR 18</span>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-1">
+          {/* MAR 18 - 8ULENTINA at Nowadays */}
+          <a href="https://edmtrain.com/new-york-city-ny/8ulentina-arushi-jain-485201" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+            <div className="p-3">
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <span className="red-tag text-[10px] px-2 py-0.5">MAR 18</span>
+                <span className="meta-text text-[10px]">Ambient/Experimental</span>
               </div>
-            </a>
-
-            {/* March 18 - 8ULENTINA at Nowadays */}
-            <a href="https://edmtrain.com/new-york-city-ny/8ulentina-arushi-jain-485201" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
-              <div className="p-3">
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <span className="red-tag text-[10px] px-2 py-0.5">MAR 18</span>
-                  <span className="meta-text text-[10px]">Ambient/Experimental</span>
-                </div>
-                <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
-                  8ULENTINA
-                </p>
-                <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                  Arushi Jain at Nowadays
-                </h3>
-                <div className="meta-text text-[10px]">Nowadays</div>
+              <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
+                8ULENTINA
+              </p>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={ fontSize: 'clamp(12px, 1.2vw, 16px)' }>
+                Nowadays
+              </h3>
+              <div className="meta-text text-[10px]">Nowadays</div>
+            </div>
+          </a>
+          {/* MAR 18 - Steen at SILO Brooklyn */}
+          <a href="https://edmtrain.com/new-york-city-ny/steen-469215" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+            <div className="p-3">
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <span className="red-tag text-[10px] px-2 py-0.5">MAR 18</span>
+                <span className="meta-text text-[10px]">Techno/Electronic</span>
               </div>
-            </a>
-
-            {/* March 18 - Steen at SILO */}
-            <a href="https://edmtrain.com/new-york-city-ny/steen-469215" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
-              <div className="p-3">
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <span className="red-tag text-[10px] px-2 py-0.5">MAR 18</span>
-                  <span className="meta-text text-[10px]">Techno/Electronic</span>
-                </div>
-                <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
-                  STEEN
-                </p>
-                <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                  SILO Brooklyn
-                </h3>
-                <div className="meta-text text-[10px]">SILO</div>
-              </div>
-            </a>
-
-            {/* March 20 - AC Slater & Shift K3Y at Basement */}
-            <a href="https://edmtrain.com/new-york-city-ny/ac-slater-469215" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
-              <div className="p-3">
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <span className="red-tag text-[10px] px-2 py-0.5">MAR 20</span>
-                  <span className="meta-text text-[10px]">Bass House</span>
-                </div>
-                <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
-                  AC SLATER
-                </p>
-                <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                  Shift K3Y at Basement
-                </h3>
-                <div className="meta-text text-[10px]">Basement</div>
-              </div>
-            </a>
-
-            {/* March 22 - Charlotte de Witte at Brooklyn Mirage */}
-            <a href="https://edmtrain.com/new-york-city-ny/charlotte-de-witte-469215" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
-              <div className="p-3">
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <span className="red-tag text-[10px] px-2 py-0.5">MAR 22</span>
-                  <span className="meta-text text-[10px]">Techno</span>
-                </div>
-                <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
-                  CHARLOTTE DE WITTE
-                </p>
-                <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                  Enrico Sangiuliano at Mirage
-                </h3>
-                <div className="meta-text text-[10px]">Brooklyn Mirage</div>
-              </div>
-            </a>
-
-            {/* March 29 - Four Tet at Knockdown Center */}
-            <a href="https://edmtrain.com/new-york-city-ny/four-tet-469215" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
-              <div className="p-3">
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <span className="red-tag text-[10px] px-2 py-0.5">MAR 29</span>
-                  <span className="meta-text text-[10px]">Electronic</span>
-                </div>
-                <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
-                  FOUR TET
-                </p>
-                <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                  Floating Points at Knockdown
-                </h3>
-                <div className="meta-text text-[10px]">Knockdown Center</div>
-              </div>
-            </a>
-          </div>
-        </section>
+              <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
+                STEEN
+              </p>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={ fontSize: 'clamp(12px, 1.2vw, 16px)' }>
+                SILO Brooklyn
+              </h3>
+              <div className="meta-text text-[10px]">SILO Brooklyn</div>
+            </div>
+          </a>
+        </div>
+      </section>
       </main>
     );
   }
@@ -231,32 +162,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* COMING UP — Next 14 days of NYC events */}
+            {/* COMING UP — Next 14 days of NYC events */}
       <section className="max-w-[1440px] mx-auto px-3 sm:px-4 lg:px-6 py-4">
         <div className="flex items-center gap-3 mb-3">
-          <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={{ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }}>COMING UP</h2>
+          <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }>COMING UP</h2>
           <div className="flex-1 h-[1px] bg-accent-red/30" />
-          <span className="meta-text whitespace-nowrap">MAR 17-31</span>
+          <span className="meta-text whitespace-nowrap">MAR 18-MAR 18</span>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-1">
-          {/* March 17 - Obskür at H0L0 */}
-          <a href="https://edmtrain.com/new-york-city-ny/raw-cuts-obskur-484986" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
-            <div className="p-3">
-              <div className="flex items-start justify-between gap-2 mb-2">
-                <span className="red-tag text-[10px] px-2 py-0.5">MAR 17</span>
-                <span className="meta-text text-[10px]">House/Techno</span>
-              </div>
-              <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
-                OBSKÜR
-              </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                Raw Cuts at H0L0
-              </h3>
-              <div className="meta-text text-[10px]">H0L0</div>
-            </div>
-          </a>
-
-          {/* March 18 - 8ULENTINA at Nowadays */}
+          {/* MAR 18 - 8ULENTINA at Nowadays */}
           <a href="https://edmtrain.com/new-york-city-ny/8ulentina-arushi-jain-485201" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
             <div className="p-3">
               <div className="flex items-start justify-between gap-2 mb-2">
@@ -266,14 +180,13 @@ export default function HomePage() {
               <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
                 8ULENTINA
               </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                Arushi Jain at Nowadays
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={ fontSize: 'clamp(12px, 1.2vw, 16px)' }>
+                Nowadays
               </h3>
               <div className="meta-text text-[10px]">Nowadays</div>
             </div>
           </a>
-
-          {/* March 18 - Steen at SILO */}
+          {/* MAR 18 - Steen at SILO Brooklyn */}
           <a href="https://edmtrain.com/new-york-city-ny/steen-469215" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
             <div className="p-3">
               <div className="flex items-start justify-between gap-2 mb-2">
@@ -283,61 +196,10 @@ export default function HomePage() {
               <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
                 STEEN
               </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={ fontSize: 'clamp(12px, 1.2vw, 16px)' }>
                 SILO Brooklyn
               </h3>
-              <div className="meta-text text-[10px]">SILO</div>
-            </div>
-          </a>
-
-          {/* March 20 - AC Slater & Shift K3Y at Basement */}
-          <a href="https://edmtrain.com/new-york-city-ny/ac-slater-469215" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
-            <div className="p-3">
-              <div className="flex items-start justify-between gap-2 mb-2">
-                <span className="red-tag text-[10px] px-2 py-0.5">MAR 20</span>
-                <span className="meta-text text-[10px]">Bass House</span>
-              </div>
-              <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
-                AC SLATER
-              </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                Shift K3Y at Basement
-              </h3>
-              <div className="meta-text text-[10px]">Basement</div>
-            </div>
-          </a>
-
-          {/* March 22 - Charlotte de Witte at Brooklyn Mirage */}
-          <a href="https://edmtrain.com/new-york-city-ny/charlotte-de-witte-469215" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
-            <div className="p-3">
-              <div className="flex items-start justify-between gap-2 mb-2">
-                <span className="red-tag text-[10px] px-2 py-0.5">MAR 22</span>
-                <span className="meta-text text-[10px]">Techno</span>
-              </div>
-              <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
-                CHARLOTTE DE WITTE
-              </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                Enrico Sangiuliano at Mirage
-              </h3>
-              <div className="meta-text text-[10px]">Brooklyn Mirage</div>
-            </div>
-          </a>
-
-          {/* March 29 - Four Tet at Knockdown Center */}
-          <a href="https://edmtrain.com/new-york-city-ny/four-tet-469215" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
-            <div className="p-3">
-              <div className="flex items-start justify-between gap-2 mb-2">
-                <span className="red-tag text-[10px] px-2 py-0.5">MAR 29</span>
-                <span className="meta-text text-[10px]">Electronic</span>
-              </div>
-              <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
-                FOUR TET
-              </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                Floating Points at Knockdown
-              </h3>
-              <div className="meta-text text-[10px]">Knockdown Center</div>
+              <div className="meta-text text-[10px]">SILO Brooklyn</div>
             </div>
           </a>
         </div>
