@@ -28,7 +28,7 @@ export default function HomePage() {
         <div className="flex items-center gap-3 mb-3">
           <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={{ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }}>COMING UP</h2>
           <div className="flex-1 h-[1px] bg-accent-red/30" />
-          <span className="meta-text whitespace-nowrap">MAR 18-MAR 18</span>
+          <span className="meta-text whitespace-nowrap">MAR 18-APR 1</span>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-1">
           {/* MAR 18 - 8ULENTINA at Nowadays */}
@@ -167,7 +167,7 @@ export default function HomePage() {
         <div className="flex items-center gap-3 mb-3">
           <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={{ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }}>COMING UP</h2>
           <div className="flex-1 h-[1px] bg-accent-red/30" />
-          <span className="meta-text whitespace-nowrap">MAR 18-MAR 18</span>
+          <span className="meta-text whitespace-nowrap">MAR 18-APR 1</span>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-1">
           {/* MAR 18 - 8ULENTINA at Nowadays */}
