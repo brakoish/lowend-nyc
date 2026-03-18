@@ -128,6 +128,7 @@ async function check() {
   console.log(`  Approved: ${stats.approved}`);
   console.log(`  Researching: ${stats.researching}`);
   console.log(`  Writing: ${stats.writing}`);
+  console.log(`  Editing: ${stats.editing}`);
   console.log(`  Draft Complete: ${stats.draftComplete}`);
   console.log(`  Pending Review: ${stats.pendingApproval}`);
   console.log(`  Scheduled: ${stats.scheduled}`);
