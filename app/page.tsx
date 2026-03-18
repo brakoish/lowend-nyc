@@ -23,44 +23,44 @@ export default function HomePage() {
           </div>
         </section>
 
-                          {/* COMING UP — Next 14 days of NYC events */}
+      {/* COMING UP — Next 14 days of NYC events */}
       <section className="max-w-[1440px] mx-auto px-3 sm:px-4 lg:px-6 py-4">
         <div className="flex items-center gap-3 mb-3">
-          <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={{ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }}>COMING UP</h2>
+          <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={{ fontSize: "clamp(16px, 2vw, 24px)", fontWeight: 700 }}>COMING UP</h2>
           <div className="flex-1 h-[1px] bg-accent-red/30" />
           <span className="meta-text whitespace-nowrap">MAR 18-APR 1</span>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-1">
-          {/* MAR 18 - 8ULENTINA at Nowadays */}
-          <a href="https://edmtrain.com/new-york-city-ny/8ulentina-arushi-jain-485201" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+          {/* MAR 18 - 8ULENTINA AND ARUSHI JAIN at NOWADAYS */}
+          <a href="/articles/8ulentina-nowadays-march-2025" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
             <div className="p-3">
               <div className="flex items-start justify-between gap-2 mb-2">
                 <span className="red-tag text-[10px] px-2 py-0.5">MAR 18</span>
-                <span className="meta-text text-[10px]">Ambient/Experimental</span>
+                <span className="meta-text text-[10px]">Electronic</span>
               </div>
               <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
-                8ULENTINA
+                8ULENTINA AND ARUSHI JAIN
               </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                Nowadays
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: "clamp(12px, 1.2vw, 16px)" }}>
+                NOWADAYS
               </h3>
-              <div className="meta-text text-[10px]">Nowadays</div>
+              <div className="meta-text text-[10px]">NOWADAYS</div>
             </div>
           </a>
-          {/* MAR 18 - Steen at SILO Brooklyn */}
-          <a href="https://edmtrain.com/new-york-city-ny/steen-469215" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+          {/* MAR 18 - STEEN at SILO BROOKLYN */}
+          <a href="/articles/steen-silo-march-2025" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
             <div className="p-3">
               <div className="flex items-start justify-between gap-2 mb-2">
                 <span className="red-tag text-[10px] px-2 py-0.5">MAR 18</span>
-                <span className="meta-text text-[10px]">Techno/Electronic</span>
+                <span className="meta-text text-[10px]">Electronic</span>
               </div>
               <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
                 STEEN
               </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                SILO Brooklyn
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: "clamp(12px, 1.2vw, 16px)" }}>
+                SILO BROOKLYN
               </h3>
-              <div className="meta-text text-[10px]">SILO Brooklyn</div>
+              <div className="meta-text text-[10px]">SILO BROOKLYN</div>
             </div>
           </a>
         </div>
@@ -162,44 +162,44 @@ export default function HomePage() {
         </div>
       </section>
 
-                        {/* COMING UP — Next 14 days of NYC events */}
+      {/* COMING UP — Next 14 days of NYC events */}
       <section className="max-w-[1440px] mx-auto px-3 sm:px-4 lg:px-6 py-4">
         <div className="flex items-center gap-3 mb-3">
-          <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={{ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }}>COMING UP</h2>
+          <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={{ fontSize: "clamp(16px, 2vw, 24px)", fontWeight: 700 }}>COMING UP</h2>
           <div className="flex-1 h-[1px] bg-accent-red/30" />
           <span className="meta-text whitespace-nowrap">MAR 18-APR 1</span>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-1">
-          {/* MAR 18 - 8ULENTINA at Nowadays */}
-          <a href="https://edmtrain.com/new-york-city-ny/8ulentina-arushi-jain-485201" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+          {/* MAR 18 - 8ULENTINA AND ARUSHI JAIN at NOWADAYS */}
+          <a href="/articles/8ulentina-nowadays-march-2025" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
             <div className="p-3">
               <div className="flex items-start justify-between gap-2 mb-2">
                 <span className="red-tag text-[10px] px-2 py-0.5">MAR 18</span>
-                <span className="meta-text text-[10px]">Ambient/Experimental</span>
+                <span className="meta-text text-[10px]">Electronic</span>
               </div>
               <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
-                8ULENTINA
+                8ULENTINA AND ARUSHI JAIN
               </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                Nowadays
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: "clamp(12px, 1.2vw, 16px)" }}>
+                NOWADAYS
               </h3>
-              <div className="meta-text text-[10px]">Nowadays</div>
+              <div className="meta-text text-[10px]">NOWADAYS</div>
             </div>
           </a>
-          {/* MAR 18 - Steen at SILO Brooklyn */}
-          <a href="https://edmtrain.com/new-york-city-ny/steen-469215" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
+          {/* MAR 18 - STEEN at SILO BROOKLYN */}
+          <a href="/articles/steen-silo-march-2025" className="group block overflow-hidden border border-border hover:border-accent-red focus-visible:border-accent-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 focus-visible:ring-offset-page-bg transition-all duration-500 ease-out">
             <div className="p-3">
               <div className="flex items-start justify-between gap-2 mb-2">
                 <span className="red-tag text-[10px] px-2 py-0.5">MAR 18</span>
-                <span className="meta-text text-[10px]">Techno/Electronic</span>
+                <span className="meta-text text-[10px]">Electronic</span>
               </div>
               <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
                 STEEN
               </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
-                SILO Brooklyn
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: "clamp(12px, 1.2vw, 16px)" }}>
+                SILO BROOKLYN
               </h3>
-              <div className="meta-text text-[10px]">SILO Brooklyn</div>
+              <div className="meta-text text-[10px]">SILO BROOKLYN</div>
             </div>
           </a>
         </div>
