@@ -23,7 +23,7 @@ export default function HomePage() {
           </div>
         </section>
 
-              {/* COMING UP — Next 14 days of NYC events */}
+                    {/* COMING UP — Next 14 days of NYC events */}
       <section className="max-w-[1440px] mx-auto px-3 sm:px-4 lg:px-6 py-4">
         <div className="flex items-center gap-3 mb-3">
           <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }>COMING UP</h2>
@@ -162,7 +162,7 @@ export default function HomePage() {
         </div>
       </section>
 
-            {/* COMING UP — Next 14 days of NYC events */}
+                  {/* COMING UP — Next 14 days of NYC events */}
       <section className="max-w-[1440px] mx-auto px-3 sm:px-4 lg:px-6 py-4">
         <div className="flex items-center gap-3 mb-3">
           <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }>COMING UP</h2>
