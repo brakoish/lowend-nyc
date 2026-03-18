@@ -1,74 +1,1874 @@
 [
   {
-    "id": "obskur-h0l0-march-2025",
-    "title": "Obskür at H0L0",
-    "date": "2026-03-17",
-    "time": "TBD",
-    "venue": "H0L0",
-    "venue_city": "Queens",
-    "artists": ["Obskür", "Armii1n", "Ford Scott"],
-    "headliner": "Obskür",
-    "genre": ["house", "techno"],
-    "description": "Raw Cuts presents",
-    "ticket_url": "https://edmtrain.com/new-york-city-ny/raw-cuts-obskur-484986",
-    "price": "TBD",
-    "age": "21+",
-    "days_until": 0,
-    "status": "tonight",
-    "scraped_at": "2026-03-17T14:00:00.000Z",
-    "assigned_to": "",
-    "coverage_type": "preview",
-    "draft_due": "",
-    "publish_date": "",
-    "priority": "high",
-    "notes": "From Google Sheet: New Pipeline"
+    "date": "2026-03-19",
+    "name": "Pictureplane, Suzy Sheer, ros3yy",
+    "venue": "Sultan Room",
+    "artists": "Pictureplane, Suzy Sheer, ros3yy",
+    "link": "https://edmtrain.com/new-york-city-ny/pictureplane-suzy-sheer-466652?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
   },
   {
-    "id": "8ulentina-nowadays-march-2025",
-    "title": "8ULENTINA and Arushi Jain at Nowadays",
-    "date": "2026-03-18",
-    "time": "TBD",
+    "date": "2026-03-19",
+    "name": "Gasolina",
+    "venue": "House of Yes",
+    "artists": "DJ Ultra Violet",
+    "link": "https://edmtrain.com/new-york-city-ny/gasolina-dj-ultra-violet-474241?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-19",
+    "name": "Accessory Records Showcase",
+    "venue": "Signal Brooklyn",
+    "artists": "Rose Kourts, Miles Mercer, Simic, Second Contact",
+    "link": "https://edmtrain.com/new-york-city-ny/accessory-records-showcase-rose-kourts-474365?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-19",
+    "name": "bambinodj, CZ Wang, Emma DJ, Via App, Khotin, Toxe",
     "venue": "Nowadays",
-    "venue_city": "Queens",
-    "artists": ["8ULENTINA", "Arushi Jain", "Hamadi", "Kamran Sadeghi"],
-    "headliner": "8ULENTINA",
-    "genre": ["ambient", "experimental"],
-    "description": "Mister Saturday Night presents",
-    "ticket_url": "https://edmtrain.com/new-york-city-ny/8ulentina-arushi-jain-485201",
-    "price": "TBD",
-    "age": "21+",
-    "days_until": 1,
-    "status": "tomorrow",
-    "scraped_at": "2026-03-17T14:00:00.000Z",
-    "assigned_to": "",
-    "coverage_type": "preview",
-    "draft_due": "",
-    "publish_date": "",
-    "priority": "high",
-    "notes": "From Google Sheet: New Pipeline"
+    "artists": "bambinodj, CZ Wang, Emma DJ, Via App, Khotin, Toxe",
+    "link": "https://edmtrain.com/new-york-city-ny/bambinodj-cz-wang-478547?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
   },
   {
-    "id": "steen-silo-march-2025",
-    "title": "Steen at SILO",
-    "date": "2026-03-18",
-    "time": "TBD",
+    "date": "2026-03-19",
+    "name": "BRUX",
+    "venue": "Elsewhere",
+    "artists": "BRUX",
+    "link": "https://edmtrain.com/new-york-city-ny/brux-480510?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-19",
+    "name": "Tour de PR",
+    "venue": "Public Records",
+    "artists": "x3butterfly, Petal Supply, Callie Reiff, Raquel Michel",
+    "link": "https://edmtrain.com/new-york-city-ny/tour-de-pr-x3butterfly-481527?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-19",
+    "name": "Off Topic Presents",
+    "venue": "H0L0",
+    "artists": "Pedro Borlado, Sweater, Parker Mac, Kamerguy, Bee Chapin, Kaegi",
+    "link": "https://edmtrain.com/new-york-city-ny/off-topic-presents-pedro-borlado-482571?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-19",
+    "name": "Palosanto Presents",
+    "venue": "Outer Heaven NYC",
+    "artists": "Oktave",
+    "link": "https://edmtrain.com/new-york-city-ny/palosanto-presents-oktave-483670?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-19",
+    "name": "Resolved - Claire Was There (DSA fundraiser for Claire Valdez)",
+    "venue": "Paragon",
+    "artists": "Lauren Flax, Lychee, PlayPlay, DJ Shannon",
+    "link": "https://edmtrain.com/new-york-city-ny/resolved-claire-was-there-dsa-fundraiser-for-claire-valdez-lauren-flax-483674?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-19",
+    "name": "Techno Brooklyn",
+    "venue": "Listen Brooklyn",
+    "artists": "Marco Bailey",
+    "link": "https://edmtrain.com/new-york-city-ny/techno-brooklyn-marco-bailey-484261?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-19",
+    "name": "Compass Rose Presents - Fluture",
+    "venue": "Moondog HiFi",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/compass-rose-presents-fluture-484455?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-19",
+    "name": "Music Madness",
+    "venue": "The Lobby NJ",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/music-madness-486552?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Roddy Lima",
     "venue": "SILO Brooklyn",
-    "venue_city": "Brooklyn",
-    "artists": ["Steen"],
-    "headliner": "Steen",
-    "genre": ["techno", "electronic"],
-    "description": "SILO presents",
-    "ticket_url": "https://edmtrain.com/new-york-city-ny/steen-469215",
-    "price": "TBD",
-    "age": "21+",
-    "days_until": 1,
-    "status": "tomorrow",
-    "scraped_at": "2026-03-17T14:00:00.000Z",
-    "assigned_to": "",
-    "coverage_type": "preview",
-    "draft_due": "",
-    "publish_date": "",
-    "priority": "high",
-    "notes": "From Google Sheet: New Pipeline"
+    "artists": "Roddy Lima",
+    "link": "https://edmtrain.com/new-york-city-ny/roddy-lima-434690?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "The Dark Night of The Soul Tour",
+    "venue": "Bowery Ballroom",
+    "artists": "Kaivon",
+    "link": "https://edmtrain.com/new-york-city-ny/the-dark-night-of-the-soul-tour-kaivon-450624?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Mindchatter, Aka Vinnie",
+    "venue": "Knockdown Center",
+    "artists": "Mindchatter, Aka Vinnie",
+    "link": "https://edmtrain.com/new-york-city-ny/mindchatter-aka-vinnie-450700?utm_source=2533&utm_medium=api",
+    "ages": "18+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Nightmares On Wax, Marco Weibel",
+    "venue": "Good Room",
+    "artists": "Nightmares On Wax, Marco Weibel",
+    "link": "https://edmtrain.com/new-york-city-ny/nightmares-on-wax-marco-weibel-453896?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Teksupport x Prophecy",
+    "venue": "Brooklyn Storehouse",
+    "artists": "Prospa, Josh Baker",
+    "link": "https://edmtrain.com/new-york-city-ny/teksupport-x-prophecy-prospa-457322?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Hernan Cattaneo, Mike Isai",
+    "venue": "The Chocolate Factory Brooklyn",
+    "artists": "Hernan Cattaneo, Mike Isai",
+    "link": "https://edmtrain.com/new-york-city-ny/hernan-cattaneo-mike-isai-457960?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Chris Dave, Rich Medina",
+    "venue": "Blue Note Jazz Club",
+    "artists": "Chris Dave, Rich Medina",
+    "link": "https://edmtrain.com/new-york-city-ny/chris-dave-rich-medina-461991?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "DJ Pauly D",
+    "venue": "Marquee",
+    "artists": "DJ Pauly D",
+    "link": "https://edmtrain.com/new-york-city-ny/dj-pauly-d-463635?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "bullet tooth, Darby, Hovy, mayv, Ford Scott, Erin Page, SIMMI",
+    "venue": "Elsewhere",
+    "artists": "bullet tooth, Darby, Hovy, mayv, Ford Scott, Erin Page, SIMMI",
+    "link": "https://edmtrain.com/new-york-city-ny/bullet-tooth-darby-466115?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Indira Paganotto, Mha Iri, Katie Rex",
+    "venue": "Knockdown Center",
+    "artists": "Indira Paganotto, Mha Iri, Katie Rex",
+    "link": "https://edmtrain.com/new-york-city-ny/indira-paganotto-mha-iri-468566?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Jessica Audiffred, Leotrix, SwitchBlades, Bellatrxx",
+    "venue": "Brooklyn Steel",
+    "artists": "Jessica Audiffred, Leotrix, SwitchBlades, Bellatrxx",
+    "link": "https://edmtrain.com/new-york-city-ny/jessica-audiffred-leotrix-469601?utm_source=2533&utm_medium=api",
+    "ages": "18+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Roger Sanchez",
+    "venue": "Listen Brooklyn",
+    "artists": "Roger Sanchez",
+    "link": "https://edmtrain.com/new-york-city-ny/roger-sanchez-470893?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Plurr Labs & Trigger Collective - Her Takeover NYC",
+    "venue": "The Crown",
+    "artists": "Stella Key, INR CHI, Pain to Passion, GUTTERGRRL, vybria",
+    "link": "https://edmtrain.com/new-york-city-ny/plurr-labs-and-trigger-collective-her-takeover-nyc-stella-key-472158?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "CHYL",
+    "venue": "Racket New York",
+    "artists": "CHYL",
+    "link": "https://edmtrain.com/new-york-city-ny/chyl-473578?utm_source=2533&utm_medium=api",
+    "ages": "18+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "OFFLINE",
+    "venue": "VShow",
+    "artists": "DJ KANG (US)",
+    "link": "https://edmtrain.com/new-york-city-ny/offline-dj-kang-us-474177?utm_source=2533&utm_medium=api",
+    "ages": "18+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Eric Cloutier, C.L.A.W.S., Tyrel Williams, Clarisa Kimskii",
+    "venue": "Signal Brooklyn",
+    "artists": "Eric Cloutier, C.L.A.W.S., Tyrel Williams, Clarisa Kimskii",
+    "link": "https://edmtrain.com/new-york-city-ny/eric-cloutier-c-l-a-w-s-474366?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Rob Brown, Kamran Sadeghi, Julia Govor, Løt.te, Nabihah Iqbal",
+    "venue": "Public Records",
+    "artists": "Rob Brown, Kamran Sadeghi, Julia Govor, Løt.te, Nabihah Iqbal",
+    "link": "https://edmtrain.com/new-york-city-ny/rob-brown-kamran-sadeghi-474731?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "1 Hotel Brooklyn Bridge",
+    "venue": "1 Hotel Brooklyn Bridge",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/1-hotel-brooklyn-bridge-478329?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Cyberia",
+    "venue": "Baby's All Right",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/cyberia-478375?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Rick Wonder",
+    "venue": "Nebula",
+    "artists": "Rick Wonder",
+    "link": "https://edmtrain.com/new-york-city-ny/rick-wonder-478607?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Alarico, Concrete Husband, fka.m4a, Tommy Hart, Ana B",
+    "venue": "BASEMENT NY",
+    "artists": "Alarico, Concrete Husband, fka.m4a, Tommy Hart, Ana B",
+    "link": "https://edmtrain.com/new-york-city-ny/alarico-concrete-husband-479398?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Club Stars",
+    "venue": "Paragon",
+    "artists": "UNIIQU3, Kush Jones, Tromac, Annie Lew, Anónima",
+    "link": "https://edmtrain.com/new-york-city-ny/club-stars-uniiqu3-479441?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Michael Simpson",
+    "venue": "Somewhere Nowhere",
+    "artists": "Michael Simpson",
+    "link": "https://edmtrain.com/new-york-city-ny/michael-simpson-479669?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Jus-Ske",
+    "venue": "Little Sister Lounge",
+    "artists": "Jus-Ske",
+    "link": "https://edmtrain.com/new-york-city-ny/jus-ske-479877?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Crawdad Sniper, Daggz",
+    "venue": "The Wood Shop",
+    "artists": "Crawdad Sniper, Daggz",
+    "link": "https://edmtrain.com/new-york-city-ny/crawdad-sniper-daggz-479937?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Clüb De Combat",
+    "venue": "UNVEILED",
+    "artists": "Clüb De Combat",
+    "link": "https://edmtrain.com/new-york-city-ny/club-de-combat-479941?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "DJ Spen",
+    "venue": "Hana House",
+    "artists": "DJ Spen",
+    "link": "https://edmtrain.com/new-york-city-ny/dj-spen-480993?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "JKS, KXAH, Parallx",
+    "venue": "Brooklyn Warehouse",
+    "artists": "JKS, KXAH, Parallx",
+    "link": "https://edmtrain.com/new-york-city-ny/jks-kxah-481396?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Mirari",
+    "venue": "ArtSpace at PUBLIC Hotels",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/mirari-481995?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Neil Jackson, Kazi",
+    "venue": "Mr. Purple",
+    "artists": "Neil Jackson, Kazi",
+    "link": "https://edmtrain.com/new-york-city-ny/neil-jackson-kazi-482651?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Soul In The Horn",
+    "venue": "99 Scott",
+    "artists": "Natasha Diggs, DJ Scratch, Peven Everett",
+    "link": "https://edmtrain.com/new-york-city-ny/soul-in-the-horn-natasha-diggs-483086?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "REVA MUSIC, Tommy LTM, Gianni DiCastro",
+    "venue": "Cafe Balearica",
+    "artists": "REVA MUSIC, Tommy LTM, Gianni DiCastro",
+    "link": "https://edmtrain.com/new-york-city-ny/reva-music-tommy-ltm-483103?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Amal Nemer",
+    "venue": "Don Felix Bar & Restaurant",
+    "artists": "Amal Nemer",
+    "link": "https://edmtrain.com/new-york-city-ny/amal-nemer-484050?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "LB aka LABAT",
+    "venue": "H0L0",
+    "artists": "LB aka LABAT",
+    "link": "https://edmtrain.com/new-york-city-ny/lb-aka-labat-484061?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Pablo Romero, Nicolas Matar, Willie Graff",
+    "venue": "MAD Radio NYC",
+    "artists": "Pablo Romero, Nicolas Matar, Willie Graff",
+    "link": "https://edmtrain.com/new-york-city-ny/pablo-romero-nicolas-matar-484071?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Luca Sanna",
+    "venue": "Moondog HiFi",
+    "artists": "Luca Sanna",
+    "link": "https://edmtrain.com/new-york-city-ny/luca-sanna-484456?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Mindchatter",
+    "venue": "Webster Hall",
+    "artists": "Mindchatter",
+    "link": "https://edmtrain.com/new-york-city-ny/mindchatter-484491?utm_source=2533&utm_medium=api",
+    "ages": "16+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Outer Heaven Presents",
+    "venue": "Outer Heaven NYC",
+    "artists": "Krol",
+    "link": "https://edmtrain.com/new-york-city-ny/outer-heaven-presents-krol-484566?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Reggaeton Tributes",
+    "venue": "The Meadows Brooklyn",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/reggaeton-tributes-484914?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Tom Noble, Supes Base, lovetempo, LEONG",
+    "venue": "Danger Danger",
+    "artists": "Tom Noble, Supes Base, lovetempo, LEONG",
+    "link": "https://edmtrain.com/new-york-city-ny/tom-noble-supes-base-486048?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Victor Houston",
+    "venue": "Laissez Faire",
+    "artists": "Victor Houston",
+    "link": "https://edmtrain.com/new-york-city-ny/victor-houston-486899?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "Mr Purple Presents - WAVCRASH",
+    "venue": "Mr. Purple",
+    "artists": "GUNIN",
+    "link": "https://edmtrain.com/new-york-city-ny/mr-purple-presents-wavcrash-gunin-487537?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-20",
+    "name": "SWEAT SESSION N°8",
+    "venue": "Mood Ring",
+    "artists": "DJ DEADNAME, No Sir, nguyendowsXP, Full Body Stretch",
+    "link": "https://edmtrain.com/new-york-city-ny/sweat-session-n-8-dj-deadname-487793?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "mind enterprises",
+    "venue": "Elsewhere Hall",
+    "artists": "mind enterprises",
+    "link": "https://edmtrain.com/new-york-city-ny/mind-enterprises-428872?utm_source=2533&utm_medium=api",
+    "ages": "16+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Kaivon, PORTYL, KC",
+    "venue": "Bowery Ballroom",
+    "artists": "Kaivon, PORTYL, KC",
+    "link": "https://edmtrain.com/new-york-city-ny/kaivon-portyl-450625?utm_source=2533&utm_medium=api",
+    "ages": "18+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Jkyl & Hyde",
+    "venue": "SILO Brooklyn",
+    "artists": "Jkyl & Hyde",
+    "link": "https://edmtrain.com/new-york-city-ny/jkyl-and-hyde-451718?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Teksupport",
+    "venue": "Brooklyn Storehouse",
+    "artists": "Carl Cox, Nicole Moudaber, Ilario Alicante, Viot",
+    "link": "https://edmtrain.com/new-york-city-ny/teksupport-carl-cox-452248?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "FKA twigs, Tokischa",
+    "venue": "Madison Square Garden",
+    "artists": "FKA twigs, Tokischa",
+    "link": "https://edmtrain.com/new-york-city-ny/fka-twigs-tokischa-455549?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Sabo, Unders",
+    "venue": "House of Yes",
+    "artists": "Sabo, Unders",
+    "link": "https://edmtrain.com/new-york-city-ny/sabo-unders-461442?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Bob Sinclar",
+    "venue": "Marquee",
+    "artists": "Bob Sinclar",
+    "link": "https://edmtrain.com/new-york-city-ny/bob-sinclar-463390?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "OMNOM, Kamino, Caleb Dent, Valencia",
+    "venue": "99 Scott",
+    "artists": "OMNOM, Kamino, Caleb Dent, Valencia",
+    "link": "https://edmtrain.com/new-york-city-ny/omnom-kamino-463637?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "360 Tour",
+    "venue": "Sony Hall",
+    "artists": "Hieroglyphics",
+    "link": "https://edmtrain.com/new-york-city-ny/360-tour-hieroglyphics-464424?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Mont Rouge, Auguste, Kotiēr, Friend Of Honor, Miss Hazard",
+    "venue": "Superior Ingredients (Rooftop)",
+    "artists": "Mont Rouge, Auguste, Kotiēr, Friend Of Honor, Miss Hazard",
+    "link": "https://edmtrain.com/new-york-city-ny/mont-rouge-auguste-465392?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Soirée",
+    "venue": "Laissez Faire",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/soiree-466365?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Paradiso",
+    "venue": "Paragon",
+    "artists": "Todd Terry, DJ Miss Parker, DJ Shannon, Katie Rex",
+    "link": "https://edmtrain.com/new-york-city-ny/paradiso-todd-terry-470643?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Gianni Blu, Maxö",
+    "venue": "Somewhere Nowhere",
+    "artists": "Gianni Blu, Maxö",
+    "link": "https://edmtrain.com/new-york-city-ny/gianni-blu-maxo-470896?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Time Lapse",
+    "venue": "Eden NYC",
+    "artists": "Darren Styles, RayRay",
+    "link": "https://edmtrain.com/new-york-city-ny/time-lapse-darren-styles-474221?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Special Request, Taylor Shockley, 98dots",
+    "venue": "Signal Brooklyn",
+    "artists": "Special Request, Taylor Shockley, 98dots",
+    "link": "https://edmtrain.com/new-york-city-ny/special-request-taylor-shockley-474367?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Satoshi Tomiie, Simone de Kunovich, Benji B, Yasmin, Love Injection",
+    "venue": "Public Records",
+    "artists": "Satoshi Tomiie, Simone de Kunovich, Benji B, Yasmin, Love Injection",
+    "link": "https://edmtrain.com/new-york-city-ny/satoshi-tomiie-simone-de-kunovich-474732?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Golden Record Presents",
+    "venue": "East Williamsburg",
+    "artists": "Sweely, Ohm Hourani, Gui Machado, Kiyoshi, Armii1n",
+    "link": "https://edmtrain.com/new-york-city-ny/golden-record-presents-sweely-475009?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "OZA, Liquid Earth (Urulu), Jay Duncan, RYKER, Ron Like Hell, Sharlese, Sterling Juan Diaz, Chris Cruse, Byron Yeates, S-candalo",
+    "venue": "Nowadays",
+    "artists": "OZA, Liquid Earth (Urulu), Jay Duncan, RYKER, Ron Like Hell, Sharlese, Sterling Juan Diaz, Chris Cruse, Byron Yeates, S-candalo",
+    "link": "https://edmtrain.com/new-york-city-ny/oza-liquid-earth-urulu-475671?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Refuge Daytime - Mood Child",
+    "venue": "Refuge",
+    "artists": "Manda Moor, Sirus Hood, Misha, TRANGAZ",
+    "link": "https://edmtrain.com/new-york-city-ny/refuge-daytime-mood-child-manda-moor-477554?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Frat Budapest Spring Break NYC",
+    "venue": "The Meadows Brooklyn",
+    "artists": "Chango, Sanzu, INAKTIV, Midroll, Oscar Dubz",
+    "link": "https://edmtrain.com/new-york-city-ny/frat-budapest-spring-break-nyc-chango-477732?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "O.BEE",
+    "venue": "H0L0",
+    "artists": "O.BEE",
+    "link": "https://edmtrain.com/new-york-city-ny/o-bee-478510?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Firebeatz",
+    "venue": "Nebula",
+    "artists": "Firebeatz",
+    "link": "https://edmtrain.com/new-york-city-ny/firebeatz-478608?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "SENZA, ARSIN, Michi",
+    "venue": "00:00",
+    "artists": "SENZA, ARSIN, Michi",
+    "link": "https://edmtrain.com/new-york-city-ny/senza-arsin-478920?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "DJ Minx, Massimiliano Pagliara, suze ijó, Ron Like Hell, Ryan Smith",
+    "venue": "BASEMENT NY",
+    "artists": "DJ Minx, Massimiliano Pagliara, suze ijó, Ron Like Hell, Ryan Smith",
+    "link": "https://edmtrain.com/new-york-city-ny/dj-minx-massimiliano-pagliara-479400?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "KVSH, Danny Way, Gaazamba, Mataka",
+    "venue": "BarCode NJ",
+    "artists": "KVSH, Danny Way, Gaazamba, Mataka",
+    "link": "https://edmtrain.com/new-york-city-ny/kvsh-danny-way-480146?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Turbz",
+    "venue": "The Highlight Room New York",
+    "artists": "Turbz",
+    "link": "https://edmtrain.com/new-york-city-ny/turbz-481583?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Mason Collective, Serge Devant, Dimatteo, Cosmo",
+    "venue": "Refuge",
+    "artists": "Mason Collective, Serge Devant, Dimatteo, Cosmo",
+    "link": "https://edmtrain.com/new-york-city-ny/mason-collective-serge-devant-482602?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "KUPYD, Jus-Ske",
+    "venue": "Mr. Purple",
+    "artists": "KUPYD, Jus-Ske",
+    "link": "https://edmtrain.com/new-york-city-ny/kupyd-jus-ske-482652?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Justin Alling",
+    "venue": "Madd Hatter",
+    "artists": "Justin Alling",
+    "link": "https://edmtrain.com/new-york-city-ny/justin-alling-482662?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Outer Heaven Presents",
+    "venue": "Outer Heaven NYC",
+    "artists": "Justin Strauss, Mona Matsuoka",
+    "link": "https://edmtrain.com/new-york-city-ny/outer-heaven-presents-justin-strauss-483671?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Life On Planets, Greg Paulus, SiDESTREETS",
+    "venue": "MAD Radio NYC",
+    "artists": "Life On Planets, Greg Paulus, SiDESTREETS",
+    "link": "https://edmtrain.com/new-york-city-ny/life-on-planets-greg-paulus-484263?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Darshan Jesrani, Eugene Tambourine",
+    "venue": "Moondog HiFi",
+    "artists": "Darshan Jesrani, Eugene Tambourine",
+    "link": "https://edmtrain.com/new-york-city-ny/darshan-jesrani-eugene-tambourine-484457?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Laylit #130 - NYC Eid party",
+    "venue": "Elsewhere",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/laylit-130-nyc-eid-party-484618?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Anané, Ameer Brooks, k.tea",
+    "venue": "Le Bain",
+    "artists": "Anané, Ameer Brooks, k.tea",
+    "link": "https://edmtrain.com/new-york-city-ny/anane-ameer-brooks-486706?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "SUBMERGE presented by Black Girl Fight Club",
+    "venue": "Silence Please",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/submerge-presented-by-black-girl-fight-club-486767?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Toribio, Jason Lindner, Garo, Mickey Pérez",
+    "venue": "Good Room",
+    "artists": "Toribio, Jason Lindner, Garo, Mickey Pérez",
+    "link": "https://edmtrain.com/new-york-city-ny/toribio-jason-lindner-486894?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Fenky and Friends",
+    "venue": "Listen Brooklyn",
+    "artists": "Fenky, Dante Reyes, Dimelo Eddy",
+    "link": "https://edmtrain.com/new-york-city-ny/fenky-and-friends-fenky-487022?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Experience Noite do Funk NYC",
+    "venue": "Sistem",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/experience-noite-do-funk-nyc-487617?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Utopia Saturdays",
+    "venue": "Viva Toro",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/utopia-saturdays-487781?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-21",
+    "name": "Apollo Studio Presents Nocturnal Sound",
+    "venue": "Apollo Studio",
+    "artists": "LegenDari, Elon, Sasta, RAAÚL",
+    "link": "https://edmtrain.com/new-york-city-ny/apollo-studio-presents-nocturnal-sound-legendari-487784?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-22",
+    "name": "Emanuel Satie, Sean Doron, Amy Jor",
+    "venue": "Superior Ingredients (Rooftop)",
+    "artists": "Emanuel Satie, Sean Doron, Amy Jor",
+    "link": "https://edmtrain.com/new-york-city-ny/emanuel-satie-sean-doron-466120?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-22",
+    "name": "Loco Carnaval Sundays",
+    "venue": "Somewhere Nowhere",
+    "artists": "Lohrasp Kansara, Nektunes, Mathias Pace",
+    "link": "https://edmtrain.com/new-york-city-ny/loco-carnaval-sundays-lohrasp-kansara-470712?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-22",
+    "name": "Sundays in the Atrium",
+    "venue": "Public Records",
+    "artists": "DJ Sprinkles, Frank & Tony",
+    "link": "https://edmtrain.com/new-york-city-ny/sundays-in-the-atrium-dj-sprinkles-474733?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-22",
+    "name": "Jellybean Benitez",
+    "venue": "Refuge",
+    "artists": "Jellybean Benitez",
+    "link": "https://edmtrain.com/new-york-city-ny/jellybean-benitez-478349?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-22",
+    "name": "Maayan Nidam",
+    "venue": "Moondog HiFi",
+    "artists": "Maayan Nidam",
+    "link": "https://edmtrain.com/new-york-city-ny/maayan-nidam-480394?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-22",
+    "name": "Sense Invites",
+    "venue": "telos.haus",
+    "artists": "Elle Dee, Mod21, 1NTT, Epfnia",
+    "link": "https://edmtrain.com/new-york-city-ny/sense-invites-elle-dee-480420?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-22",
+    "name": "DISCO X JOURNEY Party",
+    "venue": "Good Room",
+    "artists": "DJ Spinna",
+    "link": "https://edmtrain.com/new-york-city-ny/disco-x-journey-party-dj-spinna-483248?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-22",
+    "name": "Sunday Skate Club",
+    "venue": "Xanadu Roller Arts",
+    "artists": "k.tea, Mark Francis, amora, Ellis Delta",
+    "link": "https://edmtrain.com/new-york-city-ny/sunday-skate-club-k-tea-483313?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-22",
+    "name": "Jon Jon Hernandez",
+    "venue": "MAD Radio NYC",
+    "artists": "Jon Jon Hernandez",
+    "link": "https://edmtrain.com/new-york-city-ny/jon-jon-hernandez-485555?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-22",
+    "name": "Maxinne",
+    "venue": "Listen Brooklyn",
+    "artists": "Maxinne",
+    "link": "https://edmtrain.com/new-york-city-ny/maxinne-487474?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-22",
+    "name": "Deep Listening",
+    "venue": "Moondog HiFi",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/deep-listening-487534?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-22",
+    "name": "Spaghetti Strap",
+    "venue": "Signal Brooklyn",
+    "artists": "Bearcat, Leonce, Loren, Sobolik, SPRKLBB",
+    "link": "https://edmtrain.com/new-york-city-ny/spaghetti-strap-bearcat-487799?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-24",
+    "name": "Jus-Ske",
+    "venue": "Little Sister Lounge",
+    "artists": "Jus-Ske",
+    "link": "https://edmtrain.com/new-york-city-ny/jus-ske-479878?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-24",
+    "name": "Nebula Tuesdays",
+    "venue": "Nebula",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/nebula-tuesdays-482654?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-25",
+    "name": "Steen",
+    "venue": "SILO Brooklyn",
+    "artists": "Steen",
+    "link": "https://edmtrain.com/new-york-city-ny/steen-469218?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-25",
+    "name": "Out The Bag presents",
+    "venue": "Outer Heaven NYC",
+    "artists": "Cem Ozden",
+    "link": "https://edmtrain.com/new-york-city-ny/out-the-bag-presents-cem-ozden-484565?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-25",
+    "name": "Trueblends",
+    "venue": "Marquee",
+    "artists": "Trueblends",
+    "link": "https://edmtrain.com/new-york-city-ny/trueblends-486708?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-26",
+    "name": "Joris Delacroix",
+    "venue": "Elsewhere Hall",
+    "artists": "Joris Delacroix",
+    "link": "https://edmtrain.com/new-york-city-ny/joris-delacroix-465226?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-26",
+    "name": "Collective Memory",
+    "venue": "Signal Brooklyn",
+    "artists": "DJ DEADNAME, Eva Loveless, Yumi",
+    "link": "https://edmtrain.com/new-york-city-ny/collective-memory-dj-deadname-474368?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-26",
+    "name": "Turbz",
+    "venue": "Little Sister Lounge",
+    "artists": "Turbz",
+    "link": "https://edmtrain.com/new-york-city-ny/turbz-480183?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-26",
+    "name": "Refuge Thursday",
+    "venue": "Refuge",
+    "artists": "salute",
+    "link": "https://edmtrain.com/new-york-city-ny/refuge-thursday-salute-481540?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-26",
+    "name": "Vigilante Presents",
+    "venue": "Outer Heaven NYC",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/vigilante-presents-483672?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-26",
+    "name": "Continuum (Full Venue Takeover)",
+    "venue": "SILO Brooklyn",
+    "artists": "Concrete Husband, C2C., CMD+JAZMINE, Bella Mode, ceviché, Touch Base",
+    "link": "https://edmtrain.com/new-york-city-ny/continuum-full-venue-takeover-concrete-husband-483715?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-26",
+    "name": "Moondub",
+    "venue": "Moondog HiFi",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/moondub-484458?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-26",
+    "name": "Mystic State, Ma Sha",
+    "venue": "H0L0",
+    "artists": "Mystic State, Ma Sha",
+    "link": "https://edmtrain.com/new-york-city-ny/mystic-state-ma-sha-484637?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-26",
+    "name": "Body Hack",
+    "venue": "Nowadays",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/body-hack-486534?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-26",
+    "name": "Auphoria, DIFFER",
+    "venue": "MAD Radio NYC",
+    "artists": "Auphoria, DIFFER",
+    "link": "https://edmtrain.com/new-york-city-ny/auphoria-differ-487873?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Etienne de Crecy, Justin Strauss",
+    "venue": "Good Room",
+    "artists": "Etienne de Crecy, Justin Strauss",
+    "link": "https://edmtrain.com/new-york-city-ny/etienne-de-crecy-justin-strauss-453897?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "PRADA2000, Flash Gea, Firebunny, Remniqe",
+    "venue": "SILO Brooklyn",
+    "artists": "PRADA2000, Flash Gea, Firebunny, Remniqe",
+    "link": "https://edmtrain.com/new-york-city-ny/prada2000-flash-gea-457323?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "oskar med k",
+    "venue": "Webster Hall",
+    "artists": "oskar med k",
+    "link": "https://edmtrain.com/new-york-city-ny/oskar-med-k-466124?utm_source=2533&utm_medium=api",
+    "ages": "18+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "ReSolute",
+    "venue": "New York, NY",
+    "artists": "Konstantin (Giegling)",
+    "link": "https://edmtrain.com/new-york-city-ny/resolute-konstantin-giegling-467610?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "R3HAB",
+    "venue": "Marquee",
+    "artists": "R3HAB",
+    "link": "https://edmtrain.com/new-york-city-ny/r3hab-468185?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Conducta, Jialing, Samo, Honey B",
+    "venue": "Elsewhere",
+    "artists": "Conducta, Jialing, Samo, Honey B",
+    "link": "https://edmtrain.com/new-york-city-ny/conducta-jialing-468700?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "LOSING IT [TECH HOUSE NITE]",
+    "venue": "DROM",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/losing-it-tech-house-nite-473900?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "AIONIA Invites Permanent Vacation",
+    "venue": "House of Yes",
+    "artists": "Alinka, Lauer, Rebolledo, Tim Sweeney",
+    "link": "https://edmtrain.com/new-york-city-ny/aionia-invites-permanent-vacation-alinka-474242?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Signal x Zaza Island Presents",
+    "venue": "Signal Brooklyn",
+    "artists": "MOMO TROSMAN, Hilu, Titino, Tito Mazzetta",
+    "link": "https://edmtrain.com/new-york-city-ny/signal-x-zaza-island-presents-momo-trosman-474369?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Pan-Pot, ONYVAA, Julia Govor",
+    "venue": "Knockdown Center",
+    "artists": "Pan-Pot, ONYVAA, Julia Govor",
+    "link": "https://edmtrain.com/new-york-city-ny/pan-pot-onyvaa-474701?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Adam Ten",
+    "venue": "Industry City",
+    "artists": "Adam Ten",
+    "link": "https://edmtrain.com/new-york-city-ny/adam-ten-474918?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Kim Ann Foxman",
+    "venue": "Nowadays",
+    "artists": "Kim Ann Foxman",
+    "link": "https://edmtrain.com/new-york-city-ny/kim-ann-foxman-475085?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "David Hohme",
+    "venue": "Bogart House",
+    "artists": "David Hohme",
+    "link": "https://edmtrain.com/new-york-city-ny/david-hohme-475172?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "1 Hotel Brooklyn Bridge",
+    "venue": "1 Hotel Brooklyn Bridge",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/1-hotel-brooklyn-bridge-478330?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Luis Torres",
+    "venue": "Nebula",
+    "artists": "Luis Torres",
+    "link": "https://edmtrain.com/new-york-city-ny/luis-torres-478609?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Agape Presents",
+    "venue": "The Chocolate Factory Brooklyn",
+    "artists": "David Löhlein, Michelle Kay, Junkfile, AKR",
+    "link": "https://edmtrain.com/new-york-city-ny/agape-presents-david-lohlein-478697?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Fideles",
+    "venue": "Somewhere Nowhere",
+    "artists": "Fideles",
+    "link": "https://edmtrain.com/new-york-city-ny/fideles-479216?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "BOUND Blackout",
+    "venue": "BASEMENT NY",
+    "artists": "Lolsnake, Elle Dee, Katie Rex, Miss Twink USA, Makadsi, Sterling Juan Diaz",
+    "link": "https://edmtrain.com/new-york-city-ny/bound-blackout-lolsnake-479401?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Birds of Mind",
+    "venue": "UNVEILED",
+    "artists": "Birds of Mind",
+    "link": "https://edmtrain.com/new-york-city-ny/birds-of-mind-479942?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Turbz",
+    "venue": "PHD Rooftop at Dream Downtown",
+    "artists": "Turbz",
+    "link": "https://edmtrain.com/new-york-city-ny/turbz-481910?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Mirari",
+    "venue": "ArtSpace at PUBLIC Hotels",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/mirari-481996?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Golden Record NYC Presents",
+    "venue": "East Williamsburg",
+    "artists": "Truly Madly, Miguel Gallardo",
+    "link": "https://edmtrain.com/new-york-city-ny/golden-record-nyc-presents-truly-madly-482553?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Perreo Meets Techno",
+    "venue": "The Meadows Brooklyn",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/perreo-meets-techno-482625?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Afrobeat Nights NYC",
+    "venue": "Sultan Room",
+    "artists": "Ethan Thomas, Ethan Tomas",
+    "link": "https://edmtrain.com/new-york-city-ny/afrobeat-nights-nyc-ethan-thomas-483257?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Sandwell District, Rrose, Phase Fatale, Juana, Ne/Re/A, Auspex",
+    "venue": "Brooklyn",
+    "artists": "Sandwell District, Rrose, Phase Fatale, Juana, Ne/Re/A, Auspex",
+    "link": "https://edmtrain.com/new-york-city-ny/sandwell-district-rrose-483493?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Ketting",
+    "venue": "Brooklyn Monarch",
+    "artists": "Ketting",
+    "link": "https://edmtrain.com/new-york-city-ny/ketting-484012?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Karnak On Acid presents",
+    "venue": "Outer Heaven NYC",
+    "artists": "Rakim Under",
+    "link": "https://edmtrain.com/new-york-city-ny/karnak-on-acid-presents-rakim-under-484564?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Zubah, Sahlem",
+    "venue": "The Wood Shop",
+    "artists": "Zubah, Sahlem",
+    "link": "https://edmtrain.com/new-york-city-ny/zubah-sahlem-486131?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Kaito Henry, Ronaldo",
+    "venue": "Jupiter Disco",
+    "artists": "Kaito Henry, Ronaldo",
+    "link": "https://edmtrain.com/new-york-city-ny/kaito-henry-ronaldo-486502?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "We Are Eclipse & LON Presents",
+    "venue": "Moondog HiFi",
+    "artists": "Amy Jor, Jennifer Michelle, Yochanan, JLU",
+    "link": "https://edmtrain.com/new-york-city-ny/we-are-eclipse-and-lon-presents-amy-jor-486738?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "-196 Vodka Seltzer Pop-Up DJ Set",
+    "venue": "New York City",
+    "artists": "Surprise Guest",
+    "link": "https://edmtrain.com/new-york-city-ny/196-vodka-seltzer-pop-up-dj-set-surprise-guest-487162?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Lauren Ritter, Nabila",
+    "venue": "MAD Radio NYC",
+    "artists": "Lauren Ritter, Nabila",
+    "link": "https://edmtrain.com/new-york-city-ny/lauren-ritter-nabila-487492?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-27",
+    "name": "Refuge Fridays",
+    "venue": "Refuge",
+    "artists": "Concrete Husband, Briela Veneno, Per Pleks, Amotik",
+    "link": "https://edmtrain.com/new-york-city-ny/refuge-fridays-concrete-husband-487598?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Basstripper, Sam Collins, Crumb Pit, Remi Jolie, Dancing In Socks",
+    "venue": "Elsewhere",
+    "artists": "Basstripper, Sam Collins, Crumb Pit, Remi Jolie, Dancing In Socks",
+    "link": "https://edmtrain.com/new-york-city-ny/basstripper-sam-collins-452864?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "ReSolute x CHAOS",
+    "venue": "H0L0",
+    "artists": "Fumiya Tanaka",
+    "link": "https://edmtrain.com/new-york-city-ny/resolute-x-chaos-fumiya-tanaka-454937?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Last Heroes, Years Of War",
+    "venue": "Racket New York",
+    "artists": "Last Heroes, Years Of War",
+    "link": "https://edmtrain.com/new-york-city-ny/last-heroes-years-of-war-457269?utm_source=2533&utm_medium=api",
+    "ages": "18+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Agape X 240 KM/H",
+    "venue": "Brooklyn",
+    "artists": "Adrián Mills, Cloudy (Germany), Fumi, Serafina",
+    "link": "https://edmtrain.com/new-york-city-ny/agape-x-240-km-h-adrian-mills-463229?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Friction Presents - Synergy",
+    "venue": "Car Park",
+    "artists": "Friction, Yetti, Samisosa",
+    "link": "https://edmtrain.com/new-york-city-ny/friction-presents-synergy-friction-464124?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Alix Perez, SP:MC",
+    "venue": "SILO Brooklyn",
+    "artists": "Alix Perez, SP:MC",
+    "link": "https://edmtrain.com/new-york-city-ny/alix-perez-sp-mc-465379?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Soirée",
+    "venue": "Laissez Faire",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/soiree-466366?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Broadway Rave",
+    "venue": "Mercury Lounge NYC",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/broadway-rave-466674?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Get Busy",
+    "venue": "DROM",
+    "artists": "Get Busy",
+    "link": "https://edmtrain.com/new-york-city-ny/get-busy-473899?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Northern Electronics Showcase",
+    "venue": "Signal Brooklyn",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/northern-electronics-showcase-474370?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Horse Meat Disco, Ryan Farr",
+    "venue": "Knockdown Center",
+    "artists": "Horse Meat Disco, Ryan Farr",
+    "link": "https://edmtrain.com/new-york-city-ny/horse-meat-disco-ryan-farr-474702?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Bradley Zero, Louise Chen, Tornado Wallace, Alex McCracken, Cosmo",
+    "venue": "Public Records",
+    "artists": "Bradley Zero, Louise Chen, Tornado Wallace, Alex McCracken, Cosmo",
+    "link": "https://edmtrain.com/new-york-city-ny/bradley-zero-louise-chen-474734?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "DJ Auntie Spice, Gerd Janson, NIKS, Or:la, Roman Flügel, Toribio, Justin Carter, Eamon Harkin",
+    "venue": "Nowadays",
+    "artists": "DJ Auntie Spice, Gerd Janson, NIKS, Or:la, Roman Flügel, Toribio, Justin Carter, Eamon Harkin",
+    "link": "https://edmtrain.com/new-york-city-ny/dj-auntie-spice-gerd-janson-476797?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "The Widdler's Midnight Mass Tour",
+    "venue": "Bogart House",
+    "artists": "The Widdler, Cøntra, Togeki, Visiter",
+    "link": "https://edmtrain.com/new-york-city-ny/the-widdlers-midnight-mass-tour-the-widdler-477362?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Turbz",
+    "venue": "Loosie's Nightclub",
+    "artists": "Turbz",
+    "link": "https://edmtrain.com/new-york-city-ny/turbz-478198?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Cat Dealers",
+    "venue": "Nebula",
+    "artists": "Cat Dealers",
+    "link": "https://edmtrain.com/new-york-city-ny/cat-dealers-478610?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Altær 6 Year Anniversary",
+    "venue": "BASEMENT NY",
+    "artists": "Beste Hira, Yant, Auspex, Ketia, Kim Anh, Will Jack [!",
+    "link": "https://edmtrain.com/new-york-city-ny/alt-r-6-year-anniversary-beste-hira-479402?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Siwell, Alejandro Arce, Santhiago, MONDΛY",
+    "venue": "Somewhere Nowhere",
+    "artists": "Siwell, Alejandro Arce, Santhiago, MONDΛY",
+    "link": "https://edmtrain.com/new-york-city-ny/siwell-alejandro-arce-479975?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Swimming Paul",
+    "venue": "Marquee",
+    "artists": "Swimming Paul",
+    "link": "https://edmtrain.com/new-york-city-ny/swimming-paul-480063?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Diamond CLUB",
+    "venue": "Paragon",
+    "artists": "CRRDR, Debit, DJ Swisha, 2Lanes, DONIS",
+    "link": "https://edmtrain.com/new-york-city-ny/diamond-club-crrdr-480548?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "MTRNM Presents - Night at the Courthouse NYC",
+    "venue": "31 Chambers St",
+    "artists": "KAMI, Clandestino",
+    "link": "https://edmtrain.com/new-york-city-ny/mtrnm-presents-night-at-the-courthouse-nyc-kami-481358?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Turbz",
+    "venue": "The Highlight Room New York",
+    "artists": "Turbz",
+    "link": "https://edmtrain.com/new-york-city-ny/turbz-481584?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Bianca Oblivion, Star Eyes, Brianna Paon, Jordan Graham",
+    "venue": "Good Room",
+    "artists": "Bianca Oblivion, Star Eyes, Brianna Paon, Jordan Graham",
+    "link": "https://edmtrain.com/new-york-city-ny/bianca-oblivion-star-eyes-481858?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Golden Record NYC Presents",
+    "venue": "East Williamsburg",
+    "artists": "Laidlaw, Voigtmann",
+    "link": "https://edmtrain.com/new-york-city-ny/golden-record-nyc-presents-laidlaw-482554?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "The Disco Express",
+    "venue": "Dead Letter No. 9",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/the-disco-express-483518?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "SAFETY TRANCE, WTCHCRFT, Fried Plátano, SIMZII",
+    "venue": "Market Hotel",
+    "artists": "SAFETY TRANCE, WTCHCRFT, Fried Plátano, SIMZII",
+    "link": "https://edmtrain.com/new-york-city-ny/safety-trance-wtchcrft-483626?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Refuge Daytime",
+    "venue": "Refuge",
+    "artists": "Mira Kater, Ro Rousseau, Nacho Isa",
+    "link": "https://edmtrain.com/new-york-city-ny/refuge-daytime-mira-kater-484098?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Coco & Breezy, LAPORTE, Cocoa Sensei, Hugh Miles",
+    "venue": "H0L0",
+    "artists": "Coco & Breezy, LAPORTE, Cocoa Sensei, Hugh Miles",
+    "link": "https://edmtrain.com/new-york-city-ny/coco-and-breezy-laporte-484440?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Outer Heaven Presents",
+    "venue": "Outer Heaven NYC",
+    "artists": "Orson, Tolga",
+    "link": "https://edmtrain.com/new-york-city-ny/outer-heaven-presents-orson-484563?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Oomfgala",
+    "venue": "Mood Ring",
+    "artists": "Miss Twink USA, DJ Freedem, Tory Stiletto, Robyn DaBank, Gagbert",
+    "link": "https://edmtrain.com/new-york-city-ny/oomfgala-miss-twink-usa-484669?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Jan Loup, Ayesha, Matük, Gbar",
+    "venue": "Brooklyn",
+    "artists": "Jan Loup, Ayesha, Matük, Gbar",
+    "link": "https://edmtrain.com/new-york-city-ny/jan-loup-ayesha-485075?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Pleasure Moon",
+    "venue": "New York, NY",
+    "artists": "JDH, Pleasure Jams, Miss Alicia",
+    "link": "https://edmtrain.com/new-york-city-ny/pleasure-moon-jdh-485195?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Rebolledo",
+    "venue": "Moondog HiFi",
+    "artists": "Rebolledo",
+    "link": "https://edmtrain.com/new-york-city-ny/rebolledo-486297?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Archivio Records - PentLoft",
+    "venue": "32-32 Steinway St",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/archivio-records-pentloft-486455?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Off The Record-No Phones Party",
+    "venue": "Honey's",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/off-the-record-no-phones-party-486696?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Zoobstool",
+    "venue": "The Penthouse NY",
+    "artists": "Zoobstool",
+    "link": "https://edmtrain.com/new-york-city-ny/zoobstool-486932?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Club In The Pub Night",
+    "venue": "Abbey's Pub",
+    "artists": "By Design, Ziski, Adesi, J-SEO",
+    "link": "https://edmtrain.com/new-york-city-ny/club-in-the-pub-night-by-design-487126?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Jack Mulqueen, Rissa Garcia",
+    "venue": "MAD Radio NYC",
+    "artists": "Jack Mulqueen, Rissa Garcia",
+    "link": "https://edmtrain.com/new-york-city-ny/jack-mulqueen-rissa-garcia-487493?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Experience Noite do Funk NYC",
+    "venue": "Sistem",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/experience-noite-do-funk-nyc-487618?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-28",
+    "name": "Utopia Saturdays",
+    "venue": "Viva Toro",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/utopia-saturdays-487782?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-29",
+    "name": "Ferreck Dawn, Cassimm, Pavel Petrov, Ms. Unicorn, Naiman",
+    "venue": "Superior Ingredients (Rooftop)",
+    "artists": "Ferreck Dawn, Cassimm, Pavel Petrov, Ms. Unicorn, Naiman",
+    "link": "https://edmtrain.com/new-york-city-ny/ferreck-dawn-cassimm-455582?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-29",
+    "name": "Sunday Selectors",
+    "venue": "Refuge",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/sunday-selectors-478350?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-29",
+    "name": "Hannah Account, Cades, Alien D, J. Albert, DJ Purple",
+    "venue": "Jupiter Disco",
+    "artists": "Hannah Account, Cades, Alien D, J. Albert, DJ Purple",
+    "link": "https://edmtrain.com/new-york-city-ny/hannah-account-cades-479412?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-29",
+    "name": "food house (Fraxiom & Gupi), Diveo",
+    "venue": "Baby's All Right",
+    "artists": "food house (Fraxiom & Gupi), Diveo",
+    "link": "https://edmtrain.com/new-york-city-ny/food-house-fraxiom-and-gupi-diveo-482115?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-29",
+    "name": "Loco Carnaval Sundays",
+    "venue": "Somewhere Nowhere",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/loco-carnaval-sundays-482656?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-29",
+    "name": "GEEKED UP - SQUIDS BIRTHDAY PARTY",
+    "venue": "Body By Brooklyn",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/geeked-up-squids-birthday-party-485072?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-29",
+    "name": "Morabito, Boyyyish",
+    "venue": "Good Room",
+    "artists": "Morabito, Boyyyish",
+    "link": "https://edmtrain.com/new-york-city-ny/morabito-boyyyish-486061?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-29",
+    "name": "Sunday Services",
+    "venue": "20 Meadow Street",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/sunday-services-486675?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-29",
+    "name": "Toribio",
+    "venue": "Head Hi",
+    "artists": "Toribio",
+    "link": "https://edmtrain.com/new-york-city-ny/toribio-486705?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-31",
+    "name": "Atune - Deep Listening",
+    "venue": "Moondog HiFi",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/atune-deep-listening-481505?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-03-31",
+    "name": "Nebula Tuesdays",
+    "venue": "Nebula",
+    "artists": "",
+    "link": "https://edmtrain.com/new-york-city-ny/nebula-tuesdays-482655?utm_source=2533&utm_medium=api",
+    "ages": "21+",
+    "time": ""
+  },
+  {
+    "date": "2026-03-31",
+    "name": "Kaelin Ellis",
+    "venue": "Nublu Classic",
+    "artists": "Kaelin Ellis",
+    "link": "https://edmtrain.com/new-york-city-ny/kaelin-ellis-484828?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
+  },
+  {
+    "date": "2026-04-01",
+    "name": "Outer Heaven Presents",
+    "venue": "Outer Heaven NYC",
+    "artists": "Son of Lee",
+    "link": "https://edmtrain.com/new-york-city-ny/outer-heaven-presents-son-of-lee-484562?utm_source=2533&utm_medium=api",
+    "ages": "",
+    "time": ""
   }
 ]
