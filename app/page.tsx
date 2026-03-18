@@ -23,10 +23,10 @@ export default function HomePage() {
           </div>
         </section>
 
-                    {/* COMING UP — Next 14 days of NYC events */}
+                          {/* COMING UP — Next 14 days of NYC events */}
       <section className="max-w-[1440px] mx-auto px-3 sm:px-4 lg:px-6 py-4">
         <div className="flex items-center gap-3 mb-3">
-          <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }>COMING UP</h2>
+          <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={{ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }}>COMING UP</h2>
           <div className="flex-1 h-[1px] bg-accent-red/30" />
           <span className="meta-text whitespace-nowrap">MAR 18-MAR 18</span>
         </div>
@@ -41,7 +41,7 @@ export default function HomePage() {
               <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
                 8ULENTINA
               </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={ fontSize: 'clamp(12px, 1.2vw, 16px)' }>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
                 Nowadays
               </h3>
               <div className="meta-text text-[10px]">Nowadays</div>
@@ -57,7 +57,7 @@ export default function HomePage() {
               <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
                 STEEN
               </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={ fontSize: 'clamp(12px, 1.2vw, 16px)' }>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
                 SILO Brooklyn
               </h3>
               <div className="meta-text text-[10px]">SILO Brooklyn</div>
@@ -162,10 +162,10 @@ export default function HomePage() {
         </div>
       </section>
 
-                  {/* COMING UP — Next 14 days of NYC events */}
+                        {/* COMING UP — Next 14 days of NYC events */}
       <section className="max-w-[1440px] mx-auto px-3 sm:px-4 lg:px-6 py-4">
         <div className="flex items-center gap-3 mb-3">
-          <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }>COMING UP</h2>
+          <h2 className="font-display font-bold uppercase tracking-tight whitespace-nowrap text-accent-red" style={{ fontSize: 'clamp(16px, 2vw, 24px)', fontWeight: 700 }}>COMING UP</h2>
           <div className="flex-1 h-[1px] bg-accent-red/30" />
           <span className="meta-text whitespace-nowrap">MAR 18-MAR 18</span>
         </div>
@@ -180,7 +180,7 @@ export default function HomePage() {
               <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
                 8ULENTINA
               </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={ fontSize: 'clamp(12px, 1.2vw, 16px)' }>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
                 Nowadays
               </h3>
               <div className="meta-text text-[10px]">Nowadays</div>
@@ -196,7 +196,7 @@ export default function HomePage() {
               <p className="font-display text-accent-red uppercase text-[11px] font-bold tracking-wider mb-1 group-hover:text-[#FF3333] transition-colors duration-300">
                 STEEN
               </p>
-              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={ fontSize: 'clamp(12px, 1.2vw, 16px)' }>
+              <h3 className="font-display font-bold uppercase leading-tight mb-1 group-hover:text-accent-red transition-colors duration-300" style={{ fontSize: 'clamp(12px, 1.2vw, 16px)' }}>
                 SILO Brooklyn
               </h3>
               <div className="meta-text text-[10px]">SILO Brooklyn</div>
