@@ -37,6 +37,29 @@ export function calculateReadingTime(content: string): string {
   return `${minutes} MIN READ`;
 }
 
+function normalizeArticle(data: Record<string, unknown>): ArticleMetadata {
+  // Handle 'artists' (plural) vs 'artist' (singular)
+  let artist = data.artist as ArticleMetadata['artist'] | undefined;
+  if (!artist && data.artists && Array.isArray(data.artists) && data.artists.length > 0) {
+    artist = data.artists[0] as ArticleMetadata['artist'];
+  }
+  
+  // Default artist if missing
+  if (!artist) {
+    artist = {
+      name: 'Various Artists',
+      instagram: '',
+      soundcloud: '',
+      spotify: '',
+    };
+  }
+
+  return {
+    ...(data as unknown as ArticleMetadata),
+    artist,
+  };
+}
+
 export function getAllArticles(): Article[] {
   const fileNames = fs.readdirSync(articlesDirectory);
   const articles = fileNames
@@ -47,7 +70,7 @@ export function getAllArticles(): Article[] {
       const { data, content } = matter(fileContents);
 
       return {
-        ...(data as ArticleMetadata),
+        ...normalizeArticle(data),
         content,
       };
     });
@@ -62,7 +85,7 @@ export function getArticleBySlug(slug: string): Article | null {
     const { data, content } = matter(fileContents);
 
     return {
-      ...(data as ArticleMetadata),
+      ...normalizeArticle(data),
       content,
     };
   } catch {
